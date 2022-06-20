@@ -16,21 +16,23 @@
   <meta name="author" content="Boger">
   <meta name="keywords" content="">
   
-    <meta name="description" content="什么是 Hexo？&amp;emsp;&amp;emsp;Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。">
+    <meta name="description" content="题目力扣链接&amp;emsp;&amp;emsp;给定一个 n 个元素有序的（升序）整型数组 nums 和一个目标值 target  ，写一个函数搜索 nums 中的 target，如果目标值存在返回下标，否则返回 -1。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hexo -- 快速安装">
-<meta property="og:url" content="https://blog.boger.website/2022/06/18/hello-world/index.html">
+<meta property="og:title" content="704. 二分查找.">
+<meta property="og:url" content="https://blog.boger.website/2022/06/20/704-%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/index.html">
 <meta property="og:site_name" content="Boger">
-<meta property="og:description" content="什么是 Hexo？&amp;emsp;&amp;emsp;Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。">
+<meta property="og:description" content="题目力扣链接&amp;emsp;&amp;emsp;给定一个 n 个元素有序的（升序）整型数组 nums 和一个目标值 target  ，写一个函数搜索 nums 中的 target，如果目标值存在返回下标，否则返回 -1。">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2022-06-18T05:51:01.686Z">
-<meta property="article:modified_time" content="2022-06-20T07:04:07.338Z">
+<meta property="article:published_time" content="2022-06-20T06:38:45.998Z">
+<meta property="article:modified_time" content="2022-06-20T10:16:29.980Z">
 <meta property="article:author" content="Boger">
+<meta property="article:tag" content="二分法">
+<meta property="article:tag" content="LeetCode">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>Hexo -- 快速安装 - Boger</title>
+  <title>704. 二分查找. - Boger</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -195,7 +197,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="Hexo -- 快速安装"></span>
+            <span id="subtitle" data-typed-text="704. 二分查找."></span>
           
         </div>
 
@@ -206,8 +208,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2022-06-18 13:51" pubdate>
-          2022年6月18日 下午
+        <time datetime="2022-06-20 14:38" pubdate>
+          2022年6月20日 下午
         </time>
       </span>
     
@@ -218,7 +220,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          617 字
+          1.5k 字
         
       </span>
     
@@ -229,7 +231,7 @@
         
         
         
-          6 分钟
+          13 分钟
         
       </span>
     
@@ -267,53 +269,39 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">Hexo -- 快速安装</h1>
+            <h1 style="display: none">704. 二分查找.</h1>
             
             
               <div class="markdown-body">
                 
-                <h2 id="什么是-Hexo？"><a href="#什么是-Hexo？" class="headerlink" title="什么是 Hexo？"></a>什么是 Hexo？</h2><p>&emsp;&emsp;Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。<span id="more"></span></p>
-<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><h3 id="准备步骤"><a href="#准备步骤" class="headerlink" title="准备步骤"></a>准备步骤</h3><ol>
-<li> 安装 Git (如果没有基础安装的时候直接 Next)</li>
-<li> 安装 Node.js (Node.js 版本需不低于 10.13，建议使用 Node.js 12.0 及以上版本)</li>
-</ol>
-<p>&emsp;&emsp;首先我们先建一个名为 hexo 文件夹，打开文件夹右键会看到下图的 git 工具，我们用 Git Bash 命令工具，来使用 Git。</p>
-<h3 id="正式安装-Hexo"><a href="#正式安装-Hexo" class="headerlink" title="正式安装 Hexo:"></a>正式安装 Hexo:</h3><ol>
-<li> 首先使用 npm 安装 Hexo</li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">npm install -g hexo-cli<br></code></pre></td></tr></table></figure>
+                <h3 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h3><p><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/binary-search/">力扣链接</a><br>&emsp;&emsp;给定一个 n 个元素有序的（升序）整型数组 nums 和一个目标值 target  ，写一个函数搜索 nums 中的 target，如果目标值存在返回下标，否则返回 -1。</p>
+<span id="more"></span>
 
-<ol start="2">
-<li> 先看一下自己安装的 hexo 的版本，再去安装下一步</li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">hexo -v<br></code></pre></td></tr></table></figure>
+<p>示例 1:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">输入: nums = [-1,0,3,5,9,12], target = 9<br>输出: 4<br>解释: 9 出现在 nums 中并且下标为 4<br></code></pre></td></tr></table></figure>
+<p>示例 2:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">输入: nums = [-1,0,3,5,9,12], target = 2<br>输出: -1<br>解释: 2 不存在 nums 中因此返回 -1<br></code></pre></td></tr></table></figure>
 
-<ol start="3">
-<li> 接下来输入命令初始化 hexo</li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">hexo init Blog   //这个Blog起什么名字都可，这里为了方便所以使用Blog<br></code></pre></td></tr></table></figure>
+<p>提示：</p>
+<ul>
+<li>你可以假设 nums 中的所有元素是不重复的。</li>
+<li>n 将在 [1, 10000]之间。</li>
+<li>nums 的每个元素都将在 [-9999, 9999]之间。</li>
+</ul>
+<h3 id="二分法思路"><a href="#二分法思路" class="headerlink" title="二分法思路"></a>二分法思路</h3><h4 id="前提"><a href="#前提" class="headerlink" title="前提"></a>前提</h4><blockquote>
+<p>数组为有序数组<br>数组中无重复元素</p>
+</blockquote>
+<h4 id="写法一"><a href="#写法一" class="headerlink" title="写法一"></a>写法一</h4><ul>
+<li>左闭右闭</li>
+<li>[left,right]</li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> &#123;<br>            <span class="hljs-keyword">public</span>:<br>                <span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">search</span><span class="hljs-params">(vector&lt;<span class="hljs-type">int</span>&gt;&amp; nums, <span class="hljs-type">int</span> target)</span> </span>&#123;<br>                    <span class="hljs-type">int</span> left = <span class="hljs-number">0</span>;<br>                    <span class="hljs-type">int</span> right = nums.<span class="hljs-built_in">size</span>() - <span class="hljs-number">1</span>; <span class="hljs-comment">// 定义target在左闭右闭的区间里，[left, right]</span><br>                    <span class="hljs-keyword">while</span> (left &lt;= right) &#123; <span class="hljs-comment">// 当left==right，区间[left, right]依然有效，所以用 &lt;=</span><br>                        <span class="hljs-type">int</span> middle = left + ((right - left) / <span class="hljs-number">2</span>);<span class="hljs-comment">// 防止溢出 等同于(left + right)/2</span><br>                        <span class="hljs-keyword">if</span> (nums[middle] &gt; target) &#123;<br>                            right = middle - <span class="hljs-number">1</span>; <span class="hljs-comment">// target 在左区间，所以[left, middle - 1]</span><br>                        &#125; <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (nums[middle] &lt; target) &#123;<br>                            left = middle + <span class="hljs-number">1</span>; <span class="hljs-comment">// target 在右区间，所以[middle + 1, right]</span><br>                        &#125; <span class="hljs-keyword">else</span> &#123; <span class="hljs-comment">// nums[middle] == target</span><br>                            <span class="hljs-keyword">return</span> middle; <span class="hljs-comment">// 数组中找到目标值，直接返回下标</span><br>                        &#125;<br>                    &#125;<br>                    <span class="hljs-comment">// 未找到目标值</span><br>                    <span class="hljs-keyword">return</span> <span class="hljs-number">-1</span>;<br>                &#125;<br>            &#125;;<br></code></pre></td></tr></table></figure>
 
-<ol start="4">
-<li> 然后用下面的命令，进入刚刚新建的文件夹</li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">cd</span> Blog<br></code></pre></td></tr></table></figure>
-
-<ol start="5">
-<li>执行下面的命令，创建项目</li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">npm install<br></code></pre></td></tr></table></figure>
-
-<p>新建完成后，指定文件夹的目录如下：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs CONTENT">├── _config.yml<br>├── package.json<br>├── scaffolds<br>├── source<br>|   ├── _drafts (可能没有)<br>|   └── _posts<br>└── themes<br></code></pre></td></tr></table></figure>
-
-<p>然后执行以命令：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">hexo g<br></code></pre></td></tr></table></figure>
-
-<p>接下来执行下面的下面的命令.</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">hexo server  或者  hexo s(这是前一句的缩写)<br></code></pre></td></tr></table></figure>
-
-<p>在浏览器中输入</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs LINK">http://localhost:4000/<br></code></pre></td></tr></table></figure>
+<h4 id="写法二"><a href="#写法二" class="headerlink" title="写法二"></a>写法二</h4><ul>
+<li>左闭右开</li>
+<li>[left,right)</li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> &#123;<br>            <span class="hljs-keyword">public</span>:<br>                <span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">search</span><span class="hljs-params">(vector&lt;<span class="hljs-type">int</span>&gt;&amp; nums, <span class="hljs-type">int</span> target)</span> </span>&#123;<br>                    <span class="hljs-type">int</span> left = <span class="hljs-number">0</span>;<br>                    <span class="hljs-type">int</span> right = nums.<span class="hljs-built_in">size</span>(); <span class="hljs-comment">// 定义target在左闭右开的区间里，即：[left, right)</span><br>                    <span class="hljs-keyword">while</span> (left &lt; right) &#123; <span class="hljs-comment">// left==right时，在[left, right)是无效的空间，所以使用 &lt;</span><br>                        <span class="hljs-type">int</span> middle = left + ((right - left) &gt;&gt; <span class="hljs-number">1</span>);<br>                        <span class="hljs-keyword">if</span> (nums[middle] &gt; target) &#123;<br>                            right = middle; <span class="hljs-comment">// target 在左区间，在[left, middle)中</span><br>                        &#125; <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (nums[middle] &lt; target) &#123;<br>                            left = middle + <span class="hljs-number">1</span>; <span class="hljs-comment">// target 在右区间，在[middle + 1, right)中</span><br>                        &#125; <span class="hljs-keyword">else</span> &#123; <span class="hljs-comment">// nums[middle] == target</span><br>                            <span class="hljs-keyword">return</span> middle; <span class="hljs-comment">// 数组中找到目标值，直接返回下标</span><br>                        &#125;<br>                    &#125;<br>                    <span class="hljs-comment">// 未找到目标值</span><br>                    <span class="hljs-keyword">return</span> <span class="hljs-number">-1</span>;<br>                &#125;<br>            &#125;;<br></code></pre></td></tr></table></figure>
 
                 
               </div>
@@ -332,8 +320,15 @@
     
       <span class="category-chain">
         
-  <a href="/categories/Hexo/" class="category-chain-item">Hexo</a>
+  <a href="/categories/Leetcode/" class="category-chain-item">Leetcode</a>
   
+  
+    <span>></span>
+    
+  <a href="/categories/Leetcode/%E6%95%B0%E7%BB%84/" class="category-chain-item">数组</a>
+  
+  
+
   
 
       </span>
@@ -344,6 +339,15 @@
     </div>
   
   
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/%E4%BA%8C%E5%88%86%E6%B3%95/">#二分法</a>
+      
+        <a href="/tags/LeetCode/">#LeetCode</a>
+      
+    </div>
+  
 </div>
 
 
@@ -352,8 +356,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>Hexo -- 快速安装</div>
-      <div>https://blog.boger.website/2022/06/18/hello-world/</div>
+      <div>704. 二分查找.</div>
+      <div>https://blog.boger.website/2022/06/20/704-二分查找/</div>
     </div>
     <div class="license-meta">
       
@@ -365,7 +369,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2022年6月18日</div>
+          <div>2022年6月20日</div>
         </div>
       
       
@@ -395,15 +399,21 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2022/06/20/704-%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/" title="704. 二分查找.">
+                      <a href="/2022/06/20/35-%E6%90%9C%E7%B4%A2%E6%8F%92%E5%85%A5%E4%BD%8D%E7%BD%AE/" title="35.搜索插入位置">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">704. 二分查找.</span>
+                        <span class="hidden-mobile">35.搜索插入位置</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
                   </article>
                   <article class="post-next col-6">
                     
+                    
+                      <a href="/2022/06/18/hello-world/" title="Hexo -- 快速安装">
+                        <span class="hidden-mobile">Hexo -- 快速安装</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
                     
                   </article>
                 </div>
