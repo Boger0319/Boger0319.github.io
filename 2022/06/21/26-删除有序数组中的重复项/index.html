@@ -16,26 +16,25 @@
   <meta name="author" content="Boger">
   <meta name="keywords" content="">
   
-    <meta name="description" content="题目力扣链接 给定一个 正整数 num ，编写一个函数，如果 num 是一个完全平方数，则返回 true ，否则返回 false 。">
+    <meta name="description" content="题目力扣链接 给你一个 升序排列 的数组 nums ，请你 原地 删除重复出现的元素，使每个元素 只出现一次 ，返回删除后数组的新长度。元素的 相对顺序 应该保持 一致 。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="367.有效的完全平方数">
-<meta property="og:url" content="https://blog.boger.website/2022/06/21/367-%E6%9C%89%E6%95%88%E7%9A%84%E5%AE%8C%E5%85%A8%E5%B9%B3%E6%96%B9%E6%95%B0/index.html">
+<meta property="og:title" content="26.删除有序数组中的重复项">
+<meta property="og:url" content="https://blog.boger.website/2022/06/21/26-%E5%88%A0%E9%99%A4%E6%9C%89%E5%BA%8F%E6%95%B0%E7%BB%84%E4%B8%AD%E7%9A%84%E9%87%8D%E5%A4%8D%E9%A1%B9/index.html">
 <meta property="og:site_name" content="Boger">
-<meta property="og:description" content="题目力扣链接 给定一个 正整数 num ，编写一个函数，如果 num 是一个完全平方数，则返回 true ，否则返回 false 。">
+<meta property="og:description" content="题目力扣链接 给你一个 升序排列 的数组 nums ，请你 原地 删除重复出现的元素，使每个元素 只出现一次 ，返回删除后数组的新长度。元素的 相对顺序 应该保持 一致 。">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2022-06-20T17:01:44.703Z">
-<meta property="article:modified_time" content="2022-06-21T10:37:57.461Z">
+<meta property="article:published_time" content="2022-06-21T05:42:47.294Z">
+<meta property="article:modified_time" content="2022-06-21T10:38:38.025Z">
 <meta property="article:author" content="Boger">
+<meta property="article:tag" content="双指针法">
 <meta property="article:tag" content="LeetCode">
-<meta property="article:tag" content="二分法">
-<meta property="article:tag" content="数学">
 <meta name="twitter:card" content="summary_large_image">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>367.有效的完全平方数 - Boger</title>
+  <title>26.删除有序数组中的重复项 - Boger</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -200,7 +199,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="367.有效的完全平方数"></span>
+            <span id="subtitle" data-typed-text="26.删除有序数组中的重复项"></span>
           
         </div>
 
@@ -211,8 +210,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2022-06-21 01:01" pubdate>
-          2022年6月21日 凌晨
+        <time datetime="2022-06-21 13:42" pubdate>
+          2022年6月21日 下午
         </time>
       </span>
     
@@ -223,7 +222,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          644 字
+          948 字
         
       </span>
     
@@ -234,7 +233,7 @@
         
         
         
-          6 分钟
+          8 分钟
         
       </span>
     
@@ -272,31 +271,47 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">367.有效的完全平方数</h1>
+            <h1 style="display: none">26.删除有序数组中的重复项</h1>
             
             
               <div class="markdown-body">
                 
-                <h3 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h3><p><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/valid-perfect-square/">力扣链接</a></p>
-<p>给定一个 <strong>正整数</strong> <code>num</code> ，编写一个函数，如果 <code>num</code> 是一个完全平方数，则返回 <code>true</code> ，否则返回 <code>false</code> 。</p>
+                <h3 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h3><p><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/remove-duplicates-from-sorted-array/">力扣链接</a></p>
+<p>给你一个 <strong>升序排列</strong> 的数组 <code>nums</code> ，请你 <strong>原地</strong> 删除重复出现的元素，使每个元素 <strong>只出现一次</strong> ，返回删除后数组的新长度。元素的 <strong>相对顺序</strong> 应该保持 <strong>一致</strong> 。</p>
 <span id="more"></span>
-<p><strong>进阶</strong>：<strong>不要</strong> 使用任何内置的库函数，如  sqrt 。</p>
-<p>示例 1：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">输入：num = 16<br>输出：<span class="hljs-literal">true</span><br></code></pre></td></tr></table></figure>
-<p>示例 2：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">输入：num = 14<br>输出：<span class="hljs-literal">false</span><br></code></pre></td></tr></table></figure>
+<p>由于在某些语言中不能改变数组的长度，所以必须将结果放在数组<code>nums</code>的第一部分。更规范地说，如果在删除重复项之后有 <code>k</code> 个元素，那么 <code>nums</code> 的前 <code>k</code> 个元素应该保存最终结果。</p>
+<p>将最终结果插入 <code>nums</code> 的前 <code>k</code> 个位置后返回 <code>k</code> 。</p>
+<p>不要使用额外的空间，你必须在 <strong>原地</strong> <strong>修改输入数组</strong> 并在使用 O(1) 额外空间的条件下完成。</p>
+<p>*<em>判题标准</em>:</p>
+<p>系统会用下面的代码来测试你的题解:</p>
+<pre><code class="hljs">int[] nums = [...]; // 输入数组
+int[] expectedNums = [...]; // 长度正确的期望答案
 
+int k = removeDuplicates(nums); // 调用
+
+assert k == expectedNums.length;
+for (int i = 0; i &lt; k; i++) &#123;
+    assert nums[i] == expectedNums[i];
+&#125;
+</code></pre>
+<p>如果所有断言都通过，那么您的题解将被 <strong>通过</strong>    。</p>
+<p>示例 1：</p>
+<pre><code class="hljs">输入：nums = [1,1,2]
+输出：2, nums = [1,2,_]
+解释：函数应该返回新的长度 2 ，并且原数组 nums 的前两个元素被修改为 1, 2 。不需要考虑数组中超出新长度后面的元素。
+</code></pre>
+<p>示例 2：</p>
+<pre><code class="hljs">输入：nums = [0,0,1,1,1,2,2,3,3,4]
+输出：5, nums = [0,1,2,3,4]
+解释：函数应该返回新的长度 5 ， 并且原数组 nums 的前五个元素被修改为 0, 1, 2, 3, 4 。不需要考虑数组中超出新长度后面的元素。
+</code></pre>
 <p>提示：</p>
 <ul>
-<li>1 &lt;= num &lt;= 2^31 - 1</li>
+<li>0 &lt;= nums.length &lt;= 3 * 104</li>
+<li>-104 &lt;= nums[i] &lt;= 104</li>
+<li>nums 已按 升序 排列</li>
 </ul>
-<h3 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h3><h4 id="二分法"><a href="#二分法" class="headerlink" title="二分法"></a>二分法</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span><br>&#123;<br><span class="hljs-keyword">public</span>:<br>    <span class="hljs-function"><span class="hljs-type">bool</span> <span class="hljs-title">isPerfectSquare</span><span class="hljs-params">(<span class="hljs-type">int</span> num)</span></span><br><span class="hljs-function">    </span>&#123;<br>        <span class="hljs-type">long</span> l = <span class="hljs-number">1</span>, r = num / <span class="hljs-number">2</span>;<br>        <span class="hljs-keyword">while</span> (l &lt; r)<br>        &#123;<br>            <span class="hljs-type">long</span> m = (l + r + <span class="hljs-number">1</span>) / <span class="hljs-number">2</span>;<br>            <span class="hljs-keyword">if</span> (m * m &lt; num)<br>                l = m + <span class="hljs-number">1</span>;<br>            <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (m * m &gt; num)<br>                r = m - <span class="hljs-number">1</span>;<br>            <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (m * m == num)<br>                <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;<br>        &#125;<br>        <span class="hljs-keyword">if</span> (l * l == num)<br>            <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;<br>         <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;<br>    &#125;<br>&#125;;<br></code></pre></td></tr></table></figure>
-
-<h4 id="数学法"><a href="#数学法" class="headerlink" title="数学法"></a>数学法</h4><blockquote>
-<p>我们通过枚举平方数1、4、9、16、25可以发现，这些数可以由1,1+3,1+3+5,1+3+5+7,1+3+5+7+9所组成，便产生以下解法：</p>
-</blockquote>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> <br>&#123;<br><span class="hljs-keyword">public</span>:<br>    <span class="hljs-function"><span class="hljs-type">bool</span> <span class="hljs-title">isPerfectSquare</span><span class="hljs-params">(<span class="hljs-type">int</span> num)</span> </span><br><span class="hljs-function">    </span>&#123;<br>        <span class="hljs-type">int</span> n = <span class="hljs-number">1</span>;<br>        <span class="hljs-keyword">while</span>(num &gt; <span class="hljs-number">0</span>) <br>        &#123;<br>            num -= n;<br>            n += <span class="hljs-number">2</span>;<br>        &#125;<br>        <span class="hljs-keyword">return</span> num == <span class="hljs-number">0</span>;<br>    &#125;<br>&#125;;<br></code></pre></td></tr></table></figure>
-
+<h3 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> &#123;<br><span class="hljs-keyword">public</span>:<br>    <span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">removeDuplicates</span><span class="hljs-params">(vector&lt;<span class="hljs-type">int</span>&gt;&amp; nums)</span> </span>&#123;<br>        <span class="hljs-type">int</span> s = <span class="hljs-number">0</span>;<br>        <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> f = <span class="hljs-number">0</span>; f &lt; nums.<span class="hljs-built_in">size</span>();f++)<br>        &#123;<br>            <span class="hljs-keyword">if</span> (nums[f] != nums[s])<br>            &#123;<br>                s+=<span class="hljs-number">1</span>;<br>                nums[s]=nums[f];<br>            &#125;<br>        &#125;<br>        <span class="hljs-keyword">return</span> s + <span class="hljs-number">1</span>;<br>    &#125;<br>&#125;;<br></code></pre></td></tr></table></figure>
                 
               </div>
             
@@ -336,11 +351,9 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
+        <a href="/tags/%E5%8F%8C%E6%8C%87%E9%92%88%E6%B3%95/">#双指针法</a>
+      
         <a href="/tags/LeetCode/">#LeetCode</a>
-      
-        <a href="/tags/%E4%BA%8C%E5%88%86%E6%B3%95/">#二分法</a>
-      
-        <a href="/tags/%E6%95%B0%E5%AD%A6/">#数学</a>
       
     </div>
   
@@ -352,8 +365,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>367.有效的完全平方数</div>
-      <div>https://blog.boger.website/2022/06/21/367-有效的完全平方数/</div>
+      <div>26.删除有序数组中的重复项</div>
+      <div>https://blog.boger.website/2022/06/21/26-删除有序数组中的重复项/</div>
     </div>
     <div class="license-meta">
       
@@ -395,9 +408,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2022/06/21/27-%E7%A7%BB%E9%99%A4%E5%85%83%E7%B4%A0/" title="27.移除元素">
+                      <a href="/2022/06/21/283-%E7%A7%BB%E5%8A%A8%E9%9B%B6/" title="283.移动零">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">27.移除元素</span>
+                        <span class="hidden-mobile">283.移动零</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -405,8 +418,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2022/06/21/69-x%E7%9A%84%E5%B9%B3%E6%96%B9%E6%A0%B9/" title="69.x的平方根">
-                        <span class="hidden-mobile">69.x的平方根</span>
+                      <a href="/2022/06/21/27-%E7%A7%BB%E9%99%A4%E5%85%83%E7%B4%A0/" title="27.移除元素">
+                        <span class="hidden-mobile">27.移除元素</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
