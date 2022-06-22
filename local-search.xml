@@ -4,6 +4,93 @@
   
   
   <entry>
+    <title>904.水果成篮</title>
+    <link href="/2022/06/22/904-%E6%B0%B4%E6%9E%9C%E6%88%90%E7%AF%AE/"/>
+    <url>/2022/06/22/904-%E6%B0%B4%E6%9E%9C%E6%88%90%E7%AF%AE/</url>
+    
+    <content type="html"><![CDATA[<h3 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h3><p><a href="https://leetcode.cn/problems/fruit-into-baskets/description/">力扣链接</a></p><p>你正在探访一家农场，农场从左到右种植了一排果树。这些树用一个整数数组 fruits 表示，其中 fruits[i] 是第 i 棵树上的水果 <strong>种类</strong> 。</p><span id="more"></span><p>你想要尽可能多地收集水果。然而，农场的主人设定了一些严格的规矩，你必须按照要求采摘水果：</p><p>你只有 <strong>两个</strong> 篮子，并且每个篮子只能装 <strong>单一类型</strong> 的水果。每个篮子能够装的水果总量没有限制。<br>你可以选择任意一棵树开始采摘，你必须从 <strong>每棵</strong> 树（包括开始采摘的树）上 <strong>恰好摘一个水果</strong> 。采摘的水果应当符合篮子中的水果类型。每采摘一次，你将会向右移动到下一棵树，并继续采摘。<br>一旦你走到某棵树前，但水果不符合篮子的水果类型，那么就必须停止采摘。<br>给你一个整数数组 fruits ，返回你可以收集的水果的 <strong>最大</strong> 数目。</p><p>示例 1：</p><pre><code class="hljs">输入：fruits = [1,2,1]输出：3解释：可以采摘全部 3 棵树。</code></pre><p>示例 2：</p><pre><code class="hljs">输入：fruits = [0,1,2,2]输出：3解释：可以采摘 [1,2,2] 这三棵树。如果从第一棵树开始采摘，则只能采摘 [0,1] 这两棵树。</code></pre><p>示例 3：</p><pre><code class="hljs">输入：fruits = [1,2,3,2,2]输出：4解释：可以采摘 [2,3,2,2] 这四棵树。如果从第一棵树开始采摘，则只能采摘 [1,2] 这两棵树。</code></pre><p>示例 4：</p><pre><code class="hljs">输入：fruits = [3,3,3,1,2,1,1,2,3,3,4]输出：5解释：可以采摘 [1,2,1,1,2] 这五棵树。</code></pre><p>提示：</p><ul><li>1 &lt;= fruits.length &lt;= 105</li><li>0 &lt;= fruits[i] &lt; fruits.length</li></ul><h3 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span><br>&#123;<br><span class="hljs-keyword">public</span>:<br>    <span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">totalFruit</span><span class="hljs-params">(vector&lt;<span class="hljs-type">int</span>&gt; &amp;fruits)</span></span><br><span class="hljs-function">    </span>&#123;<br>        <span class="hljs-type">int</span> n = fruits.<span class="hljs-built_in">size</span>();<br>        unordered_map&lt;<span class="hljs-type">int</span>, <span class="hljs-type">int</span>&gt; mp; <span class="hljs-comment">// 定义哈希表</span><br>        <span class="hljs-type">int</span> ans = <span class="hljs-number">0</span>; <span class="hljs-comment">// 存放最长长度</span><br>        <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">0</span>, j = <span class="hljs-number">0</span>; j &lt; n; j++) <span class="hljs-comment">// 遍历fruits数组</span><br>        &#123;<br>            mp[fruits[j]]++; <span class="hljs-comment">// 某种水果种类次数 +1 </span><br>            <span class="hljs-keyword">while</span> (mp.<span class="hljs-built_in">size</span>() &gt; <span class="hljs-number">2</span>) <span class="hljs-comment">// 出现第三种水果</span><br>            &#123;<br>                mp[fruits[i]]--;<br>                <span class="hljs-keyword">if</span> (mp[fruits[i]] == <span class="hljs-number">0</span>)<br>                    mp.<span class="hljs-built_in">erase</span>(fruits[i]);<br>                i++; <span class="hljs-comment">// erase 直到剩两种水果</span><br>            &#125;<br>            ans = <span class="hljs-built_in">max</span>(ans, j - i + <span class="hljs-number">1</span>);<br>        &#125;<br>        <span class="hljs-keyword">return</span> ans;<br>    &#125;<br>&#125;;<br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    <categories>
+      
+      <category>Leetcode</category>
+      
+      <category>数组</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>LeetCode</tag>
+      
+      <tag>滑动窗口</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>209.长度最小的子数组</title>
+    <link href="/2022/06/22/209-%E9%95%BF%E5%BA%A6%E6%9C%80%E5%B0%8F%E7%9A%84%E5%AD%90%E6%95%B0%E7%BB%84/"/>
+    <url>/2022/06/22/209-%E9%95%BF%E5%BA%A6%E6%9C%80%E5%B0%8F%E7%9A%84%E5%AD%90%E6%95%B0%E7%BB%84/</url>
+    
+    <content type="html"><![CDATA[<h3 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h3><p><a href="https://leetcode.cn/problems/minimum-size-subarray-sum/description/">力扣链接</a></p><p>给定一个含有 n 个正整数的数组和一个正整数 target 。</p><p>找出该数组中满足其和 ≥ target 的长度最小的 <strong>连续子数组</strong> [numsl, numsl+1, …, numsr-1, numsr] ，并返回其长度。如果不存在符合条件的子数组，返回 0 。</p><span id="more"></span><p>示例 1：</p><pre><code class="hljs">输入：target = 7, nums = [2,3,1,2,4,3]输出：2解释：子数组 [4,3] 是该条件下的长度最小的子数组。</code></pre><p>示例 2：</p><pre><code class="hljs">输入：target = 4, nums = [1,4,4]输出：1</code></pre><p>示例 3：</p><pre><code class="hljs">输入：target = 11, nums = [1,1,1,1,1,1,1,1]输出：0</code></pre><p>提示：</p><ul><li>1 &lt;= target &lt;= 109</li><li>1 &lt;= nums.length &lt;= 105</li><li>1 &lt;= nums[i] &lt;= 105</li></ul><h3 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h3><blockquote><p>滑动窗口就是不断的调节子序列的起始位置和终止位置，从而得出我们要想的结果。<br>滑动窗口的精妙之处在于根据当前子序列和大小的情况，不断调节子序列的起始位置。从而将O(n^2)暴力解法降为O(n)。</p></blockquote><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> &#123;<br><span class="hljs-keyword">public</span>:<br>    <span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">minSubArrayLen</span><span class="hljs-params">(<span class="hljs-type">int</span> target, vector&lt;<span class="hljs-type">int</span>&gt;&amp; nums)</span> </span>&#123;<br>        <span class="hljs-type">int</span> sum = <span class="hljs-number">0</span>,s = <span class="hljs-number">0</span>;<br>        <span class="hljs-type">int</span> result = INT32_MAX;<br>        <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">0</span>;i &lt; nums.<span class="hljs-built_in">size</span>();i++)<br>        &#123;<br>            sum += nums[i];<br>            <span class="hljs-keyword">while</span> (sum &gt;= target)<br>            &#123;<br>                <span class="hljs-type">int</span> len = i-s+<span class="hljs-number">1</span>;<br>                <span class="hljs-keyword">if</span> (result &gt; len) result = len;<br>                sum-=nums[s++];<br>            &#125;<br>        &#125;<br>        <span class="hljs-keyword">return</span> result == INT32_MAX ? <span class="hljs-number">0</span> : result;<br>    &#125;<br>&#125;;<br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    <categories>
+      
+      <category>Leetcode</category>
+      
+      <category>数组</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>LeetCode</tag>
+      
+      <tag>滑动窗口</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>3.无重复字符的最长子串</title>
+    <link href="/2022/06/22/3-%E6%97%A0%E9%87%8D%E5%A4%8D%E5%AD%97%E7%AC%A6%E7%9A%84%E6%9C%80%E9%95%BF%E5%AD%90%E4%B8%B2/"/>
+    <url>/2022/06/22/3-%E6%97%A0%E9%87%8D%E5%A4%8D%E5%AD%97%E7%AC%A6%E7%9A%84%E6%9C%80%E9%95%BF%E5%AD%90%E4%B8%B2/</url>
+    
+    <content type="html"><![CDATA[<h3 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h3><p><a href="https://leetcode.cn/problems/longest-substring-without-repeating-characters/description/">力扣链接</a></p><p>给定一个字符串 s ，请你找出其中不含有重复字符的 <strong>最长子串</strong> 的长度。</p><span id="more"></span><p>示例 1:</p><pre><code class="hljs">输入: s = &quot;abcabcbb&quot;输出: 3 解释: 因为无重复字符的最长子串是 &quot;abc&quot;，所以其长度为 3。</code></pre><p>示例 2:</p><pre><code class="hljs">输入: s = &quot;bbbbb&quot;输出: 1解释: 因为无重复字符的最长子串是 &quot;b&quot;，所以其长度为 1。</code></pre><p>示例 3:</p><pre><code class="hljs">输入: s = &quot;pwwkew&quot;输出: 3解释: 因为无重复字符的最长子串是 &quot;wke&quot;，所以其长度为 3。    请注意，你的答案必须是 子串 的长度，&quot;pwke&quot; 是一个子序列，不是子串。</code></pre><p>提示：</p><ul><li>0 &lt;= s.length &lt;= 5 * 104</li><li>s 由英文字母、数字、符号和空格组成</li></ul>]]></content>
+    
+    
+    <categories>
+      
+      <category>Leetcode</category>
+      
+      <category>数组</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>LeetCode</tag>
+      
+      <tag>滑动窗口</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>关于我的刷题路线</title>
     <link href="/2022/06/21/%E6%88%91%E7%9A%84%E5%88%B7%E9%A2%98%E8%B7%AF%E7%BA%BF/"/>
     <url>/2022/06/21/%E6%88%91%E7%9A%84%E5%88%B7%E9%A2%98%E8%B7%AF%E7%BA%BF/</url>
@@ -315,7 +402,7 @@
     <link href="/2022/06/18/hello-world/"/>
     <url>/2022/06/18/hello-world/</url>
     
-    <content type="html"><![CDATA[<h2 id="什么是-Hexo？"><a href="#什么是-Hexo？" class="headerlink" title="什么是 Hexo？"></a>什么是 Hexo？</h2><p>&emsp;&emsp;Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。<span id="more"></span></p><h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><h3 id="准备步骤"><a href="#准备步骤" class="headerlink" title="准备步骤"></a>准备步骤</h3><ol><li> 安装 Git (如果没有基础安装的时候直接 Next)</li><li> 安装 Node.js (Node.js 版本需不低于 10.13，建议使用 Node.js 12.0 及以上版本)</li></ol><p>&emsp;&emsp;首先我们先建一个名为 hexo 文件夹，打开文件夹右键会看到下图的 git 工具，我们用 Git Bash 命令工具，来使用 Git。</p><h3 id="正式安装-Hexo"><a href="#正式安装-Hexo" class="headerlink" title="正式安装 Hexo:"></a>正式安装 Hexo:</h3><ol><li> 首先使用 npm 安装 Hexo</li></ol><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">npm install -g hexo-cli<br></code></pre></td></tr></table></figure><ol start="2"><li> 先看一下自己安装的 hexo 的版本，再去安装下一步</li></ol><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">hexo -v<br></code></pre></td></tr></table></figure><ol start="3"><li> 接下来输入命令初始化 hexo</li></ol><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">hexo init Blog   //这个Blog起什么名字都可，这里为了方便所以使用Blog<br></code></pre></td></tr></table></figure><ol start="4"><li> 然后用下面的命令，进入刚刚新建的文件夹</li></ol><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">cd</span> Blog<br></code></pre></td></tr></table></figure><ol start="5"><li>执行下面的命令，创建项目</li></ol><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">npm install<br></code></pre></td></tr></table></figure><p>新建完成后，指定文件夹的目录如下：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs CONTENT">├── _config.yml<br>├── package.json<br>├── scaffolds<br>├── source<br>|   ├── _drafts (可能没有)<br>|   └── _posts<br>└── themes<br></code></pre></td></tr></table></figure><p>然后执行以命令：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">hexo g<br></code></pre></td></tr></table></figure><p>接下来执行下面的下面的命令.</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">hexo server  或者  hexo s(这是前一句的缩写)<br></code></pre></td></tr></table></figure><p>在浏览器中输入</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs LINK">http://localhost:4000/<br></code></pre></td></tr></table></figure>]]></content>
+    <content type="html"><![CDATA[<h2 id="什么是-Hexo？"><a href="#什么是-Hexo？" class="headerlink" title="什么是 Hexo？"></a>什么是 Hexo？</h2><p>Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。<span id="more"></span></p><h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><h3 id="准备步骤"><a href="#准备步骤" class="headerlink" title="准备步骤"></a>准备步骤</h3><ol><li> 安装 <a href="https://git-scm.com/download/win">Git</a> (如果没有基础安装的时候直接 Next)</li><li> 安装 <a href="https://nodejs.org/en/">Node.js</a> (Node.js 版本需不低于 10.13，建议使用 Node.js 12.0 及以上版本)</li></ol><p>&emsp;&emsp;首先我们先建一个名为 hexo 文件夹，打开文件夹右键会看到下图的 git 工具，我们用 Git Bash 命令工具，来使用 Git。</p><h3 id="正式安装-Hexo"><a href="#正式安装-Hexo" class="headerlink" title="正式安装 Hexo:"></a>正式安装 Hexo:</h3><ol><li> 首先使用 npm 安装 Hexo</li></ol><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">npm install -g hexo-cli<br></code></pre></td></tr></table></figure><ol start="2"><li> 先看一下自己安装的 hexo 的版本，再去安装下一步</li></ol><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">hexo -v<br></code></pre></td></tr></table></figure><ol start="3"><li> 接下来输入命令初始化 hexo</li></ol><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">hexo init Blog   //这个Blog起什么名字都可，这里为了方便所以使用Blog<br></code></pre></td></tr></table></figure><ol start="4"><li> 然后用下面的命令，进入刚刚新建的文件夹</li></ol><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">cd</span> Blog<br></code></pre></td></tr></table></figure><ol start="5"><li>执行下面的命令，创建项目</li></ol><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">npm install<br></code></pre></td></tr></table></figure><p>新建完成后，指定文件夹的目录如下：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs CONTENT">├── _config.yml<br>├── package.json<br>├── scaffolds<br>├── source<br>|   ├── _drafts (可能没有)<br>|   └── _posts<br>└── themes<br></code></pre></td></tr></table></figure><p>然后执行以命令：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">hexo g<br></code></pre></td></tr></table></figure><p>接下来执行下面的下面的命令.</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">hexo server  或者  hexo s(这是前一句的缩写)<br></code></pre></td></tr></table></figure><p>在浏览器中输入</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs LINK">http://localhost:4000/<br></code></pre></td></tr></table></figure>]]></content>
     
     
     <categories>
