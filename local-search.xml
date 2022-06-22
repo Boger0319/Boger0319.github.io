@@ -4,6 +4,64 @@
   
   
   <entry>
+    <title>718.最长重复子数组</title>
+    <link href="/2022/06/23/718-%E6%9C%80%E9%95%BF%E9%87%8D%E5%A4%8D%E5%AD%90%E6%95%B0%E7%BB%84/"/>
+    <url>/2022/06/23/718-%E6%9C%80%E9%95%BF%E9%87%8D%E5%A4%8D%E5%AD%90%E6%95%B0%E7%BB%84/</url>
+    
+    <content type="html"><![CDATA[<h3 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h3><p><a href="https://leetcode.cn/problems/maximum-length-of-repeated-subarray/">力扣链接</a></p><p>给两个整数数组 <code>nums1</code> 和 <code>nums2</code> ，返回 两个数组中 <strong>公共的</strong> 、长度最长的子数组的长度 。</p><p>示例 1：</p><pre><code class="hljs">输入：nums1 = [1,2,3,2,1], nums2 = [3,2,1,4,7]输出：3解释：长度最长的公共子数组是 [3,2,1] 。</code></pre><p>示例 2：</p><pre><code class="hljs">输入：nums1 = [0,0,0,0,0], nums2 = [0,0,0,0,0]输出：5</code></pre><p>提示：</p><ul><li>1 &lt;= nums1.length, nums2.length &lt;= 1000</li><li>0 &lt;= nums1[i], nums2[i] &lt;= 100</li></ul><h3 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> &#123;<br><span class="hljs-keyword">public</span>:<br>    <span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">maxLength</span><span class="hljs-params">(vector&lt;<span class="hljs-type">int</span>&gt;&amp; nums1, vector&lt;<span class="hljs-type">int</span>&gt;&amp; nums2, <span class="hljs-type">int</span> Aop, <span class="hljs-type">int</span> Bop, <span class="hljs-type">int</span> both_length)</span> </span>&#123;<br>        <span class="hljs-type">int</span> k = <span class="hljs-number">0</span>;<br>        <span class="hljs-type">int</span> res = <span class="hljs-number">0</span>;<br>        <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">0</span>; i &lt; both_length; i++) &#123;<br>            <span class="hljs-keyword">if</span> (nums1[Aop + i] == nums2[Bop + i])<br>                k++;<br>            <span class="hljs-keyword">else</span> k = <span class="hljs-number">0</span>;<br>            res = <span class="hljs-built_in">max</span>(res, k);<br>        &#125;<br>        <span class="hljs-keyword">return</span> res;<br>    &#125;<br>    <span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">findLength</span><span class="hljs-params">(vector&lt;<span class="hljs-type">int</span>&gt;&amp; nums1, vector&lt;<span class="hljs-type">int</span>&gt;&amp; nums2)</span> </span>&#123;<br>        <span class="hljs-type">int</span> ans = <span class="hljs-number">0</span>;<br>        <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">0</span>; i &lt; nums1.<span class="hljs-built_in">size</span>(); i++) &#123;<br>            <span class="hljs-type">int</span> nums1_len = <span class="hljs-built_in">min</span>(nums2.<span class="hljs-built_in">size</span>(), nums1.<span class="hljs-built_in">size</span>() - i);    <span class="hljs-comment">// nums1往nums2的左侧方向滑动</span><br>            <span class="hljs-type">int</span> maxlen = <span class="hljs-built_in">maxLength</span>(nums1, nums2, i, <span class="hljs-number">0</span>, nums1_len);<br>            ans = <span class="hljs-built_in">max</span>(ans, maxlen);<br>        &#125;<br>        <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">0</span>; i &lt; nums2.<span class="hljs-built_in">size</span>(); i++) &#123;<br>            <span class="hljs-type">int</span> nums2_len = <span class="hljs-built_in">min</span>(nums1.<span class="hljs-built_in">size</span>(), nums2.<span class="hljs-built_in">size</span>() - i);    <span class="hljs-comment">// nums1往nums2的右侧方向滑动</span><br>            <span class="hljs-type">int</span> maxlen = <span class="hljs-built_in">maxLength</span>(nums1, nums2, <span class="hljs-number">0</span>, i, nums2_len);<br>            ans = <span class="hljs-built_in">max</span>(ans, maxlen);<br>        &#125;<br>        <span class="hljs-keyword">return</span> ans;<br>    &#125;<br>&#125;;<br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    <categories>
+      
+      <category>Leetcode</category>
+      
+      <category>数组</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>滑动窗口</tag>
+      
+      <tag>LeetCode</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>76.最小覆盖子串</title>
+    <link href="/2022/06/22/76-%E6%9C%80%E5%B0%8F%E8%A6%86%E7%9B%96%E5%AD%90%E4%B8%B2/"/>
+    <url>/2022/06/22/76-%E6%9C%80%E5%B0%8F%E8%A6%86%E7%9B%96%E5%AD%90%E4%B8%B2/</url>
+    
+    <content type="html"><![CDATA[<h3 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h3><p><a href="https://leetcode.cn/problems/minimum-window-substring/description/">力扣链接</a></p><p>给你一个字符串 s 、一个字符串 t 。返回 s 中涵盖 t 所有字符的最小子串。如果 s 中不存在涵盖 t 所有字符的子串，则返回空字符串 “” 。</p><p>注意：</p><p>对于 t 中重复字符，我们寻找的子字符串中该字符数量必须不少于 t 中该字符数量。<br>如果 s 中存在这样的子串，我们保证它是唯一的答案。</p><p>示例 1：</p><pre><code class="hljs">输入：s = &quot;ADOBECODEBANC&quot;, t = &quot;ABC&quot;输出：&quot;BANC&quot;</code></pre><p>示例 2：</p><pre><code class="hljs">输入：s = &quot;a&quot;, t = &quot;a&quot;输出：&quot;a&quot;</code></pre><p>示例 3:</p><pre><code class="hljs">输入: s = &quot;a&quot;, t = &quot;aa&quot;输出: &quot;&quot;解释: t 中两个字符 &#39;a&#39; 均应包含在 s 的子串中，因此没有符合条件的子字符串，返回空字符串。</code></pre><p>提示：</p><ul><li>1 &lt;= s.length, t.length &lt;= 105</li><li>s 和 t 由英文字母组成</li></ul><h3 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h3><blockquote><p>建议熟悉哈希表的操作，在进行字符个数确定时十分好用。</p></blockquote><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> &#123;<br><span class="hljs-keyword">public</span>:<br>    <span class="hljs-function">string <span class="hljs-title">minWindow</span><span class="hljs-params">(string s, string t)</span> </span>&#123;<br>        unordered_map&lt;<span class="hljs-type">char</span>, <span class="hljs-type">int</span>&gt; smap, tmap;<br>        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">auto</span> c: t) tmap[c] ++ ;<br>        string res;<br>        <span class="hljs-type">int</span> cnt = <span class="hljs-number">0</span>; <span class="hljs-comment">// 包含子串中字符的个数</span><br>        <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">0</span>, j = <span class="hljs-number">0</span>; i &lt; s.<span class="hljs-built_in">size</span>(); i ++ ) &#123;<br>            smap[s[i]] ++ ;<br>            <span class="hljs-keyword">if</span> (smap[s[i]] &lt;= tmap[s[i]]) cnt ++ ;<br>            <span class="hljs-keyword">while</span> (smap[s[j]] &gt; tmap[s[j]]) smap[s[j ++ ]] -- ;<br>            <span class="hljs-keyword">if</span> (cnt == t.<span class="hljs-built_in">size</span>()) &#123;<br>                <span class="hljs-keyword">if</span> (res.<span class="hljs-built_in">empty</span>() || i - j + <span class="hljs-number">1</span> &lt; res.<span class="hljs-built_in">size</span>())<br>                    res = s.<span class="hljs-built_in">substr</span>(j, i - j + <span class="hljs-number">1</span>);<br>            &#125;<br>        &#125;<br>        <span class="hljs-keyword">return</span> res;<br>    &#125;<br>&#125;;<br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    <categories>
+      
+      <category>Leetcode</category>
+      
+      <category>数组</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>滑动窗口</tag>
+      
+      <tag>LeetCode</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>904.水果成篮</title>
     <link href="/2022/06/22/904-%E6%B0%B4%E6%9E%9C%E6%88%90%E7%AF%AE/"/>
     <url>/2022/06/22/904-%E6%B0%B4%E6%9E%9C%E6%88%90%E7%AF%AE/</url>
@@ -66,7 +124,7 @@
     <link href="/2022/06/22/3-%E6%97%A0%E9%87%8D%E5%A4%8D%E5%AD%97%E7%AC%A6%E7%9A%84%E6%9C%80%E9%95%BF%E5%AD%90%E4%B8%B2/"/>
     <url>/2022/06/22/3-%E6%97%A0%E9%87%8D%E5%A4%8D%E5%AD%97%E7%AC%A6%E7%9A%84%E6%9C%80%E9%95%BF%E5%AD%90%E4%B8%B2/</url>
     
-    <content type="html"><![CDATA[<h3 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h3><p><a href="https://leetcode.cn/problems/longest-substring-without-repeating-characters/description/">力扣链接</a></p><p>给定一个字符串 s ，请你找出其中不含有重复字符的 <strong>最长子串</strong> 的长度。</p><span id="more"></span><p>示例 1:</p><pre><code class="hljs">输入: s = &quot;abcabcbb&quot;输出: 3 解释: 因为无重复字符的最长子串是 &quot;abc&quot;，所以其长度为 3。</code></pre><p>示例 2:</p><pre><code class="hljs">输入: s = &quot;bbbbb&quot;输出: 1解释: 因为无重复字符的最长子串是 &quot;b&quot;，所以其长度为 1。</code></pre><p>示例 3:</p><pre><code class="hljs">输入: s = &quot;pwwkew&quot;输出: 3解释: 因为无重复字符的最长子串是 &quot;wke&quot;，所以其长度为 3。    请注意，你的答案必须是 子串 的长度，&quot;pwke&quot; 是一个子序列，不是子串。</code></pre><p>提示：</p><ul><li>0 &lt;= s.length &lt;= 5 * 104</li><li>s 由英文字母、数字、符号和空格组成</li></ul>]]></content>
+    <content type="html"><![CDATA[<h3 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h3><p><a href="https://leetcode.cn/problems/longest-substring-without-repeating-characters/description/">力扣链接</a></p><p>给定一个字符串 s ，请你找出其中不含有重复字符的 <strong>最长子串</strong> 的长度。</p><span id="more"></span><p>示例 1:</p><pre><code class="hljs">输入: s = &quot;abcabcbb&quot;输出: 3 解释: 因为无重复字符的最长子串是 &quot;abc&quot;，所以其长度为 3。</code></pre><p>示例 2:</p><pre><code class="hljs">输入: s = &quot;bbbbb&quot;输出: 1解释: 因为无重复字符的最长子串是 &quot;b&quot;，所以其长度为 1。</code></pre><p>示例 3:</p><pre><code class="hljs">输入: s = &quot;pwwkew&quot;输出: 3解释: 因为无重复字符的最长子串是 &quot;wke&quot;，所以其长度为 3。    请注意，你的答案必须是 子串 的长度，&quot;pwke&quot; 是一个子序列，不是子串。</code></pre><p>提示：</p><ul><li>0 &lt;= s.length &lt;= 5 * 104</li><li>s 由英文字母、数字、符号和空格组成</li></ul><h3 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h3><blockquote><p>哈希表是根据关键码的值而直接进行访问的数据结构。<br>std::unordered_map 底层实现为哈希表</p></blockquote><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span><br>&#123;<br><span class="hljs-keyword">public</span>:<br>    <span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">lengthOfLongestSubstring</span><span class="hljs-params">(string s)</span></span><br><span class="hljs-function">    </span>&#123;<br>        <span class="hljs-type">int</span> result = <span class="hljs-number">0</span>;<br>        unordered_map&lt;<span class="hljs-type">char</span>,<span class="hljs-type">int</span>&gt; m;<br>        <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">0</span>, j = <span class="hljs-number">0</span>; i &lt; s.<span class="hljs-built_in">size</span>(); i++)<br>        &#123;<br>            m[s[i]]++;<br>            <span class="hljs-keyword">while</span> (m[s[i]] &gt;= <span class="hljs-number">2</span>)<br>            &#123;<br>                m[s[j]]--;<br>                <span class="hljs-keyword">if</span> (m[s[j]] == <span class="hljs-number">0</span>)<br>                    m.<span class="hljs-built_in">erase</span>(s[j]);<br>                j++;<br>            &#125;<br>            result = result &lt; i - j + <span class="hljs-number">1</span> ? i - j + <span class="hljs-number">1</span> : result;<br>        &#125;<br>        <span class="hljs-keyword">return</span> result;<br>    &#125;<br>&#125;;<br></code></pre></td></tr></table></figure>]]></content>
     
     
     <categories>
