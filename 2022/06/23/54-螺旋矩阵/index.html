@@ -17,25 +17,28 @@
   <meta name="author" content="Boger">
   <meta name="keywords" content="">
   
-    <meta name="description" content="题目力扣链接 你正在探访一家农场，农场从左到右种植了一排果树。这些树用一个整数数组 fruits 表示，其中 fruits[i] 是第 i 棵树上的水果 种类 。">
+    <meta name="description" content="题目力扣链接 给你一个 m 行 n 列的矩阵 matrix ，请按照 顺时针螺旋顺序 ，返回矩阵中的所有元素。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="904.水果成篮">
-<meta property="og:url" content="https://boger.website/2022/06/22/904-%E6%B0%B4%E6%9E%9C%E6%88%90%E7%AF%AE/index.html">
+<meta property="og:title" content="54.螺旋矩阵">
+<meta property="og:url" content="https://boger.website/2022/06/23/54-%E8%9E%BA%E6%97%8B%E7%9F%A9%E9%98%B5/index.html">
 <meta property="og:site_name" content="Boger">
-<meta property="og:description" content="题目力扣链接 你正在探访一家农场，农场从左到右种植了一排果树。这些树用一个整数数组 fruits 表示，其中 fruits[i] 是第 i 棵树上的水果 种类 。">
+<meta property="og:description" content="题目力扣链接 给你一个 m 行 n 列的矩阵 matrix ，请按照 顺时针螺旋顺序 ，返回矩阵中的所有元素。">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2022-06-22T05:28:03.189Z">
-<meta property="article:modified_time" content="2022-06-22T08:52:12.624Z">
+<meta property="og:image" content="https://api2.mubu.com/v3/document_image/2d47caf0-f858-4bc7-a5a1-d52c9d3c5b40-785422.jpg">
+<meta property="og:image" content="https://api2.mubu.com/v3/document_image/2e9d5c77-faec-4bd8-b3ab-76debd6d5a2f-785422.jpg">
+<meta property="article:published_time" content="2022-06-23T09:57:25.683Z">
+<meta property="article:modified_time" content="2022-06-23T10:14:54.479Z">
 <meta property="article:author" content="Boger">
 <meta property="article:tag" content="LeetCode">
-<meta property="article:tag" content="滑动窗口">
+<meta property="article:tag" content="模拟">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://api2.mubu.com/v3/document_image/2d47caf0-f858-4bc7-a5a1-d52c9d3c5b40-785422.jpg">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>904.水果成篮 - Boger</title>
+  <title>54.螺旋矩阵 - Boger</title>
   
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
@@ -201,7 +204,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="904.水果成篮"></span>
+            <span id="subtitle" data-typed-text="54.螺旋矩阵"></span>
           
         </div>
 
@@ -212,8 +215,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2022-06-22 13:28" pubdate>
-          2022年6月22日 下午
+        <time datetime="2022-06-23 17:57" pubdate>
+          2022年6月23日 下午
         </time>
       </span>
     
@@ -224,7 +227,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          1k 字
+          958 字
         
       </span>
     
@@ -235,7 +238,7 @@
         
         
         
-          9 分钟
+          8 分钟
         
       </span>
     
@@ -273,44 +276,33 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">904.水果成篮</h1>
+            <h1 style="display: none">54.螺旋矩阵</h1>
             
             
               <div class="markdown-body">
                 
-                <h3 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h3><p><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/fruit-into-baskets/description/">力扣链接</a></p>
-<p>你正在探访一家农场，农场从左到右种植了一排果树。这些树用一个整数数组 fruits 表示，其中 fruits[i] 是第 i 棵树上的水果 <strong>种类</strong> 。</p>
+                <h3 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h3><p><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/spiral-matrix/description/">力扣链接</a></p>
+<p>给你一个 m 行 n 列的矩阵 matrix ，请按照 顺时针螺旋顺序 ，返回矩阵中的所有元素。</p>
 <span id="more"></span>
-<p>你想要尽可能多地收集水果。然而，农场的主人设定了一些严格的规矩，你必须按照要求采摘水果：</p>
-<p>你只有 <strong>两个</strong> 篮子，并且每个篮子只能装 <strong>单一类型</strong> 的水果。每个篮子能够装的水果总量没有限制。<br>你可以选择任意一棵树开始采摘，你必须从 <strong>每棵</strong> 树（包括开始采摘的树）上 <strong>恰好摘一个水果</strong> 。采摘的水果应当符合篮子中的水果类型。每采摘一次，你将会向右移动到下一棵树，并继续采摘。<br>一旦你走到某棵树前，但水果不符合篮子的水果类型，那么就必须停止采摘。<br>给你一个整数数组 fruits ，返回你可以收集的水果的 <strong>最大</strong> 数目。</p>
-<p>示例 1：</p>
-<pre><code class="hljs">输入：fruits = [1,2,1]
-输出：3
-解释：可以采摘全部 3 棵树。
+<p>示例 1：<br><img src="https://api2.mubu.com/v3/document_image/2d47caf0-f858-4bc7-a5a1-d52c9d3c5b40-785422.jpg" srcset="/img/loading.gif" lazyload alt="spiral1"></p>
+<pre><code class="hljs">输入：matrix = [[1,2,3],[4,5,6],[7,8,9]]
+输出：[1,2,3,6,9,8,7,4,5]
 </code></pre>
-<p>示例 2：</p>
-<pre><code class="hljs">输入：fruits = [0,1,2,2]
-输出：3
-解释：可以采摘 [1,2,2] 这三棵树。
-如果从第一棵树开始采摘，则只能采摘 [0,1] 这两棵树。
-</code></pre>
-<p>示例 3：</p>
-<pre><code class="hljs">输入：fruits = [1,2,3,2,2]
-输出：4
-解释：可以采摘 [2,3,2,2] 这四棵树。
-如果从第一棵树开始采摘，则只能采摘 [1,2] 这两棵树。
-</code></pre>
-<p>示例 4：</p>
-<pre><code class="hljs">输入：fruits = [3,3,3,1,2,1,1,2,3,3,4]
-输出：5
-解释：可以采摘 [1,2,1,1,2] 这五棵树。
+<p>示例 2：<br><img src="https://api2.mubu.com/v3/document_image/2e9d5c77-faec-4bd8-b3ab-76debd6d5a2f-785422.jpg" srcset="/img/loading.gif" lazyload alt="spiral"></p>
+<pre><code class="hljs">输入：matrix = [[1,2,3,4],[5,6,7,8],[9,10,11,12]]
+输出：[1,2,3,4,8,12,11,10,9,5,6,7]
 </code></pre>
 <p>提示：</p>
 <ul>
-<li>1 &lt;= fruits.length &lt;= 105</li>
-<li>0 &lt;= fruits[i] &lt; fruits.length</li>
+<li>m == matrix.length</li>
+<li>n == matrix[i].length</li>
+<li>1 &lt;= m, n &lt;= 10</li>
+<li>-100 &lt;= matrix[i][j] &lt;= 100</li>
 </ul>
-<h3 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span><br>&#123;<br><span class="hljs-keyword">public</span>:<br>    <span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">totalFruit</span><span class="hljs-params">(vector&lt;<span class="hljs-type">int</span>&gt; &amp;fruits)</span></span><br><span class="hljs-function">    </span>&#123;<br>        <span class="hljs-type">int</span> n = fruits.<span class="hljs-built_in">size</span>();<br>        unordered_map&lt;<span class="hljs-type">int</span>, <span class="hljs-type">int</span>&gt; mp; <span class="hljs-comment">// 定义哈希表</span><br>        <span class="hljs-type">int</span> ans = <span class="hljs-number">0</span>; <span class="hljs-comment">// 存放最长长度</span><br>        <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">0</span>, j = <span class="hljs-number">0</span>; j &lt; n; j++) <span class="hljs-comment">// 遍历fruits数组</span><br>        &#123;<br>            mp[fruits[j]]++; <span class="hljs-comment">// 某种水果种类次数 +1 </span><br>            <span class="hljs-keyword">while</span> (mp.<span class="hljs-built_in">size</span>() &gt; <span class="hljs-number">2</span>) <span class="hljs-comment">// 出现第三种水果</span><br>            &#123;<br>                mp[fruits[i]]--;<br>                <span class="hljs-keyword">if</span> (mp[fruits[i]] == <span class="hljs-number">0</span>)<br>                    mp.<span class="hljs-built_in">erase</span>(fruits[i]);<br>                i++; <span class="hljs-comment">// erase 直到剩两种水果</span><br>            &#125;<br>            ans = <span class="hljs-built_in">max</span>(ans, j - i + <span class="hljs-number">1</span>);<br>        &#125;<br>        <span class="hljs-keyword">return</span> ans;<br>    &#125;<br>&#125;;<br></code></pre></td></tr></table></figure>
+<h3 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h3><blockquote>
+<p>引用了 59.螺旋矩阵II 的模拟过程</p>
+</blockquote>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> &#123;<br><span class="hljs-keyword">public</span>:<br>    <span class="hljs-function">vector&lt;<span class="hljs-type">int</span>&gt; <span class="hljs-title">spiralOrder</span><span class="hljs-params">(vector&lt;vector&lt;<span class="hljs-type">int</span>&gt;&gt;&amp; matrix)</span> </span>&#123;<br>        <span class="hljs-type">int</span> s = matrix.<span class="hljs-built_in">size</span>() * matrix[<span class="hljs-number">0</span>].<span class="hljs-built_in">size</span>();<br>        <span class="hljs-function">vector&lt;<span class="hljs-type">int</span>&gt; <span class="hljs-title">sp</span> <span class="hljs-params">(s)</span></span>;<br><br>        <span class="hljs-type">int</span> h1 = <span class="hljs-number">0</span>, h2 = matrix.<span class="hljs-built_in">size</span>() - <span class="hljs-number">1</span>, l1 = <span class="hljs-number">0</span>, l2 = matrix[<span class="hljs-number">0</span>].<span class="hljs-built_in">size</span>() - <span class="hljs-number">1</span>;<br>        <span class="hljs-type">int</span> idx = <span class="hljs-number">0</span>;<br>        <span class="hljs-keyword">while</span> (idx &lt; s)<br>        &#123;<br>            <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> j = h1; j &lt; matrix[<span class="hljs-number">0</span>].<span class="hljs-built_in">size</span>() - h1 &amp;&amp; idx &lt; s; j++)<br>               sp[idx++] = matrix[h1][j];<br>            h1++;<br>            <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = h1; i &lt; matrix.<span class="hljs-built_in">size</span>() - h1 &amp;&amp; idx &lt; s; i++)<br>                sp[idx++] = matrix[i][l2];<br>            <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> j = matrix[<span class="hljs-number">0</span>].<span class="hljs-built_in">size</span>() - h1; j &gt;= h1 - <span class="hljs-number">1</span> &amp;&amp; idx &lt; s; j--)<br>                sp[idx++] = matrix[h2][j];<br>            <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = matrix.<span class="hljs-built_in">size</span>() - h1 - <span class="hljs-number">1</span>; i &gt;= h1 &amp;&amp; idx &lt; s; i--)<br>                sp[idx++] = matrix[i][l1];<br>            h2--;<br>            l1++;<br>            l2--;<br>        &#125;<br>        <span class="hljs-keyword">return</span> sp;<br>    &#125;<br>&#125;;<br></code></pre></td></tr></table></figure>
                 
               </div>
             
@@ -352,7 +344,7 @@
       
         <a href="/tags/LeetCode/">#LeetCode</a>
       
-        <a href="/tags/%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3/">#滑动窗口</a>
+        <a href="/tags/%E6%A8%A1%E6%8B%9F/">#模拟</a>
       
     </div>
   
@@ -364,8 +356,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>904.水果成篮</div>
-      <div>https://boger.website/2022/06/22/904-水果成篮/</div>
+      <div>54.螺旋矩阵</div>
+      <div>https://boger.website/2022/06/23/54-螺旋矩阵/</div>
     </div>
     <div class="license-meta">
       
@@ -377,7 +369,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2022年6月22日</div>
+          <div>2022年6月23日</div>
         </div>
       
       
@@ -407,18 +399,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2022/06/22/76-%E6%9C%80%E5%B0%8F%E8%A6%86%E7%9B%96%E5%AD%90%E4%B8%B2/" title="76.最小覆盖子串">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">76.最小覆盖子串</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2022/06/22/209-%E9%95%BF%E5%BA%A6%E6%9C%80%E5%B0%8F%E7%9A%84%E5%AD%90%E6%95%B0%E7%BB%84/" title="209.长度最小的子数组">
-                        <span class="hidden-mobile">209.长度最小的子数组</span>
+                      <a href="/2022/06/23/59-%E8%9E%BA%E6%97%8B%E7%9F%A9%E9%98%B5II/" title="59.螺旋矩阵II">
+                        <span class="hidden-mobile">59.螺旋矩阵II</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
