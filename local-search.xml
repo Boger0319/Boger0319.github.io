@@ -4,6 +4,116 @@
   
   
   <entry>
+    <title>189.轮转数组</title>
+    <link href="/2022/06/23/189-%E8%BD%AE%E8%BD%AC%E6%95%B0%E7%BB%84/"/>
+    <url>/2022/06/23/189-%E8%BD%AE%E8%BD%AC%E6%95%B0%E7%BB%84/</url>
+    
+    <content type="html"><![CDATA[<h3 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h3><p><a href="https://leetcode.cn/problems/rotate-array/">力扣链接</a></p><p>给你一个数组，将数组中的元素向右轮转 k 个位置，其中 k 是非负数。</p><span id="more"></span><p>示例 1:</p><pre><code class="hljs">输入: nums = [1,2,3,4,5,6,7], k = 3输出: [5,6,7,1,2,3,4]解释:向右轮转 1 步: [7,1,2,3,4,5,6]向右轮转 2 步: [6,7,1,2,3,4,5]向右轮转 3 步: [5,6,7,1,2,3,4]</code></pre><p>示例 2:</p><pre><code class="hljs">输入：nums = [-1,-100,3,99], k = 2输出：[3,99,-1,-100]解释: 向右轮转 1 步: [99,-1,-100,3]向右轮转 2 步: [3,99,-1,-100]</code></pre><p>提示：</p><ul><li>1 &lt;= nums.length &lt;= 105</li><li>-231 &lt;= nums[i] &lt;= 231 - 1</li><li>0 &lt;= k &lt;= 105</li></ul><h3 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> &#123;<br><span class="hljs-keyword">public</span>:<br>    <span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">rotate</span><span class="hljs-params">(vector&lt;<span class="hljs-type">int</span>&gt;&amp; nums, <span class="hljs-type">int</span> k)</span> </span>&#123;<br>        k %= nums.<span class="hljs-built_in">size</span>();<br>        <span class="hljs-built_in">reverse</span>(nums.<span class="hljs-built_in">begin</span>(),nums.<span class="hljs-built_in">end</span>());<br>        <span class="hljs-built_in">reverse</span>(nums.<span class="hljs-built_in">begin</span>(),nums.<span class="hljs-built_in">begin</span>() + k);<br>        <span class="hljs-built_in">reverse</span>(nums.<span class="hljs-built_in">begin</span>() + k,nums.<span class="hljs-built_in">end</span>());<br>    &#125;<br>&#125;;<br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    <categories>
+      
+      <category>Leetcode</category>
+      
+      <category>数组</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>LeetCode</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>1207.独一无二的出现次数</title>
+    <link href="/2022/06/23/1207-%E7%8B%AC%E4%B8%80%E6%97%A0%E4%BA%8C%E7%9A%84%E5%87%BA%E7%8E%B0%E6%AC%A1%E6%95%B0/"/>
+    <url>/2022/06/23/1207-%E7%8B%AC%E4%B8%80%E6%97%A0%E4%BA%8C%E7%9A%84%E5%87%BA%E7%8E%B0%E6%AC%A1%E6%95%B0/</url>
+    
+    <content type="html"><![CDATA[<h3 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h3><p><a href="https://leetcode.cn/problems/unique-number-of-occurrences/">力扣链接</a></p><p>给你一个整数数组 arr，请你帮忙统计数组中每个数的出现次数。</p><span id="more"></span><p>如果每个数的出现次数都是独一无二的，就返回 true；否则返回 false。</p><p>示例 1：</p><pre><code class="hljs">输入：arr = [1,2,2,1,1,3]输出：true解释：在该数组中，1 出现了 3 次，2 出现了 2 次，3 只出现了 1 次。没有两个数的出现次数相同。</code></pre><p>示例 2：</p><pre><code class="hljs">输入：arr = [1,2]输出：false</code></pre><p>示例 3：</p><pre><code class="hljs">输入：arr = [-3,0,1,-3,1,1,1,-3,10,0]输出：true</code></pre><p>提示：</p><ul><li>1 &lt;= arr.length &lt;= 1000</li><li>-1000 &lt;= arr[i] &lt;= 1000</li></ul><h3 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> &#123;<br><span class="hljs-keyword">public</span>:<br>    <span class="hljs-function"><span class="hljs-type">bool</span> <span class="hljs-title">uniqueOccurrences</span><span class="hljs-params">(vector&lt;<span class="hljs-type">int</span>&gt;&amp; arr)</span> </span>&#123;<br>        map&lt;<span class="hljs-type">int</span>,<span class="hljs-type">int</span>&gt; mp;<br>        <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i = <span class="hljs-number">0</span>; i &lt; arr.<span class="hljs-built_in">size</span>(); i ++)&#123;<br>            mp[arr[i]] ++;<br>        &#125;<br>        set&lt;<span class="hljs-type">int</span>&gt; res;<br>        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">auto</span> m : mp)&#123;<br>            res.<span class="hljs-built_in">insert</span>(m.second);<br>        &#125;<br>        <span class="hljs-keyword">return</span> res.<span class="hljs-built_in">size</span>() == mp.<span class="hljs-built_in">size</span>();<br>    &#125;<br>&#125;;<br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    <categories>
+      
+      <category>Leetcode</category>
+      
+      <category>数组</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>LeetCode</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>941.有效的山脉数组</title>
+    <link href="/2022/06/23/941-%E6%9C%89%E6%95%88%E7%9A%84%E5%B1%B1%E8%84%89%E6%95%B0%E7%BB%84/"/>
+    <url>/2022/06/23/941-%E6%9C%89%E6%95%88%E7%9A%84%E5%B1%B1%E8%84%89%E6%95%B0%E7%BB%84/</url>
+    
+    <content type="html"><![CDATA[<h3 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h3><p><a href="https://leetcode.cn/problems/valid-mountain-array/">力扣链接</a></p><p>给定一个整数数组 arr，如果它是有效的山脉数组就返回 true，否则返回 false。</p><span id="more"></span><p>让我们回顾一下，如果 arr 满足下述条件，那么它是一个山脉数组：</p><ul><li>arr.length &gt;= 3</li><li>在 0 &lt; i &lt; arr.length - 1 条件下，存在 i 使得：<ul><li>arr[0] &lt; arr[1] &lt; … arr[i-1] &lt; arr[i] </li><li>arr[i] &gt; arr[i+1] &gt; … &gt; arr[arr.length - 1]</li></ul></li></ul><p><img src="https://api2.mubu.com/v3/document_image/32c8e83d-0e55-4266-a160-cdc543b331ed-785422.jpg"></p><p>示例 1：</p><pre><code class="hljs">输入：arr = [2,1]输出：false</code></pre><p>示例 2：</p><pre><code class="hljs">输入：arr = [3,5,5]输出：false</code></pre><p>示例 3：</p><pre><code class="hljs">输入：arr = [0,3,2,1]输出：true</code></pre><p>提示：</p><ul><li>1 &lt;= arr.length &lt;= 104</li><li>0 &lt;= arr[i] &lt;= 104</li></ul><h3 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h3><blockquote><p>我直接选择了从头走到尾，可以理解为单调，追求效率可以试试双指针。</p></blockquote><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> &#123;<br><span class="hljs-keyword">public</span>:<br>    <span class="hljs-function"><span class="hljs-type">bool</span> <span class="hljs-title">validMountainArray</span><span class="hljs-params">(vector&lt;<span class="hljs-type">int</span>&gt;&amp; arr)</span> </span>&#123;<br>        <span class="hljs-type">int</span> up = <span class="hljs-number">0</span>, dn = <span class="hljs-number">0</span>;<br>        <span class="hljs-type">int</span> i = <span class="hljs-number">1</span>,len = arr.<span class="hljs-built_in">size</span>() - <span class="hljs-number">1</span>;<br>        <span class="hljs-keyword">for</span> (;i &lt;= len;i++)<br>            <span class="hljs-keyword">if</span> (arr[i<span class="hljs-number">-1</span>] &lt; arr[i])<br>                up++;<br>            <span class="hljs-keyword">else</span> <br>                <span class="hljs-keyword">break</span>;<br>        <span class="hljs-keyword">for</span> (;i &lt;= len;i++)<br>            <span class="hljs-keyword">if</span> (arr[i<span class="hljs-number">-1</span>] &gt; arr[i])<br>                dn++;<br>        <span class="hljs-keyword">if</span> (up != <span class="hljs-number">0</span> &amp;&amp; dn != <span class="hljs-number">0</span> &amp;&amp; up + dn == len)<br>            <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;<br>        <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;<br>    &#125;<br>&#125;;<br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    <categories>
+      
+      <category>Leetcode</category>
+      
+      <category>数组</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>LeetCode</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>1365.有多少小于当前数字的数字</title>
+    <link href="/2022/06/23/1365-%E6%9C%89%E5%A4%9A%E5%B0%91%E5%B0%8F%E4%BA%8E%E5%BD%93%E5%89%8D%E6%95%B0%E5%AD%97%E7%9A%84%E6%95%B0%E5%AD%97/"/>
+    <url>/2022/06/23/1365-%E6%9C%89%E5%A4%9A%E5%B0%91%E5%B0%8F%E4%BA%8E%E5%BD%93%E5%89%8D%E6%95%B0%E5%AD%97%E7%9A%84%E6%95%B0%E5%AD%97/</url>
+    
+    <content type="html"><![CDATA[<h3 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h3><p><a href="https://leetcode.cn/problems/how-many-numbers-are-smaller-than-the-current-number/">力扣链接</a></p><p>给你一个数组 nums，对于其中每个元素 nums[i]，请你统计数组中比它小的所有数字的数目。</p><p>换而言之，对于每个 nums[i] 你必须计算出有效的 j 的数量，其中 j 满足 j != i 且 nums[j] &lt; nums[i] 。</p><p>以数组形式返回答案。</p><p>示例 1：</p><pre><code class="hljs">输入：nums = [8,1,2,2,3]输出：[4,0,1,1,3]解释： 对于 nums[0]=8 存在四个比它小的数字：（1，2，2 和 3）。 对于 nums[1]=1 不存在比它小的数字。对于 nums[2]=2 存在一个比它小的数字：（1）。 对于 nums[3]=2 存在一个比它小的数字：（1）。 对于 nums[4]=3 存在三个比它小的数字：（1，2 和 2）。</code></pre><p>示例 2：</p><pre><code class="hljs">输入：nums = [6,5,4,8]输出：[2,1,0,3]</code></pre><p>示例 3：</p><pre><code class="hljs">输入：nums = [7,7,7,7]输出：[0,0,0,0]</code></pre><p>提示：</p><ul><li>2 &lt;= nums.length &lt;= 500</li><li>0 &lt;= nums[i] &lt;= 100</li></ul><h3 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h3><blockquote><p>这道题比较偷懒了，用暴力或者排序都是可以的，我选择直接用哈希表了</p></blockquote><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> &#123;<br><span class="hljs-keyword">public</span>:<br>    <span class="hljs-function">vector&lt;<span class="hljs-type">int</span>&gt; <span class="hljs-title">smallerNumbersThanCurrent</span><span class="hljs-params">(vector&lt;<span class="hljs-type">int</span>&gt;&amp; nums)</span> </span>&#123;<br>        unordered_map&lt;<span class="hljs-type">int</span>, <span class="hljs-type">int</span>&gt; m;<br>        <span class="hljs-type">int</span> len = nums.<span class="hljs-built_in">size</span>();<br>        <span class="hljs-function">vector&lt;<span class="hljs-type">int</span>&gt; <span class="hljs-title">result</span> <span class="hljs-params">(len)</span></span>;<br>        <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">0</span>;i &lt; len;i++)<br>            m[nums[i]]++;<br>        <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">0</span>;i &lt; len;i++)<br>            <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> j = <span class="hljs-number">0</span>;j &lt; nums[i];j++)<br>                result[i] += m[j];<br>        <span class="hljs-keyword">return</span> result;<br>    &#125;<br>&#125;;<br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    <categories>
+      
+      <category>Leetcode</category>
+      
+      <category>数组</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>LeetCode</tag>
+      
+      <tag>哈希表</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>54.螺旋矩阵</title>
     <link href="/2022/06/23/54-%E8%9E%BA%E6%97%8B%E7%9F%A9%E9%98%B5/"/>
     <url>/2022/06/23/54-%E8%9E%BA%E6%97%8B%E7%9F%A9%E9%98%B5/</url>

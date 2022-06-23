@@ -17,28 +17,25 @@
   <meta name="author" content="Boger">
   <meta name="keywords" content="">
   
-    <meta name="description" content="题目力扣链接 给你一个 m 行 n 列的矩阵 matrix ，请按照 顺时针螺旋顺序 ，返回矩阵中的所有元素。">
+    <meta name="description" content="题目力扣链接 给你一个数组 nums，对于其中每个元素 nums[i]，请你统计数组中比它小的所有数字的数目。 换而言之，对于每个 nums[i] 你必须计算出有效的 j 的数量，其中 j 满足 j !&#x3D; i 且 nums[j] &lt; nums[i] 。 以数组形式返回答案。 示例 1： 输入：nums &#x3D; [8,1,2,2,3] 输出：[4,0,1,1,3] 解释：  对于 nums[0]&#x3D;">
 <meta property="og:type" content="article">
-<meta property="og:title" content="54.螺旋矩阵">
-<meta property="og:url" content="https://boger.website/2022/06/23/54-%E8%9E%BA%E6%97%8B%E7%9F%A9%E9%98%B5/index.html">
+<meta property="og:title" content="1365.有多少小于当前数字的数字">
+<meta property="og:url" content="https://boger.website/2022/06/23/1365-%E6%9C%89%E5%A4%9A%E5%B0%91%E5%B0%8F%E4%BA%8E%E5%BD%93%E5%89%8D%E6%95%B0%E5%AD%97%E7%9A%84%E6%95%B0%E5%AD%97/index.html">
 <meta property="og:site_name" content="Boger">
-<meta property="og:description" content="题目力扣链接 给你一个 m 行 n 列的矩阵 matrix ，请按照 顺时针螺旋顺序 ，返回矩阵中的所有元素。">
+<meta property="og:description" content="题目力扣链接 给你一个数组 nums，对于其中每个元素 nums[i]，请你统计数组中比它小的所有数字的数目。 换而言之，对于每个 nums[i] 你必须计算出有效的 j 的数量，其中 j 满足 j !&#x3D; i 且 nums[j] &lt; nums[i] 。 以数组形式返回答案。 示例 1： 输入：nums &#x3D; [8,1,2,2,3] 输出：[4,0,1,1,3] 解释：  对于 nums[0]&#x3D;">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://api2.mubu.com/v3/document_image/2d47caf0-f858-4bc7-a5a1-d52c9d3c5b40-785422.jpg">
-<meta property="og:image" content="https://api2.mubu.com/v3/document_image/2e9d5c77-faec-4bd8-b3ab-76debd6d5a2f-785422.jpg">
-<meta property="article:published_time" content="2022-06-23T09:57:25.683Z">
-<meta property="article:modified_time" content="2022-06-23T10:14:54.479Z">
+<meta property="article:published_time" content="2022-06-23T10:50:04.831Z">
+<meta property="article:modified_time" content="2022-06-23T10:52:08.184Z">
 <meta property="article:author" content="Boger">
 <meta property="article:tag" content="LeetCode">
-<meta property="article:tag" content="模拟">
+<meta property="article:tag" content="哈希表">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://api2.mubu.com/v3/document_image/2d47caf0-f858-4bc7-a5a1-d52c9d3c5b40-785422.jpg">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>54.螺旋矩阵 - Boger</title>
+  <title>1365.有多少小于当前数字的数字 - Boger</title>
   
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
@@ -204,7 +201,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="54.螺旋矩阵"></span>
+            <span id="subtitle" data-typed-text="1365.有多少小于当前数字的数字"></span>
           
         </div>
 
@@ -215,8 +212,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2022-06-23 17:57" pubdate>
-          2022年6月23日 下午
+        <time datetime="2022-06-23 18:50" pubdate>
+          2022年6月23日 晚上
         </time>
       </span>
     
@@ -227,7 +224,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          958 字
+          775 字
         
       </span>
     
@@ -238,7 +235,7 @@
         
         
         
-          8 分钟
+          7 分钟
         
       </span>
     
@@ -276,33 +273,42 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">54.螺旋矩阵</h1>
+            <h1 style="display: none">1365.有多少小于当前数字的数字</h1>
             
             
               <div class="markdown-body">
                 
-                <h3 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h3><p><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/spiral-matrix/description/">力扣链接</a></p>
-<p>给你一个 m 行 n 列的矩阵 matrix ，请按照 顺时针螺旋顺序 ，返回矩阵中的所有元素。</p>
-<span id="more"></span>
-<p>示例 1：<br><img src="https://api2.mubu.com/v3/document_image/2d47caf0-f858-4bc7-a5a1-d52c9d3c5b40-785422.jpg" srcset="/img/loading.gif" lazyload alt="spiral1"></p>
-<pre><code class="hljs">输入：matrix = [[1,2,3],[4,5,6],[7,8,9]]
-输出：[1,2,3,6,9,8,7,4,5]
+                <h3 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h3><p><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/how-many-numbers-are-smaller-than-the-current-number/">力扣链接</a></p>
+<p>给你一个数组 nums，对于其中每个元素 nums[i]，请你统计数组中比它小的所有数字的数目。</p>
+<p>换而言之，对于每个 nums[i] 你必须计算出有效的 j 的数量，其中 j 满足 j != i 且 nums[j] &lt; nums[i] 。</p>
+<p>以数组形式返回答案。</p>
+<p>示例 1：</p>
+<pre><code class="hljs">输入：nums = [8,1,2,2,3]
+输出：[4,0,1,1,3]
+解释： 
+对于 nums[0]=8 存在四个比它小的数字：（1，2，2 和 3）。 
+对于 nums[1]=1 不存在比它小的数字。
+对于 nums[2]=2 存在一个比它小的数字：（1）。 
+对于 nums[3]=2 存在一个比它小的数字：（1）。 
+对于 nums[4]=3 存在三个比它小的数字：（1，2 和 2）。
 </code></pre>
-<p>示例 2：<br><img src="https://api2.mubu.com/v3/document_image/2e9d5c77-faec-4bd8-b3ab-76debd6d5a2f-785422.jpg" srcset="/img/loading.gif" lazyload alt="spiral"></p>
-<pre><code class="hljs">输入：matrix = [[1,2,3,4],[5,6,7,8],[9,10,11,12]]
-输出：[1,2,3,4,8,12,11,10,9,5,6,7]
+<p>示例 2：</p>
+<pre><code class="hljs">输入：nums = [6,5,4,8]
+输出：[2,1,0,3]
+</code></pre>
+<p>示例 3：</p>
+<pre><code class="hljs">输入：nums = [7,7,7,7]
+输出：[0,0,0,0]
 </code></pre>
 <p>提示：</p>
 <ul>
-<li>m == matrix.length</li>
-<li>n == matrix[i].length</li>
-<li>1 &lt;= m, n &lt;= 10</li>
-<li>-100 &lt;= matrix[i][j] &lt;= 100</li>
+<li>2 &lt;= nums.length &lt;= 500</li>
+<li>0 &lt;= nums[i] &lt;= 100</li>
 </ul>
 <h3 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h3><blockquote>
-<p>引用了 59.螺旋矩阵II 的模拟过程</p>
+<p>这道题比较偷懒了，用暴力或者排序都是可以的，我选择直接用哈希表了</p>
 </blockquote>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> &#123;<br><span class="hljs-keyword">public</span>:<br>    <span class="hljs-function">vector&lt;<span class="hljs-type">int</span>&gt; <span class="hljs-title">spiralOrder</span><span class="hljs-params">(vector&lt;vector&lt;<span class="hljs-type">int</span>&gt;&gt;&amp; matrix)</span> </span>&#123;<br>        <span class="hljs-type">int</span> s = matrix.<span class="hljs-built_in">size</span>() * matrix[<span class="hljs-number">0</span>].<span class="hljs-built_in">size</span>();<br>        <span class="hljs-function">vector&lt;<span class="hljs-type">int</span>&gt; <span class="hljs-title">sp</span> <span class="hljs-params">(s)</span></span>;<br><br>        <span class="hljs-type">int</span> h1 = <span class="hljs-number">0</span>, h2 = matrix.<span class="hljs-built_in">size</span>() - <span class="hljs-number">1</span>, l1 = <span class="hljs-number">0</span>, l2 = matrix[<span class="hljs-number">0</span>].<span class="hljs-built_in">size</span>() - <span class="hljs-number">1</span>;<br>        <span class="hljs-type">int</span> idx = <span class="hljs-number">0</span>;<br>        <span class="hljs-keyword">while</span> (idx &lt; s)<br>        &#123;<br>            <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> j = h1; j &lt; matrix[<span class="hljs-number">0</span>].<span class="hljs-built_in">size</span>() - h1 &amp;&amp; idx &lt; s; j++)<br>               sp[idx++] = matrix[h1][j];<br>            h1++;<br>            <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = h1; i &lt; matrix.<span class="hljs-built_in">size</span>() - h1 &amp;&amp; idx &lt; s; i++)<br>                sp[idx++] = matrix[i][l2];<br>            <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> j = matrix[<span class="hljs-number">0</span>].<span class="hljs-built_in">size</span>() - h1; j &gt;= h1 - <span class="hljs-number">1</span> &amp;&amp; idx &lt; s; j--)<br>                sp[idx++] = matrix[h2][j];<br>            <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = matrix.<span class="hljs-built_in">size</span>() - h1 - <span class="hljs-number">1</span>; i &gt;= h1 &amp;&amp; idx &lt; s; i--)<br>                sp[idx++] = matrix[i][l1];<br>            h2--;<br>            l1++;<br>            l2--;<br>        &#125;<br>        <span class="hljs-keyword">return</span> sp;<br>    &#125;<br>&#125;;<br></code></pre></td></tr></table></figure>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> &#123;<br><span class="hljs-keyword">public</span>:<br>    <span class="hljs-function">vector&lt;<span class="hljs-type">int</span>&gt; <span class="hljs-title">smallerNumbersThanCurrent</span><span class="hljs-params">(vector&lt;<span class="hljs-type">int</span>&gt;&amp; nums)</span> </span>&#123;<br>        unordered_map&lt;<span class="hljs-type">int</span>, <span class="hljs-type">int</span>&gt; m;<br>        <span class="hljs-type">int</span> len = nums.<span class="hljs-built_in">size</span>();<br>        <span class="hljs-function">vector&lt;<span class="hljs-type">int</span>&gt; <span class="hljs-title">result</span> <span class="hljs-params">(len)</span></span>;<br>        <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">0</span>;i &lt; len;i++)<br>            m[nums[i]]++;<br>        <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">0</span>;i &lt; len;i++)<br>            <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> j = <span class="hljs-number">0</span>;j &lt; nums[i];j++)<br>                result[i] += m[j];<br>        <span class="hljs-keyword">return</span> result;<br>    &#125;<br>&#125;;<br></code></pre></td></tr></table></figure>
                 
               </div>
             
@@ -344,7 +350,7 @@
       
         <a href="/tags/LeetCode/">#LeetCode</a>
       
-        <a href="/tags/%E6%A8%A1%E6%8B%9F/">#模拟</a>
+        <a href="/tags/%E5%93%88%E5%B8%8C%E8%A1%A8/">#哈希表</a>
       
     </div>
   
@@ -356,8 +362,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>54.螺旋矩阵</div>
-      <div>https://boger.website/2022/06/23/54-螺旋矩阵/</div>
+      <div>1365.有多少小于当前数字的数字</div>
+      <div>https://boger.website/2022/06/23/1365-有多少小于当前数字的数字/</div>
     </div>
     <div class="license-meta">
       
@@ -399,9 +405,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2022/06/23/1365-%E6%9C%89%E5%A4%9A%E5%B0%91%E5%B0%8F%E4%BA%8E%E5%BD%93%E5%89%8D%E6%95%B0%E5%AD%97%E7%9A%84%E6%95%B0%E5%AD%97/" title="1365.有多少小于当前数字的数字">
+                      <a href="/2022/06/23/941-%E6%9C%89%E6%95%88%E7%9A%84%E5%B1%B1%E8%84%89%E6%95%B0%E7%BB%84/" title="941.有效的山脉数组">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">1365.有多少小于当前数字的数字</span>
+                        <span class="hidden-mobile">941.有效的山脉数组</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -409,8 +415,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2022/06/23/59-%E8%9E%BA%E6%97%8B%E7%9F%A9%E9%98%B5II/" title="59.螺旋矩阵II">
-                        <span class="hidden-mobile">59.螺旋矩阵II</span>
+                      <a href="/2022/06/23/54-%E8%9E%BA%E6%97%8B%E7%9F%A9%E9%98%B5/" title="54.螺旋矩阵">
+                        <span class="hidden-mobile">54.螺旋矩阵</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
