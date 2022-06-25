@@ -4,6 +4,130 @@
   
   
   <entry>
+    <title>93.复原IP地址</title>
+    <link href="/2022/06/25/93-%E5%A4%8D%E5%8E%9FIP%E5%9C%B0%E5%9D%80/"/>
+    <url>/2022/06/25/93-%E5%A4%8D%E5%8E%9FIP%E5%9C%B0%E5%9D%80/</url>
+    
+    <content type="html"><![CDATA[<h3 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h3><p><a href="https://leetcode.cn/problems/restore-ip-addresses/">力扣链接</a></p><p><strong>有效 IP 地址</strong> 正好由四个整数（每个整数位于 0 到 255 之间组成，且不能含有前导 0），整数之间用 ‘.’ 分隔。</p><span id="more"></span><ul><li>例如：”0.1.2.201” 和 “192.168.1.1” 是 <strong>有效</strong> IP 地址，但是 “0.011.255.245”、”192.168.1.312” 和 “<a href="mailto:&#49;&#57;&#x32;&#x2e;&#x31;&#54;&#56;&#64;&#x31;&#46;&#49;">&#49;&#57;&#x32;&#x2e;&#x31;&#54;&#56;&#64;&#x31;&#46;&#49;</a>“ 是 <strong>无效</strong> IP 地址。<br>给定一个只包含数字的字符串 s ，用以表示一个 IP 地址，返回所有可能的<strong>有效 IP 地址</strong>，这些地址可以通过在 s 中插入 ‘.’ 来形成。你 <strong>不能</strong> 重新排序或删除 s 中的任何数字。你可以按 <strong>任何</strong> 顺序返回答案。</li></ul><p>示例 1：</p><pre><code class="hljs">输入：s = &quot;25525511135&quot;输出：[&quot;255.255.11.135&quot;,&quot;255.255.111.35&quot;]</code></pre><p>示例 2：</p><pre><code class="hljs">输入：s = &quot;0000&quot;输出：[&quot;0.0.0.0&quot;]</code></pre><p>示例 3：</p><pre><code class="hljs">输入：s = &quot;101023&quot;输出：[&quot;1.0.10.23&quot;,&quot;1.0.102.3&quot;,&quot;10.1.0.23&quot;,&quot;10.10.2.3&quot;,&quot;101.0.2.3&quot;]</code></pre><p>提示：</p><ul><li>1 &lt;= s.length &lt;= 20</li><li>s 仅由数字组成</li></ul><h3 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h3><blockquote><p>代码来源：代码随想录</p></blockquote><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> &#123;<br><span class="hljs-keyword">private</span>:<br>    vector&lt;string&gt; result;<span class="hljs-comment">// 记录结果</span><br>    <span class="hljs-comment">// startIndex: 搜索的起始位置，pointNum:添加逗点的数量</span><br>    <span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">backtracking</span><span class="hljs-params">(string&amp; s, <span class="hljs-type">int</span> startIndex, <span class="hljs-type">int</span> pointNum)</span> </span>&#123;<br>        <span class="hljs-keyword">if</span> (pointNum == <span class="hljs-number">3</span>) &#123; <span class="hljs-comment">// 逗点数量为3时，分隔结束</span><br>            <span class="hljs-comment">// 判断第四段子字符串是否合法，如果合法就放进result中</span><br>            <span class="hljs-keyword">if</span> (<span class="hljs-built_in">isValid</span>(s, startIndex, s.<span class="hljs-built_in">size</span>() - <span class="hljs-number">1</span>)) &#123;<br>                result.<span class="hljs-built_in">push_back</span>(s);<br>            &#125;<br>            <span class="hljs-keyword">return</span>;<br>        &#125;<br>        <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = startIndex; i &lt; s.<span class="hljs-built_in">size</span>(); i++) &#123;<br>            <span class="hljs-keyword">if</span> (<span class="hljs-built_in">isValid</span>(s, startIndex, i)) &#123; <span class="hljs-comment">// 判断 [startIndex,i] 这个区间的子串是否合法</span><br>                s.<span class="hljs-built_in">insert</span>(s.<span class="hljs-built_in">begin</span>() + i + <span class="hljs-number">1</span> , <span class="hljs-string">&#x27;.&#x27;</span>);  <span class="hljs-comment">// 在i的后面插入一个逗点</span><br>                pointNum++;<br>                <span class="hljs-built_in">backtracking</span>(s, i + <span class="hljs-number">2</span>, pointNum);   <span class="hljs-comment">// 插入逗点之后下一个子串的起始位置为i+2</span><br>                pointNum--;                         <span class="hljs-comment">// 回溯</span><br>                s.<span class="hljs-built_in">erase</span>(s.<span class="hljs-built_in">begin</span>() + i + <span class="hljs-number">1</span>);         <span class="hljs-comment">// 回溯删掉逗点</span><br>            &#125; <span class="hljs-keyword">else</span> <span class="hljs-keyword">break</span>; <span class="hljs-comment">// 不合法，直接结束本层循环</span><br>        &#125;<br>    &#125;<br>    <span class="hljs-comment">// 判断字符串s在左闭又闭区间[start, end]所组成的数字是否合法</span><br>    <span class="hljs-function"><span class="hljs-type">bool</span> <span class="hljs-title">isValid</span><span class="hljs-params">(<span class="hljs-type">const</span> string&amp; s, <span class="hljs-type">int</span> start, <span class="hljs-type">int</span> end)</span> </span>&#123;<br>        <span class="hljs-keyword">if</span> (start &gt; end) <br>            <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;<br>        <span class="hljs-keyword">if</span> (s[start] == <span class="hljs-string">&#x27;0&#x27;</span> &amp;&amp; start != end)  <span class="hljs-comment">// 0开头的数字不合法</span><br>            <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;<br>        <span class="hljs-type">int</span> num = <span class="hljs-number">0</span>;<br>        <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = start; i &lt;= end; i++) &#123;<br>            <span class="hljs-keyword">if</span> (s[i] &gt; <span class="hljs-string">&#x27;9&#x27;</span> || s[i] &lt; <span class="hljs-string">&#x27;0&#x27;</span>) &#123; <span class="hljs-comment">// 遇到非数字字符不合法</span><br>                <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;<br>            &#125;<br>            num = num * <span class="hljs-number">10</span> + (s[i] - <span class="hljs-string">&#x27;0&#x27;</span>);<br>            <span class="hljs-keyword">if</span> (num &gt; <span class="hljs-number">255</span>) &#123; <span class="hljs-comment">// 如果大于255了不合法</span><br>                <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;<br>            &#125;<br>        &#125;<br>        <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;<br>    &#125;<br><span class="hljs-keyword">public</span>:<br>    <span class="hljs-function">vector&lt;string&gt; <span class="hljs-title">restoreIpAddresses</span><span class="hljs-params">(string s)</span> </span>&#123;<br>        result.<span class="hljs-built_in">clear</span>();<br>        <span class="hljs-keyword">if</span> (s.<span class="hljs-built_in">size</span>() &lt; <span class="hljs-number">4</span> || s.<span class="hljs-built_in">size</span>() &gt; <span class="hljs-number">12</span>) <span class="hljs-keyword">return</span> result; <span class="hljs-comment">// 算是剪枝了</span><br>        <span class="hljs-built_in">backtracking</span>(s, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>);<br>        <span class="hljs-keyword">return</span> result;<br>    &#125;<br>&#125;;<br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    <categories>
+      
+      <category>Leetcode</category>
+      
+      <category>回溯算法</category>
+      
+      <category>组合</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>LeetCode</tag>
+      
+      <tag>回溯算法</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>131.分割回文串</title>
+    <link href="/2022/06/25/131-%E5%88%86%E5%89%B2%E5%9B%9E%E6%96%87%E4%B8%B2/"/>
+    <url>/2022/06/25/131-%E5%88%86%E5%89%B2%E5%9B%9E%E6%96%87%E4%B8%B2/</url>
+    
+    <content type="html"><![CDATA[<h3 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h3><p><a href="https://leetcode.cn/problems/palindrome-partitioning/">力扣链接</a></p><p>给你一个字符串 s，请你将 s 分割成一些子串，使每个子串都是 回文串 。返回 s 所有可能的分割方案。</p><span id="more"></span><p>回文串 是正着读和反着读都一样的字符串。</p><p>示例 1：</p><pre><code class="hljs">输入：s = &quot;aab&quot;输出：[[&quot;a&quot;,&quot;a&quot;,&quot;b&quot;],[&quot;aa&quot;,&quot;b&quot;]]</code></pre><p>示例 2：</p><pre><code class="hljs">输入：s = &quot;a&quot;输出：[[&quot;a&quot;]]</code></pre><p>提示：</p><ul><li>1 &lt;= s.length &lt;= 16</li><li>s 仅由小写英文字母组成</li></ul><h3 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h3><blockquote><p>思路：<br>按 回溯法 分割子串<br>判断是否为回文<br><strong>! 要认清 <code>i</code> 与 <code>startIndex</code> 的关系</strong> </p></blockquote><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span><br>&#123;<br><span class="hljs-keyword">private</span>:<br>    vector&lt;vector&lt;string&gt;&gt; result;<br>    vector&lt;string&gt; path; <span class="hljs-comment">// 放已经回文的子串</span><br>    <span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">backtracking</span><span class="hljs-params">(<span class="hljs-type">const</span> string &amp;s, <span class="hljs-type">int</span> startIndex)</span></span><br><span class="hljs-function">    </span>&#123;<br>        <span class="hljs-comment">// 如果起始位置已经大于s的大小，说明已经找到了一组分割方案了</span><br>        <span class="hljs-keyword">if</span> (startIndex &gt;= s.<span class="hljs-built_in">size</span>())<br>        &#123;<br>            result.<span class="hljs-built_in">push_back</span>(path);<br>            <span class="hljs-keyword">return</span>;<br>        &#125;<br>        <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = startIndex; i &lt; s.<span class="hljs-built_in">size</span>(); i++)<br>        &#123;<br>            <span class="hljs-keyword">if</span> (<span class="hljs-built_in">isPalindrome</span>(s, startIndex, i))<br>            &#123; <span class="hljs-comment">// 是回文子串</span><br>                <span class="hljs-comment">// 获取[startIndex,i]在s中的子串</span><br>                string str = s.<span class="hljs-built_in">substr</span>(startIndex, i - startIndex + <span class="hljs-number">1</span>);<br>                path.<span class="hljs-built_in">push_back</span>(str);<br>            &#125;<br>            <span class="hljs-keyword">else</span><br>            &#123; <span class="hljs-comment">// 不是回文，跳过</span><br>                <span class="hljs-keyword">continue</span>;<br>            &#125;<br>            <span class="hljs-built_in">backtracking</span>(s, i + <span class="hljs-number">1</span>); <span class="hljs-comment">// 寻找i+1为起始位置的子串</span><br>            path.<span class="hljs-built_in">pop_back</span>();        <span class="hljs-comment">// 回溯过程，弹出本次已经填在的子串</span><br>        &#125;<br>    &#125;<br>    <span class="hljs-function"><span class="hljs-type">bool</span> <span class="hljs-title">isPalindrome</span><span class="hljs-params">(<span class="hljs-type">const</span> string &amp;s, <span class="hljs-type">int</span> start, <span class="hljs-type">int</span> end)</span></span><br><span class="hljs-function">    </span>&#123;<br>        <span class="hljs-keyword">if</span> (start == end)<br>            <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;<br>        <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = start, j = end; i &lt; j; i++, j--)<br>        &#123;<br>            <span class="hljs-keyword">if</span> (s[i] != s[j])<br>            &#123;<br>                <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;<br>            &#125;<br>        &#125;<br>        <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;<br>    &#125;<br><br><span class="hljs-keyword">public</span>:<br>    vector&lt;vector&lt;string&gt;&gt; <span class="hljs-built_in">partition</span>(string s)<br>    &#123;<br>        result.<span class="hljs-built_in">clear</span>();<br>        path.<span class="hljs-built_in">clear</span>();<br>        <span class="hljs-built_in">backtracking</span>(s, <span class="hljs-number">0</span>);<br>        <span class="hljs-keyword">return</span> result;<br>    &#125;<br>&#125;;<br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    <categories>
+      
+      <category>Leetcode</category>
+      
+      <category>回溯算法</category>
+      
+      <category>组合</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>LeetCode</tag>
+      
+      <tag>回溯算法</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>40.组合总和II</title>
+    <link href="/2022/06/25/40-%E7%BB%84%E5%90%88%E6%80%BB%E5%92%8CII/"/>
+    <url>/2022/06/25/40-%E7%BB%84%E5%90%88%E6%80%BB%E5%92%8CII/</url>
+    
+    <content type="html"><![CDATA[<h3 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h3><p><a href="https://leetcode.cn/problems/combination-sum-ii/">力扣链接</a></p><p>给定一个候选人编号的集合 <code>candidates</code> 和一个目标数 <code>target</code> ，找出 <code>candidates</code> 中所有可以使数字和为 <code>target</code> 的组合。</p><span id="more"></span><p><code>candidates</code> 中的每个数字在每个组合中只能使用 <strong>一次</strong> 。</p><p>注意：解集不能包含重复的组合。 </p><p>示例 1:</p><pre><code class="hljs">输入: candidates = [10,1,2,7,6,1,5], target = 8,输出:[[1,1,6],[1,2,5],[1,7],[2,6]]</code></pre><p>示例 2:</p><pre><code class="hljs">输入: candidates = [2,5,2,1,2], target = 5,输出:[[1,2,2],[5]]</code></pre><p>提示:</p><ul><li>1 &lt;= candidates.length &lt;= 100</li><li>1 &lt;= candidates[i] &lt;= 50</li><li>1 &lt;= target &lt;= 30</li></ul><h3 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h3><blockquote><p><strong>难点</strong>：<br>本题 candidates 中的每个数字在每个组合中只能使用一次。<br>本题 candidates 的元素是有重复的，</p></blockquote><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span><br>&#123;<br><span class="hljs-keyword">private</span>:<br>    vector&lt;vector&lt;<span class="hljs-type">int</span>&gt;&gt; result;<br>    vector&lt;<span class="hljs-type">int</span>&gt; path;<br>    <span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">backtracking</span><span class="hljs-params">(vector&lt;<span class="hljs-type">int</span>&gt; &amp;candidates, <span class="hljs-type">int</span> target, <span class="hljs-type">int</span> index, <span class="hljs-type">int</span> sum)</span></span><br><span class="hljs-function">    </span>&#123;<br>        <span class="hljs-keyword">if</span> (sum == target)<br>        &#123;<br>            result.<span class="hljs-built_in">push_back</span>(path);<br>            <span class="hljs-keyword">return</span>;<br>        &#125;<br>        <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = index; i &lt; candidates.<span class="hljs-built_in">size</span>() &amp;&amp; sum + candidates[i] &lt;= target; i++)<br>        &#123;<br>            <span class="hljs-keyword">if</span> (i &gt; index &amp;&amp; candidates[i] == candidates[i - <span class="hljs-number">1</span>])<br>                <span class="hljs-keyword">continue</span>;<br>            path.<span class="hljs-built_in">push_back</span>(candidates[i]);<br>            <span class="hljs-built_in">backtracking</span>(candidates, target, i + <span class="hljs-number">1</span>, sum + candidates[i]);<br>            path.<span class="hljs-built_in">pop_back</span>();<br>        &#125;<br>    &#125;<br><br><span class="hljs-keyword">public</span>:<br>    vector&lt;vector&lt;<span class="hljs-type">int</span>&gt;&gt; <span class="hljs-built_in">combinationSum2</span>(vector&lt;<span class="hljs-type">int</span>&gt; &amp;candidates, <span class="hljs-type">int</span> target)<br>    &#123;<br>        <span class="hljs-built_in">sort</span>(candidates.<span class="hljs-built_in">begin</span>(), candidates.<span class="hljs-built_in">end</span>());<br>        <span class="hljs-built_in">backtracking</span>(candidates, target, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>);<br>        <span class="hljs-keyword">return</span> result;<br>    &#125;<br>&#125;;<br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    <categories>
+      
+      <category>Leetcode</category>
+      
+      <category>回溯算法</category>
+      
+      <category>组合</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>LeetCode</tag>
+      
+      <tag>回溯算法</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>39.组合总和</title>
+    <link href="/2022/06/25/39-%E7%BB%84%E5%90%88%E6%80%BB%E5%92%8C/"/>
+    <url>/2022/06/25/39-%E7%BB%84%E5%90%88%E6%80%BB%E5%92%8C/</url>
+    
+    <content type="html"><![CDATA[<h3 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h3><p><a href="https://leetcode.cn/problems/combination-sum/">力扣链接</a></p><p>给你一个 <strong>无重复元素</strong> 的整数数组 <code>candidates</code> 和一个目标整数 <code>target</code> ，找出 <code>candidates</code> 中可以使数字和为目标数 <code>target</code> 的 所有 <strong>不同组合</strong> ，并以列表形式返回。你可以按 <strong>任意顺序</strong> 返回这些组合。</p><span id="more"></span><p><code>candidates</code> 中的 <strong>同一个</strong> 数字可以 <strong>无限制重复被选取</strong> 。如果至少一个数字的被选数量不同，则两种组合是不同的。 </p><p>对于给定的输入，保证和为 <code>target</code> 的不同组合数少于 150 个。</p><p>示例 1：</p><pre><code class="hljs">输入：candidates = [2,3,6,7], target = 7输出：[[2,2,3],[7]]解释：2 和 3 可以形成一组候选，2 + 2 + 3 = 7 。注意 2 可以使用多次。7 也是一个候选， 7 = 7 。仅有这两种组合。</code></pre><p>示例 2：</p><pre><code class="hljs">输入: candidates = [2,3,5], target = 8输出: [[2,2,2,2],[2,3,3],[3,5]]</code></pre><p>示例 3：</p><pre><code class="hljs">输入: candidates = [2], target = 1输出: []</code></pre><p>提示：</p><ul><li>1 &lt;= candidates.length &lt;= 30</li><li>1 &lt;= candidates[i] &lt;= 200</li><li>candidate 中的每个元素都 互不相同</li><li>1 &lt;= target &lt;= 500</li></ul><h3 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> &#123;<br><span class="hljs-keyword">private</span>:<br>    vector&lt;vector&lt;<span class="hljs-type">int</span>&gt;&gt;result;<br>    vector&lt;<span class="hljs-type">int</span>&gt; part;<br>    <span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">backtracking</span><span class="hljs-params">(vector&lt;<span class="hljs-type">int</span>&gt;&amp; nums, <span class="hljs-type">int</span> target,<span class="hljs-type">int</span> index,<span class="hljs-type">int</span> subsum)</span></span><br><span class="hljs-function">    </span>&#123;<br>        <span class="hljs-keyword">if</span> (subsum == target)<br>        &#123;<br>            result.<span class="hljs-built_in">push_back</span>(part);<br>            <span class="hljs-keyword">return</span>;<br>        &#125;<br>        <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = index;i &lt; nums.<span class="hljs-built_in">size</span>() &amp;&amp; subsum + nums[i] &lt;= target;i++)<br>        &#123;<br>            part.<span class="hljs-built_in">push_back</span>(nums[i]);<br>            <span class="hljs-built_in">backtracking</span>(nums,target,i,subsum+nums[i]);<br>            part.<span class="hljs-built_in">pop_back</span>();<br>        &#125;<br>    &#125;<br><span class="hljs-keyword">public</span>:<br>    vector&lt;vector&lt;<span class="hljs-type">int</span>&gt;&gt; <span class="hljs-built_in">combinationSum</span>(vector&lt;<span class="hljs-type">int</span>&gt;&amp; candidates, <span class="hljs-type">int</span> target) &#123;<br>        <span class="hljs-built_in">sort</span>(candidates.<span class="hljs-built_in">begin</span>(), candidates.<span class="hljs-built_in">end</span>());<br>        <span class="hljs-built_in">backtracking</span>(candidates,target,<span class="hljs-number">0</span>,<span class="hljs-number">0</span>);<br>        <span class="hljs-keyword">return</span> result;<br>    &#125;<br>&#125;;<br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    <categories>
+      
+      <category>Leetcode</category>
+      
+      <category>回溯算法</category>
+      
+      <category>组合</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>LeetCode</tag>
+      
+      <tag>回溯算法</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>17.电话号码的字母组合</title>
     <link href="/2022/06/25/17-%E7%94%B5%E8%AF%9D%E5%8F%B7%E7%A0%81%E7%9A%84%E5%AD%97%E6%AF%8D%E7%BB%84%E5%90%88/"/>
     <url>/2022/06/25/17-%E7%94%B5%E8%AF%9D%E5%8F%B7%E7%A0%81%E7%9A%84%E5%AD%97%E6%AF%8D%E7%BB%84%E5%90%88/</url>
