@@ -17,26 +17,28 @@
   <meta name="author" content="Boger">
   <meta name="keywords" content="">
   
-    <meta name="description" content="题目力扣链接 如果连续数字之间的差严格地在正数和负数之间交替，则数字序列称为 摆动序列 。第一个差（如果存在的话）可能是正数或负数。仅有一个元素或者含两个不等元素的序列也视作摆动序列。">
+    <meta name="description" content="题目力扣链接 一个机器人位于一个 m x n 网格的左上角 （起始点在下图中标记为 “Start” ）。 机器人每次只能向下或者向右移动一步。机器人试图达到网格的右下角（在下图中标记为 “Finish”）。 现在考虑网格中有障碍物。那么从左上角到右下角将会有多少条不同的路径？">
 <meta property="og:type" content="article">
-<meta property="og:title" content="376.摆动序列">
-<meta property="og:url" content="https://boger.website/2022/06/27/376-%E6%91%86%E5%8A%A8%E5%BA%8F%E5%88%97/index.html">
+<meta property="og:title" content="63.不同路径II">
+<meta property="og:url" content="https://boger.website/2022/06/29/63-%E4%B8%8D%E5%90%8C%E8%B7%AF%E5%BE%84II/index.html">
 <meta property="og:site_name" content="Boger">
-<meta property="og:description" content="题目力扣链接 如果连续数字之间的差严格地在正数和负数之间交替，则数字序列称为 摆动序列 。第一个差（如果存在的话）可能是正数或负数。仅有一个元素或者含两个不等元素的序列也视作摆动序列。">
+<meta property="og:description" content="题目力扣链接 一个机器人位于一个 m x n 网格的左上角 （起始点在下图中标记为 “Start” ）。 机器人每次只能向下或者向右移动一步。机器人试图达到网格的右下角（在下图中标记为 “Finish”）。 现在考虑网格中有障碍物。那么从左上角到右下角将会有多少条不同的路径？">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2022-06-27T14:58:01.799Z">
-<meta property="article:modified_time" content="2022-06-27T17:07:18.241Z">
+<meta property="og:image" content="https://api2.mubu.com/v3/document_image/3715ebc0-b25e-4bef-adef-4b166edd214d-785422.jpg">
+<meta property="og:image" content="https://api2.mubu.com/v3/document_image/db8f2cfc-b678-4b82-a19a-01a0773b04c0-785422.jpg">
+<meta property="article:published_time" content="2022-06-28T16:15:46.738Z">
+<meta property="article:modified_time" content="2022-06-28T16:35:06.107Z">
 <meta property="article:author" content="Boger">
 <meta property="article:tag" content="LeetCode">
 <meta property="article:tag" content="动态规划">
-<meta property="article:tag" content="贪心算法">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://api2.mubu.com/v3/document_image/3715ebc0-b25e-4bef-adef-4b166edd214d-785422.jpg">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>376.摆动序列 - Boger</title>
+  <title>63.不同路径II - Boger</title>
   
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
@@ -230,7 +232,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="376.摆动序列"></span>
+            <span id="subtitle" data-typed-text="63.不同路径II"></span>
           
         </div>
 
@@ -241,8 +243,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2022-06-27 22:58" pubdate>
-          2022年6月27日 晚上
+        <time datetime="2022-06-29 00:15" pubdate>
+          2022年6月29日 凌晨
         </time>
       </span>
     
@@ -253,7 +255,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          1.3k 字
+          1k 字
         
       </span>
     
@@ -264,7 +266,7 @@
         
         
         
-          11 分钟
+          9 分钟
         
       </span>
     
@@ -302,45 +304,39 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">376.摆动序列</h1>
+            <h1 style="display: none">63.不同路径II</h1>
             
             
               <div class="markdown-body">
                 
-                <h3 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h3><p><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/wiggle-subsequence/">力扣链接</a></p>
-<p>如果连续数字之间的差严格地在正数和负数之间交替，则数字序列称为 摆动序列 。第一个差（如果存在的话）可能是正数或负数。仅有一个元素或者含两个不等元素的序列也视作摆动序列。</p>
+                <h3 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h3><p><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/unique-paths-ii/">力扣链接</a></p>
+<p>一个机器人位于一个 m x n 网格的左上角 （起始点在下图中标记为 “Start” ）。</p>
+<p>机器人每次只能向下或者向右移动一步。机器人试图达到网格的右下角（在下图中标记为 “Finish”）。</p>
+<p>现在考虑网格中有障碍物。那么从左上角到右下角将会有多少条不同的路径？</p>
 <span id="more"></span>
-<ul>
-<li><p>例如， [1, 7, 4, 9, 2, 5] 是一个 摆动序列 ，因为差值 (6, -3, 5, -7, 3) 是正负交替出现的。</p>
-</li>
-<li><p>相反，[1, 4, 7, 2, 5] 和 [1, 7, 4, 5, 5] 不是摆动序列，第一个序列是因为它的前两个差值都是正数，第二个序列是因为它的最后一个差值为零。<br>子序列 可以通过从原始序列中删除一些（也可以不删除）元素来获得，剩下的元素保持其原始顺序。</p>
-</li>
-</ul>
-<p>给你一个整数数组 nums ，返回 nums 中作为 摆动序列 的 最长子序列的长度 。</p>
-<p>示例 1：</p>
-<pre><code class="hljs">输入：nums = [1,7,4,9,2,5]
-输出：6
-解释：整个序列均为摆动序列，各元素之间的差值为 (6, -3, 5, -7, 3) 。
-</code></pre>
-<p>示例 2：</p>
-<pre><code class="hljs">输入：nums = [1,17,5,10,13,15,10,5,16,8]
-输出：7
-解释：这个序列包含几个长度为 7 摆动序列。
-其中一个是 [1, 17, 10, 13, 10, 16, 8] ，各元素之间的差值为 (16, -7, 3, -3, 6, -8) 。
-</code></pre>
-<p>示例 3：</p>
-<pre><code class="hljs">输入：nums = [1,2,3,4,5,6,7,8,9]
+<p>网格中的障碍物和空位置分别用 1 和 0 来表示。</p>
+<p>示例 1：<br><img src="https://api2.mubu.com/v3/document_image/3715ebc0-b25e-4bef-adef-4b166edd214d-785422.jpg" srcset="/img/loading.gif" lazyload></p>
+<pre><code class="hljs">输入：obstacleGrid = [[0,0,0],[0,1,0],[0,0,0]]
 输出：2
+解释：3x3 网格的正中间有一个障碍物。
+从左上角到右下角一共有 2 条不同的路径：
+</code></pre>
+<ol>
+<li>向右 -&gt; 向右 -&gt; 向下 -&gt; 向下</li>
+<li>向下 -&gt; 向下 -&gt; 向右 -&gt; 向右<br>示例 2：</li>
+</ol>
+<p><img src="https://api2.mubu.com/v3/document_image/db8f2cfc-b678-4b82-a19a-01a0773b04c0-785422.jpg" srcset="/img/loading.gif" lazyload></p>
+<pre><code class="hljs">输入：obstacleGrid = [[0,1],[0,0]]
+输出：1
 </code></pre>
 <p>提示：</p>
 <ul>
-<li>1 &lt;= nums.length &lt;= 1000</li>
-<li>0 &lt;= nums[i] &lt;= 1000</li>
+<li>m == obstacleGrid.length</li>
+<li>n == obstacleGrid[i].length</li>
+<li>1 &lt;= m, n &lt;= 100</li>
+<li>obstacleGrid[i][j] 为 0 或 1</li>
 </ul>
-<h3 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h3><h4 id="解法一"><a href="#解法一" class="headerlink" title="解法一"></a>解法一</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> &#123;<br><span class="hljs-keyword">public</span>:<br>    <span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">wiggleMaxLength</span><span class="hljs-params">(vector&lt;<span class="hljs-type">int</span>&gt;&amp; nums)</span> </span>&#123;<br>        <span class="hljs-keyword">if</span> (nums.<span class="hljs-built_in">size</span>() &lt;= <span class="hljs-number">1</span>) <span class="hljs-keyword">return</span> nums.<span class="hljs-built_in">size</span>();<br>        <span class="hljs-type">int</span> curDiff = <span class="hljs-number">0</span>; <span class="hljs-comment">// 当前一对差值</span><br>        <span class="hljs-type">int</span> preDiff = <span class="hljs-number">0</span>; <span class="hljs-comment">// 前一对差值</span><br>        <span class="hljs-type">int</span> result = <span class="hljs-number">1</span>;  <span class="hljs-comment">// 记录峰值个数，序列默认序列最右边有一个峰值</span><br>        <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">0</span>; i &lt; nums.<span class="hljs-built_in">size</span>() - <span class="hljs-number">1</span>; i++) &#123;<br>            curDiff = nums[i + <span class="hljs-number">1</span>] - nums[i];<br>            <span class="hljs-comment">// 出现峰值</span><br>            <span class="hljs-keyword">if</span> ((curDiff &gt; <span class="hljs-number">0</span> &amp;&amp; preDiff &lt;= <span class="hljs-number">0</span>) || (preDiff &gt;= <span class="hljs-number">0</span> &amp;&amp; curDiff &lt; <span class="hljs-number">0</span>)) &#123;<br>                result++;<br>                preDiff = curDiff;<br>            &#125;<br>        &#125;<br>        <span class="hljs-keyword">return</span> result;<br>    &#125;<br>&#125;;<br></code></pre></td></tr></table></figure>
-<h4 id="解法二"><a href="#解法二" class="headerlink" title="解法二"></a>解法二</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> &#123;<br><span class="hljs-keyword">public</span>:<br>    <span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">wiggleMaxLength</span><span class="hljs-params">(vector&lt;<span class="hljs-type">int</span>&gt;&amp; nums)</span> </span>&#123;<br>    <span class="hljs-type">int</span> down = <span class="hljs-number">1</span>, up = <span class="hljs-number">1</span>;<br>    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">1</span>; i &lt; nums.<span class="hljs-built_in">size</span>(); i++) &#123;<br>        <span class="hljs-keyword">if</span> (nums[i] &gt; nums[i - <span class="hljs-number">1</span>])<br>            up = down + <span class="hljs-number">1</span>;<br>        <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (nums[i] &lt; nums[i - <span class="hljs-number">1</span>])<br>            down = up + <span class="hljs-number">1</span>;<br>    &#125;<br>    <span class="hljs-keyword">return</span> nums.<span class="hljs-built_in">size</span>() == <span class="hljs-number">0</span> ? <span class="hljs-number">0</span> : <span class="hljs-built_in">max</span>(down, up);<br>    &#125;<br>&#125;;<br></code></pre></td></tr></table></figure>
-
-
+<h3 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span><br>&#123;<br><span class="hljs-keyword">public</span>:<br>    <span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">uniquePathsWithObstacles</span><span class="hljs-params">(vector&lt;vector&lt;<span class="hljs-type">int</span>&gt;&gt; &amp;obstacleGrid)</span></span><br><span class="hljs-function">    </span>&#123;<br>        <span class="hljs-type">int</span> m = obstacleGrid.<span class="hljs-built_in">size</span>(), n = obstacleGrid[<span class="hljs-number">0</span>].<span class="hljs-built_in">size</span>();<br>        <span class="hljs-keyword">if</span> (obstacleGrid[m - <span class="hljs-number">1</span>][n - <span class="hljs-number">1</span>] == <span class="hljs-number">1</span> || obstacleGrid[<span class="hljs-number">0</span>][<span class="hljs-number">0</span>] == <span class="hljs-number">1</span>) <span class="hljs-comment">//如果在起点或终点出现了障碍，直接返回0</span><br>            <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>        vector&lt;vector&lt;<span class="hljs-type">int</span>&gt;&gt; <span class="hljs-built_in">dp</span>(m, <span class="hljs-built_in">vector</span>&lt;<span class="hljs-type">int</span>&gt;(n, <span class="hljs-number">0</span>));<br>        <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">0</span>; i &lt; n &amp;&amp; obstacleGrid[<span class="hljs-number">0</span>][i] == <span class="hljs-number">0</span>; i++)<br>            dp[<span class="hljs-number">0</span>][i] = <span class="hljs-number">1</span>;<br>        <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">0</span>; i &lt; m &amp;&amp; obstacleGrid[i][<span class="hljs-number">0</span>] == <span class="hljs-number">0</span>; i++)<br>            dp[i][<span class="hljs-number">0</span>] = <span class="hljs-number">1</span>;<br>        <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">1</span>; i &lt; m; i++)<br>            <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> j = <span class="hljs-number">1</span>; j &lt; n; j++)<br>            &#123;<br>                <span class="hljs-keyword">if</span> (obstacleGrid[i][j] == <span class="hljs-number">1</span>)<br>                    <span class="hljs-keyword">continue</span>;<br>                dp[i][j] = dp[i - <span class="hljs-number">1</span>][j] + dp[i][j - <span class="hljs-number">1</span>];<br>            &#125;<br>        <span class="hljs-keyword">return</span> dp[m - <span class="hljs-number">1</span>][n - <span class="hljs-number">1</span>];<br>    &#125;<br>&#125;;<br></code></pre></td></tr></table></figure>
                 
               </div>
             
@@ -363,7 +359,7 @@
   
     <span>></span>
     
-  <a href="/categories/Leetcode/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95/" class="category-chain-item">贪心算法</a>
+  <a href="/categories/Leetcode/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/" class="category-chain-item">动态规划</a>
   
   
 
@@ -384,8 +380,6 @@
       
         <a href="/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/">#动态规划</a>
       
-        <a href="/tags/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95/">#贪心算法</a>
-      
     </div>
   
 </div>
@@ -396,8 +390,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>376.摆动序列</div>
-      <div>https://boger.website/2022/06/27/376-摆动序列/</div>
+      <div>63.不同路径II</div>
+      <div>https://boger.website/2022/06/29/63-不同路径II/</div>
     </div>
     <div class="license-meta">
       
@@ -409,7 +403,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2022年6月27日</div>
+          <div>2022年6月29日</div>
         </div>
       
       
@@ -439,9 +433,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2022/06/28/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E7%90%86%E8%AE%BA/" title="动态规划理论">
+                      <a href="/2022/06/29/343-%E6%95%B4%E6%95%B0%E6%8B%86%E5%88%86/" title="343.整数拆分">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">动态规划理论</span>
+                        <span class="hidden-mobile">343.整数拆分</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -449,8 +443,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2022/06/27/455-%E5%88%86%E5%8F%91%E9%A5%BC%E5%B9%B2/" title="455.分发饼干">
-                        <span class="hidden-mobile">455.分发饼干</span>
+                      <a href="/2022/06/29/62-%E4%B8%8D%E5%90%8C%E8%B7%AF%E5%BE%84/" title="62.不同路径">
+                        <span class="hidden-mobile">62.不同路径</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
