@@ -17,26 +17,25 @@
   <meta name="author" content="Boger">
   <meta name="keywords" content="">
   
-    <meta name="description" content="题目力扣链接 如果连续数字之间的差严格地在正数和负数之间交替，则数字序列称为 摆动序列 。第一个差（如果存在的话）可能是正数或负数。仅有一个元素或者含两个不等元素的序列也视作摆动序列。">
+    <meta name="description" content="题目力扣链接 在一条环路上有 n 个加油站，其中第 i 个加油站有汽油 gas[i] 升。 你有一辆油箱容量无限的的汽车，从第 i 个加油站开往第 i+1 个加油站需要消耗汽油 cost[i] 升。你从其中的一个加油站出发，开始时油箱为空。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="376.摆动序列">
-<meta property="og:url" content="https://boger.website/2022/06/27/376-%E6%91%86%E5%8A%A8%E5%BA%8F%E5%88%97/index.html">
+<meta property="og:title" content="134.加油站">
+<meta property="og:url" content="https://boger.website/2022/06/30/134-%E5%8A%A0%E6%B2%B9%E7%AB%99/index.html">
 <meta property="og:site_name" content="Boger">
-<meta property="og:description" content="题目力扣链接 如果连续数字之间的差严格地在正数和负数之间交替，则数字序列称为 摆动序列 。第一个差（如果存在的话）可能是正数或负数。仅有一个元素或者含两个不等元素的序列也视作摆动序列。">
+<meta property="og:description" content="题目力扣链接 在一条环路上有 n 个加油站，其中第 i 个加油站有汽油 gas[i] 升。 你有一辆油箱容量无限的的汽车，从第 i 个加油站开往第 i+1 个加油站需要消耗汽油 cost[i] 升。你从其中的一个加油站出发，开始时油箱为空。">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2022-06-27T14:58:01.799Z">
-<meta property="article:modified_time" content="2022-06-27T17:07:18.241Z">
+<meta property="article:published_time" content="2022-06-29T16:41:59.885Z">
+<meta property="article:modified_time" content="2022-06-29T16:56:02.388Z">
 <meta property="article:author" content="Boger">
 <meta property="article:tag" content="LeetCode">
 <meta property="article:tag" content="贪心算法">
-<meta property="article:tag" content="动态规划">
 <meta name="twitter:card" content="summary_large_image">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>376.摆动序列 - Boger</title>
+  <title>134.加油站 - Boger</title>
   
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
@@ -230,7 +229,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="376.摆动序列"></span>
+            <span id="subtitle" data-typed-text="134.加油站"></span>
           
         </div>
 
@@ -241,8 +240,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2022-06-27 22:58" pubdate>
-          2022年6月27日 晚上
+        <time datetime="2022-06-30 00:41" pubdate>
+          2022年6月30日 凌晨
         </time>
       </span>
     
@@ -253,7 +252,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          1.3k 字
+          1.1k 字
         
       </span>
     
@@ -264,7 +263,7 @@
         
         
         
-          11 分钟
+          10 分钟
         
       </span>
     
@@ -302,45 +301,47 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">376.摆动序列</h1>
+            <h1 style="display: none">134.加油站</h1>
             
             
               <div class="markdown-body">
                 
-                <h3 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h3><p><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/wiggle-subsequence/">力扣链接</a></p>
-<p>如果连续数字之间的差严格地在正数和负数之间交替，则数字序列称为 摆动序列 。第一个差（如果存在的话）可能是正数或负数。仅有一个元素或者含两个不等元素的序列也视作摆动序列。</p>
+                <h3 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h3><p><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/gas-station/">力扣链接</a></p>
+<p>在一条环路上有 n 个加油站，其中第 i 个加油站有汽油 gas[i] 升。</p>
+<p>你有一辆油箱容量无限的的汽车，从第 i 个加油站开往第 i+1 个加油站需要消耗汽油 cost[i] 升。你从其中的一个加油站出发，开始时油箱为空。</p>
 <span id="more"></span>
+<p>给定两个整数数组 gas 和 cost ，如果你可以绕环路行驶一周，则返回出发时加油站的编号，否则返回 -1 。如果存在解，则 保证 它是 唯一 的。</p>
+<p>示例 1:</p>
+<pre><code class="hljs">输入: gas = [1,2,3,4,5], cost = [3,4,5,1,2]
+输出: 3
+解释:
+从 3 号加油站(索引为 3 处)出发，可获得 4 升汽油。此时油箱有 = 0 + 4 = 4 升汽油
+开往 4 号加油站，此时油箱有 4 - 1 + 5 = 8 升汽油
+开往 0 号加油站，此时油箱有 8 - 2 + 1 = 7 升汽油
+开往 1 号加油站，此时油箱有 7 - 3 + 2 = 6 升汽油
+开往 2 号加油站，此时油箱有 6 - 4 + 3 = 5 升汽油
+开往 3 号加油站，你需要消耗 5 升汽油，正好足够你返回到 3 号加油站。
+因此，3 可为起始索引。
+</code></pre>
+<p>示例 2:</p>
+<pre><code class="hljs">输入: gas = [2,3,4], cost = [3,4,3]
+输出: -1
+解释:
+你不能从 0 号或 1 号加油站出发，因为没有足够的汽油可以让你行驶到下一个加油站。
+我们从 2 号加油站出发，可以获得 4 升汽油。 此时油箱有 = 0 + 4 = 4 升汽油
+开往 0 号加油站，此时油箱有 4 - 3 + 2 = 3 升汽油
+开往 1 号加油站，此时油箱有 3 - 3 + 3 = 3 升汽油
+你无法返回 2 号加油站，因为返程需要消耗 4 升汽油，但是你的油箱只有 3 升汽油。
+因此，无论怎样，你都不可能绕环路行驶一周。
+</code></pre>
+<p>提示:</p>
 <ul>
-<li><p>例如， [1, 7, 4, 9, 2, 5] 是一个 摆动序列 ，因为差值 (6, -3, 5, -7, 3) 是正负交替出现的。</p>
-</li>
-<li><p>相反，[1, 4, 7, 2, 5] 和 [1, 7, 4, 5, 5] 不是摆动序列，第一个序列是因为它的前两个差值都是正数，第二个序列是因为它的最后一个差值为零。<br>子序列 可以通过从原始序列中删除一些（也可以不删除）元素来获得，剩下的元素保持其原始顺序。</p>
-</li>
+<li>gas.length == n</li>
+<li>cost.length == n</li>
+<li>1 &lt;= n &lt;= 10^5</li>
+<li>0 &lt;= gas[i], cost[i] &lt;= 10^4</li>
 </ul>
-<p>给你一个整数数组 nums ，返回 nums 中作为 摆动序列 的 最长子序列的长度 。</p>
-<p>示例 1：</p>
-<pre><code class="hljs">输入：nums = [1,7,4,9,2,5]
-输出：6
-解释：整个序列均为摆动序列，各元素之间的差值为 (6, -3, 5, -7, 3) 。
-</code></pre>
-<p>示例 2：</p>
-<pre><code class="hljs">输入：nums = [1,17,5,10,13,15,10,5,16,8]
-输出：7
-解释：这个序列包含几个长度为 7 摆动序列。
-其中一个是 [1, 17, 10, 13, 10, 16, 8] ，各元素之间的差值为 (16, -7, 3, -3, 6, -8) 。
-</code></pre>
-<p>示例 3：</p>
-<pre><code class="hljs">输入：nums = [1,2,3,4,5,6,7,8,9]
-输出：2
-</code></pre>
-<p>提示：</p>
-<ul>
-<li>1 &lt;= nums.length &lt;= 1000</li>
-<li>0 &lt;= nums[i] &lt;= 1000</li>
-</ul>
-<h3 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h3><h4 id="解法一"><a href="#解法一" class="headerlink" title="解法一"></a>解法一</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> &#123;<br><span class="hljs-keyword">public</span>:<br>    <span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">wiggleMaxLength</span><span class="hljs-params">(vector&lt;<span class="hljs-type">int</span>&gt;&amp; nums)</span> </span>&#123;<br>        <span class="hljs-keyword">if</span> (nums.<span class="hljs-built_in">size</span>() &lt;= <span class="hljs-number">1</span>) <span class="hljs-keyword">return</span> nums.<span class="hljs-built_in">size</span>();<br>        <span class="hljs-type">int</span> curDiff = <span class="hljs-number">0</span>; <span class="hljs-comment">// 当前一对差值</span><br>        <span class="hljs-type">int</span> preDiff = <span class="hljs-number">0</span>; <span class="hljs-comment">// 前一对差值</span><br>        <span class="hljs-type">int</span> result = <span class="hljs-number">1</span>;  <span class="hljs-comment">// 记录峰值个数，序列默认序列最右边有一个峰值</span><br>        <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">0</span>; i &lt; nums.<span class="hljs-built_in">size</span>() - <span class="hljs-number">1</span>; i++) &#123;<br>            curDiff = nums[i + <span class="hljs-number">1</span>] - nums[i];<br>            <span class="hljs-comment">// 出现峰值</span><br>            <span class="hljs-keyword">if</span> ((curDiff &gt; <span class="hljs-number">0</span> &amp;&amp; preDiff &lt;= <span class="hljs-number">0</span>) || (preDiff &gt;= <span class="hljs-number">0</span> &amp;&amp; curDiff &lt; <span class="hljs-number">0</span>)) &#123;<br>                result++;<br>                preDiff = curDiff;<br>            &#125;<br>        &#125;<br>        <span class="hljs-keyword">return</span> result;<br>    &#125;<br>&#125;;<br></code></pre></td></tr></table></figure>
-<h4 id="解法二"><a href="#解法二" class="headerlink" title="解法二"></a>解法二</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> &#123;<br><span class="hljs-keyword">public</span>:<br>    <span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">wiggleMaxLength</span><span class="hljs-params">(vector&lt;<span class="hljs-type">int</span>&gt;&amp; nums)</span> </span>&#123;<br>    <span class="hljs-type">int</span> down = <span class="hljs-number">1</span>, up = <span class="hljs-number">1</span>;<br>    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">1</span>; i &lt; nums.<span class="hljs-built_in">size</span>(); i++) &#123;<br>        <span class="hljs-keyword">if</span> (nums[i] &gt; nums[i - <span class="hljs-number">1</span>])<br>            up = down + <span class="hljs-number">1</span>;<br>        <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (nums[i] &lt; nums[i - <span class="hljs-number">1</span>])<br>            down = up + <span class="hljs-number">1</span>;<br>    &#125;<br>    <span class="hljs-keyword">return</span> nums.<span class="hljs-built_in">size</span>() == <span class="hljs-number">0</span> ? <span class="hljs-number">0</span> : <span class="hljs-built_in">max</span>(down, up);<br>    &#125;<br>&#125;;<br></code></pre></td></tr></table></figure>
-
-
+<h3 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span><br>&#123;<br><span class="hljs-keyword">public</span>:<br>    <span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">canCompleteCircuit</span><span class="hljs-params">(vector&lt;<span class="hljs-type">int</span>&gt; &amp;gas, vector&lt;<span class="hljs-type">int</span>&gt; &amp;cost)</span></span><br><span class="hljs-function">    </span>&#123;<br>        <span class="hljs-type">int</span> curSum = <span class="hljs-number">0</span>;<br>        <span class="hljs-type">int</span> totalSum = <span class="hljs-number">0</span>;<br>        <span class="hljs-type">int</span> start = <span class="hljs-number">0</span>;<br>        <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">0</span>; i &lt; gas.<span class="hljs-built_in">size</span>(); i++)<br>        &#123;<br>            curSum += gas[i] - cost[i];<br>            totalSum += gas[i] - cost[i];<br>            <span class="hljs-keyword">if</span> (curSum &lt; <span class="hljs-number">0</span>)<br>            &#123;                  <span class="hljs-comment">// 当前累加rest[i]和 curSum一旦小于0</span><br>                start = i + <span class="hljs-number">1</span>; <span class="hljs-comment">// 起始位置更新为i+1</span><br>                curSum = <span class="hljs-number">0</span>;    <span class="hljs-comment">// curSum从0开始</span><br>            &#125;<br>        &#125;<br>        <span class="hljs-keyword">if</span> (totalSum &lt; <span class="hljs-number">0</span>)<br>            <span class="hljs-keyword">return</span> <span class="hljs-number">-1</span>; <span class="hljs-comment">// 说明怎么走都不可能跑一圈了</span><br>        <span class="hljs-keyword">return</span> start;<br>    &#125;<br>&#125;;<br></code></pre></td></tr></table></figure>
                 
               </div>
             
@@ -384,8 +385,6 @@
       
         <a href="/tags/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95/">#贪心算法</a>
       
-        <a href="/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/">#动态规划</a>
-      
     </div>
   
 </div>
@@ -396,8 +395,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>376.摆动序列</div>
-      <div>https://boger.website/2022/06/27/376-摆动序列/</div>
+      <div>134.加油站</div>
+      <div>https://boger.website/2022/06/30/134-加油站/</div>
     </div>
     <div class="license-meta">
       
@@ -409,7 +408,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2022年6月27日</div>
+          <div>2022年6月30日</div>
         </div>
       
       
@@ -439,18 +438,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2022/06/28/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E7%90%86%E8%AE%BA/" title="动态规划理论">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">动态规划理论</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2022/06/27/455-%E5%88%86%E5%8F%91%E9%A5%BC%E5%B9%B2/" title="455.分发饼干">
-                        <span class="hidden-mobile">455.分发饼干</span>
+                      <a href="/2022/06/30/1005-K%E6%AC%A1%E5%8F%96%E5%8F%8D%E5%90%8E%E6%9C%80%E5%A4%A7%E5%8C%96%E7%9A%84%E6%95%B0%E7%BB%84%E5%92%8C/" title="1005.K次取反后最大化的数组和">
+                        <span class="hidden-mobile">1005.K次取反后最大化的数组和</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
