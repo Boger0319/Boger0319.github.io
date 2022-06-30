@@ -4,6 +4,122 @@
   
   
   <entry>
+    <title>452.用最少数量的箭引爆气球</title>
+    <link href="/2022/07/01/452-%E7%94%A8%E6%9C%80%E5%B0%91%E6%95%B0%E9%87%8F%E7%9A%84%E7%AE%AD%E5%BC%95%E7%88%86%E6%B0%94%E7%90%83/"/>
+    <url>/2022/07/01/452-%E7%94%A8%E6%9C%80%E5%B0%91%E6%95%B0%E9%87%8F%E7%9A%84%E7%AE%AD%E5%BC%95%E7%88%86%E6%B0%94%E7%90%83/</url>
+    
+    <content type="html"><![CDATA[<h3 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h3><p><a href="https://leetcode.cn/problems/minimum-number-of-arrows-to-burst-balloons/">力扣链接</a></p><p>有一些球形气球贴在一堵用 XY 平面表示的墙面上。墙面上的气球记录在整数数组&nbsp;<code>points</code>&nbsp;，其中<code>points[i] = [x<sub>start</sub>, x<sub>end</sub>]</code>&nbsp;表示水平直径在&nbsp;<code>x<sub>start</sub></code>&nbsp;和&nbsp;<code>x<sub>end</sub></code>之间的气球。你不知道气球的确切 y 坐标。</p><p>一支弓箭可以沿着 x 轴从不同点 <strong>完全垂直</strong> 地射出。在坐标 <code>x</code> 处射出一支箭，若有一个气球的直径的开始和结束坐标为 <code>x</code><sub><code>start</code>，</sub><code>x</code><sub><code>end</code>，</sub> 且满足 &nbsp;<code>x<sub>start</sub>&nbsp;≤ x ≤ x</code><sub><code>end</code>，</sub>则该气球会被 <strong>引爆</strong>&nbsp;<sub>。</sub>可以射出的弓箭的数量 <strong>没有限制</strong> 。 弓箭一旦被射出之后，可以无限地前进。</p><p>给你一个数组 <code>points</code> ，<em>返回引爆所有气球所必须射出的 <strong>最小</strong> 弓箭数&nbsp;</em>。</p>&nbsp;<p><strong>示例 1：</strong></p><pre><strong>输入：</strong>points = [[10,16],[2,8],[1,6],[7,12]]<strong>输出：</strong>2<strong>解释：</strong>气球可以用2支箭来爆破:-在x = 6处射出箭，击破气球[2,8]和[1,6]。-在x = 11处发射箭，击破气球[10,16]和[7,12]。</pre><p><strong>示例 2：</strong></p><pre><strong>输入：</strong>points = [[1,2],[3,4],[5,6],[7,8]]<strong>输出：</strong>4<strong>解释：</strong>每个气球需要射出一支箭，总共需要4支箭。</pre><p><strong>示例 3：</strong></p><pre><strong>输入：</strong>points = [[1,2],[2,3],[3,4],[4,5]]<strong>输出：</strong>2解释：气球可以用2支箭来爆破:- 在x = 2处发射箭，击破气球[1,2]和[2,3]。- 在x = 4处射出箭，击破气球[3,4]和[4,5]。</pre><p>&nbsp;</p><p><meta charset="UTF-8" /></p><p><strong>提示:</strong></p><ul>    <li><code>1 &lt;= points.length &lt;= 10<sup>5</sup></code></li>    <li><code>points[i].length == 2</code></li>    <li><code>-2<sup>31</sup>&nbsp;&lt;= x<sub>start</sub>&nbsp;&lt; x<sub>end</sub>&nbsp;&lt;= 2<sup>31</sup>&nbsp;- 1</code></li></ul><h3 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    <categories>
+      
+      <category>Leetcode</category>
+      
+      <category>贪心算法</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>LeetCode</tag>
+      
+      <tag>贪心算法</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>406.根据身高重建队列</title>
+    <link href="/2022/06/30/406-%E6%A0%B9%E6%8D%AE%E8%BA%AB%E9%AB%98%E9%87%8D%E5%BB%BA%E9%98%9F%E5%88%97/"/>
+    <url>/2022/06/30/406-%E6%A0%B9%E6%8D%AE%E8%BA%AB%E9%AB%98%E9%87%8D%E5%BB%BA%E9%98%9F%E5%88%97/</url>
+    
+    <content type="html"><![CDATA[<h3 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h3><p><a href="https://leetcode.cn/problems/queue-reconstruction-by-height/">力扣链接</a></p><p>假设有打乱顺序的一群人站成一个队列，数组 <code>people</code> 表示队列中一些人的属性（不一定按顺序）。每个 <code>people[i] = [h<sub>i</sub>, k<sub>i</sub>]</code> 表示第 <code>i</code> 个人的身高为 <code>h<sub>i</sub></code> ，前面 <strong>正好</strong> 有 <code>k<sub>i</sub></code><sub> </sub>个身高大于或等于 <code>h<sub>i</sub></code> 的人。</p><p>请你重新构造并返回输入数组 <code>people</code> 所表示的队列。返回的队列应该格式化为数组 <code>queue</code> ，其中 <code>queue[j] = [h<sub>j</sub>, k<sub>j</sub>]</code> 是队列中第 <code>j</code> 个人的属性（<code>queue[0]</code> 是排在队列前面的人）。</p><p> </p><ul></ul><p><strong>示例 1：</strong></p><pre><strong>输入：</strong>people = [[7,0],[4,4],[7,1],[5,0],[6,1],[5,2]]<strong>输出：</strong>[[5,0],[7,0],[5,2],[6,1],[4,4],[7,1]]<strong>解释：</strong>编号为 0 的人身高为 5 ，没有身高更高或者相同的人排在他前面。编号为 1 的人身高为 7 ，没有身高更高或者相同的人排在他前面。编号为 2 的人身高为 5 ，有 2 个身高更高或者相同的人排在他前面，即编号为 0 和 1 的人。编号为 3 的人身高为 6 ，有 1 个身高更高或者相同的人排在他前面，即编号为 1 的人。编号为 4 的人身高为 4 ，有 4 个身高更高或者相同的人排在他前面，即编号为 0、1、2、3 的人。编号为 5 的人身高为 7 ，有 1 个身高更高或者相同的人排在他前面，即编号为 1 的人。因此 [[5,0],[7,0],[5,2],[6,1],[4,4],[7,1]] 是重新构造后的队列。</pre><p><strong>示例 2：</strong></p><pre><strong>输入：</strong>people = [[6,0],[5,0],[4,0],[3,2],[2,2],[1,4]]<strong>输出：</strong>[[4,0],[5,0],[2,2],[3,2],[1,4],[6,0]]</pre><p> </p><p><strong>提示：</strong></p><ul>    <li><code>1 <= people.length <= 2000</code></li>    <li><code>0 <= h<sub>i</sub> <= 10<sup>6</sup></code></li>    <li><code>0 <= k<sub>i</sub> < people.length</code></li>    <li>题目数据确保队列可以被重建</li></ul><h3 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> &#123;<br><span class="hljs-keyword">public</span>:<br>    <span class="hljs-function"><span class="hljs-type">static</span> <span class="hljs-type">bool</span> <span class="hljs-title">cmp</span><span class="hljs-params">(<span class="hljs-type">const</span> vector&lt;<span class="hljs-type">int</span>&gt; a, <span class="hljs-type">const</span> vector&lt;<span class="hljs-type">int</span>&gt; b)</span> </span>&#123;<br>        <span class="hljs-keyword">if</span> (a[<span class="hljs-number">0</span>] == b[<span class="hljs-number">0</span>]) <span class="hljs-keyword">return</span> a[<span class="hljs-number">1</span>] &lt; b[<span class="hljs-number">1</span>];<br>        <span class="hljs-keyword">return</span> a[<span class="hljs-number">0</span>] &gt; b[<span class="hljs-number">0</span>];<br>    &#125;<br>    vector&lt;vector&lt;<span class="hljs-type">int</span>&gt;&gt; <span class="hljs-built_in">reconstructQueue</span>(vector&lt;vector&lt;<span class="hljs-type">int</span>&gt;&gt;&amp; people) &#123;<br>        <span class="hljs-built_in">sort</span> (people.<span class="hljs-built_in">begin</span>(), people.<span class="hljs-built_in">end</span>(), cmp);<br>        vector&lt;vector&lt;<span class="hljs-type">int</span>&gt;&gt; que;<br>        <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">0</span>; i &lt; people.<span class="hljs-built_in">size</span>(); i++) &#123;<br>            <span class="hljs-type">int</span> position = people[i][<span class="hljs-number">1</span>];<br>            que.<span class="hljs-built_in">insert</span>(que.<span class="hljs-built_in">begin</span>() + position, people[i]);<br>        &#125;<br>        <span class="hljs-keyword">return</span> que;<br>    &#125;<br>&#125;;<br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    <categories>
+      
+      <category>Leetcode</category>
+      
+      <category>贪心算法</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>LeetCode</tag>
+      
+      <tag>贪心算法</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>860.柠檬水找零</title>
+    <link href="/2022/06/30/860-%E6%9F%A0%E6%AA%AC%E6%B0%B4%E6%89%BE%E9%9B%B6/"/>
+    <url>/2022/06/30/860-%E6%9F%A0%E6%AA%AC%E6%B0%B4%E6%89%BE%E9%9B%B6/</url>
+    
+    <content type="html"><![CDATA[<h3 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h3><p><a href="https://leetcode.cn/problems/lemonade-change/">力扣链接</a></p><p>在柠檬水摊上，每一杯柠檬水的售价为 5 美元。顾客排队购买你的产品，（按账单 bills 支付的顺序）一次购买一杯。</p><span id="more"></span><p>每位顾客只买一杯柠檬水，然后向你付 5 美元、10 美元或 20 美元。你必须给每个顾客正确找零，也就是说净交易是每位顾客向你支付 5 美元。</p><p>注意，一开始你手头没有任何零钱。</p><p>给你一个整数数组 bills ，其中 bills[i] 是第 i 位顾客付的账。如果你能给每位顾客正确找零，返回 true ，否则返回 false 。</p><p>示例 1：</p><pre><code class="hljs">输入：bills = [5,5,5,10,20]输出：true解释：前 3 位顾客那里，我们按顺序收取 3 张 5 美元的钞票。第 4 位顾客那里，我们收取一张 10 美元的钞票，并返还 5 美元。第 5 位顾客那里，我们找还一张 10 美元的钞票和一张 5 美元的钞票。由于所有客户都得到了正确的找零，所以我们输出 true。</code></pre><p>示例 2：</p><pre><code class="hljs">输入：bills = [5,5,10,10,20]输出：false解释：前 2 位顾客那里，我们按顺序收取 2 张 5 美元的钞票。对于接下来的 2 位顾客，我们收取一张 10 美元的钞票，然后返还 5 美元。对于最后一位顾客，我们无法退回 15 美元，因为我们现在只有两张 10 美元的钞票。由于不是每位顾客都得到了正确的找零，所以答案是 false。</code></pre><p>提示：</p><ul><li>1 &lt;= bills.length &lt;= 10^5</li><li>bills[i] 不是 5 就是 10 或是 20 </li></ul><h3 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span><br>&#123;<br><span class="hljs-keyword">public</span>:<br>    <span class="hljs-function"><span class="hljs-type">bool</span> <span class="hljs-title">lemonadeChange</span><span class="hljs-params">(vector&lt;<span class="hljs-type">int</span>&gt; &amp;bills)</span></span><br><span class="hljs-function">    </span>&#123;<br>        <span class="hljs-type">int</span> fc = <span class="hljs-number">0</span>, tc = <span class="hljs-number">0</span>;<br>        <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">0</span>; i &lt; bills.<span class="hljs-built_in">size</span>(); i++)<br>        &#123;<br>            <span class="hljs-keyword">if</span> (bills[i] == <span class="hljs-number">5</span>)<br>                fc++;<br>            <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (bills[i] == <span class="hljs-number">10</span>)<br>                tc++, fc--;<br>            <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (bills[i] == <span class="hljs-number">20</span>)<br>            &#123;<br>                <span class="hljs-keyword">if</span> (tc &gt; <span class="hljs-number">0</span>)<br>                    tc--, fc--;<br>                <span class="hljs-keyword">else</span><br>                    fc -= <span class="hljs-number">3</span>;<br>            &#125;<br>            <span class="hljs-keyword">if</span> (fc &lt; <span class="hljs-number">0</span> || tc &lt; <span class="hljs-number">0</span>)<br>                <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;<br>        &#125;<br>        <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;<br>    &#125;<br>&#125;;<br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    <categories>
+      
+      <category>Leetcode</category>
+      
+      <category>贪心算法</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>LeetCode</tag>
+      
+      <tag>贪心算法</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>135.分发糖果</title>
+    <link href="/2022/06/30/135-%E5%88%86%E5%8F%91%E7%B3%96%E6%9E%9C/"/>
+    <url>/2022/06/30/135-%E5%88%86%E5%8F%91%E7%B3%96%E6%9E%9C/</url>
+    
+    <content type="html"><![CDATA[<h3 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h3><p><a href="https://leetcode.cn/problems/candy/">力扣链接</a></p><p>n 个孩子站成一排。给你一个整数数组 ratings 表示每个孩子的评分。</p><span id="more"></span><p>你需要按照以下要求，给这些孩子分发糖果：</p><p>每个孩子至少分配到 1 个糖果。<br>相邻两个孩子评分更高的孩子会获得更多的糖果。<br>请你给每个孩子分发糖果，计算并返回需要准备的 最少糖果数目 。</p><p>示例 1：</p><pre><code class="hljs">输入：ratings = [1,0,2]输出：5解释：你可以分别给第一个、第二个、第三个孩子分发 2、1、2 颗糖果。</code></pre><p>示例 2：</p><pre><code class="hljs">输入：ratings = [1,2,2]输出：4解释：你可以分别给第一个、第二个、第三个孩子分发 1、2、1 颗糖果。    第三个孩子只得到 1 颗糖果，这满足题面中的两个条件。</code></pre><p>提示：</p><ul><li>n == ratings.length</li><li>1 &lt;= n &lt;= 2 * 10^4</li><li>0 &lt;= ratings[i] &lt;= 2 * 10^4</li></ul><h3 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> &#123;<br><span class="hljs-keyword">public</span>:<br>    <span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">candy</span><span class="hljs-params">(vector&lt;<span class="hljs-type">int</span>&gt;&amp; ratings)</span> </span>&#123;<br>        <span class="hljs-function">vector&lt;<span class="hljs-type">int</span>&gt; <span class="hljs-title">candys</span><span class="hljs-params">(ratings.size(),<span class="hljs-number">1</span>)</span></span>;<br>        <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i = <span class="hljs-number">1</span>; i &lt; ratings.<span class="hljs-built_in">size</span>(); i++) &#123;<br>            <span class="hljs-keyword">if</span>(ratings[i] &gt; ratings[i<span class="hljs-number">-1</span>]) candys[i] = candys[i<span class="hljs-number">-1</span>] + <span class="hljs-number">1</span>;<br>        &#125;<br>        <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i = ratings.<span class="hljs-built_in">size</span>()<span class="hljs-number">-2</span>; i &gt;= <span class="hljs-number">0</span>; i--) &#123;<br>            <span class="hljs-keyword">if</span>(ratings[i] &gt; ratings[i+<span class="hljs-number">1</span>]) candys[i] = <span class="hljs-built_in">max</span>(candys[i+<span class="hljs-number">1</span>]+<span class="hljs-number">1</span>,candys[i]);<br>        &#125;<br>        <span class="hljs-type">int</span> result = <span class="hljs-number">0</span>;<br>        <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i = <span class="hljs-number">0</span>; i &lt; candys.<span class="hljs-built_in">size</span>(); i++) <br>            result += candys[i];<br>        <span class="hljs-keyword">return</span> result;<br>    &#125;<br>&#125;;<br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    <categories>
+      
+      <category>Leetcode</category>
+      
+      <category>贪心算法</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>LeetCode</tag>
+      
+      <tag>贪心算法</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>134.加油站</title>
     <link href="/2022/06/30/134-%E5%8A%A0%E6%B2%B9%E7%AB%99/"/>
     <url>/2022/06/30/134-%E5%8A%A0%E6%B2%B9%E7%AB%99/</url>
