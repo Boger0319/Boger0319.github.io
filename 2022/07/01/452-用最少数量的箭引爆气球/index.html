@@ -17,15 +17,15 @@
   <meta name="author" content="Boger">
   <meta name="keywords" content="">
   
-    <meta name="description" content="题目力扣链接 有一些球形气球贴在一堵用 XY 平面表示的墙面上。墙面上的气球记录在整数数组&amp;nbsp;points&amp;nbsp;，其中points[i] &#x3D; [xstart, xend]&amp;nbsp;表示水平直径在&amp;nbsp;xstart&amp;nbsp;和&amp;nbsp;xend之间的气球。你不知道气球的确切 y 坐标。  一支弓箭可以沿着 x 轴从不同点 完全垂直 地射出。在坐标 x 处射出一支箭，若有一个">
+    <meta name="description" content="题目力扣链接 有一些球形气球贴在一堵用 XY 平面表示的墙面上。墙面上的气球记录在整数数组&amp;nbsp;points&amp;nbsp;，其中points[i] &#x3D; [xstart, xend]&amp;nbsp;表示水平直径在&amp;nbsp;xstart&amp;nbsp;和&amp;nbsp;xend之间的气球。你不知道气球的确切 y 坐标。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="452.用最少数量的箭引爆气球">
 <meta property="og:url" content="https://boger.website/2022/07/01/452-%E7%94%A8%E6%9C%80%E5%B0%91%E6%95%B0%E9%87%8F%E7%9A%84%E7%AE%AD%E5%BC%95%E7%88%86%E6%B0%94%E7%90%83/index.html">
 <meta property="og:site_name" content="Boger">
-<meta property="og:description" content="题目力扣链接 有一些球形气球贴在一堵用 XY 平面表示的墙面上。墙面上的气球记录在整数数组&amp;nbsp;points&amp;nbsp;，其中points[i] &#x3D; [xstart, xend]&amp;nbsp;表示水平直径在&amp;nbsp;xstart&amp;nbsp;和&amp;nbsp;xend之间的气球。你不知道气球的确切 y 坐标。  一支弓箭可以沿着 x 轴从不同点 完全垂直 地射出。在坐标 x 处射出一支箭，若有一个">
+<meta property="og:description" content="题目力扣链接 有一些球形气球贴在一堵用 XY 平面表示的墙面上。墙面上的气球记录在整数数组&amp;nbsp;points&amp;nbsp;，其中points[i] &#x3D; [xstart, xend]&amp;nbsp;表示水平直径在&amp;nbsp;xstart&amp;nbsp;和&amp;nbsp;xend之间的气球。你不知道气球的确切 y 坐标。">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-06-30T16:48:12.544Z">
-<meta property="article:modified_time" content="2022-06-30T16:49:07.388Z">
+<meta property="article:modified_time" content="2022-07-01T13:15:16.915Z">
 <meta property="article:author" content="Boger">
 <meta property="article:tag" content="贪心算法">
 <meta property="article:tag" content="LeetCode">
@@ -252,7 +252,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          740 字
+          1.2k 字
         
       </span>
     
@@ -263,7 +263,7 @@
         
         
         
-          7 分钟
+          11 分钟
         
       </span>
     
@@ -308,7 +308,7 @@
                 
                 <h3 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h3><p><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/minimum-number-of-arrows-to-burst-balloons/">力扣链接</a></p>
 <p>有一些球形气球贴在一堵用 XY 平面表示的墙面上。墙面上的气球记录在整数数组&nbsp;<code>points</code>&nbsp;，其中<code>points[i] = [x<sub>start</sub>, x<sub>end</sub>]</code>&nbsp;表示水平直径在&nbsp;<code>x<sub>start</sub></code>&nbsp;和&nbsp;<code>x<sub>end</sub></code>之间的气球。你不知道气球的确切 y 坐标。</p>
-
+<span id="more"></span>
 <p>一支弓箭可以沿着 x 轴从不同点 <strong>完全垂直</strong> 地射出。在坐标 <code>x</code> 处射出一支箭，若有一个气球的直径的开始和结束坐标为 <code>x</code><sub><code>start</code>，</sub><code>x</code><sub><code>end</code>，</sub> 且满足 &nbsp;<code>x<sub>start</sub>&nbsp;≤ x ≤ x</code><sub><code>end</code>，</sub>则该气球会被 <strong>引爆</strong>&nbsp;<sub>。</sub>可以射出的弓箭的数量 <strong>没有限制</strong> 。 弓箭一旦被射出之后，可以无限地前进。</p>
 
 <p>给你一个数组 <code>points</code> ，<em>返回引爆所有气球所必须射出的 <strong>最小</strong> 弓箭数&nbsp;</em>。</p>
@@ -351,7 +351,7 @@
     <li><code>-2<sup>31</sup>&nbsp;&lt;= x<sub>start</sub>&nbsp;&lt; x<sub>end</sub>&nbsp;&lt;= 2<sup>31</sup>&nbsp;- 1</code></li>
 </ul>
 
-<h3 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><br></code></pre></td></tr></table></figure>
+<h3 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> &#123;<br><span class="hljs-keyword">public</span>:<br>    <span class="hljs-function"><span class="hljs-type">static</span> <span class="hljs-type">bool</span> <span class="hljs-title">cmp</span><span class="hljs-params">(<span class="hljs-type">const</span> vector&lt;<span class="hljs-type">int</span>&gt;&amp; a, <span class="hljs-type">const</span> vector&lt;<span class="hljs-type">int</span>&gt;&amp; b)</span> </span>&#123;<br>        <span class="hljs-keyword">return</span> a[<span class="hljs-number">0</span>] &lt; b[<span class="hljs-number">0</span>];<br>    &#125;<br>    <span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">findMinArrowShots</span><span class="hljs-params">(vector&lt;vector&lt;<span class="hljs-type">int</span>&gt;&gt;&amp; points)</span> </span>&#123;<br>        <span class="hljs-keyword">if</span>(points.<span class="hljs-built_in">size</span>() == <span class="hljs-number">0</span>) <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>        <span class="hljs-type">int</span> result = <span class="hljs-number">1</span>;<br>        <span class="hljs-built_in">sort</span>(points.<span class="hljs-built_in">begin</span>(), points.<span class="hljs-built_in">end</span>(), cmp);<br>        <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i = <span class="hljs-number">1</span>; i &lt; points.<span class="hljs-built_in">size</span>(); i++) &#123;<br>            <span class="hljs-keyword">if</span>(points[i<span class="hljs-number">-1</span>][<span class="hljs-number">1</span>] &lt; points[i][<span class="hljs-number">0</span>]) result++;<br>            <span class="hljs-keyword">else</span> points[i][<span class="hljs-number">1</span>] = <span class="hljs-built_in">min</span>(points[i][<span class="hljs-number">1</span>], points[i<span class="hljs-number">-1</span>][<span class="hljs-number">1</span>]);<br>        &#125;<br>        <span class="hljs-keyword">return</span> result;<br>    &#125;<br>&#125;;<br></code></pre></td></tr></table></figure>
                 
               </div>
             
@@ -447,6 +447,12 @@
                 <div class="post-prevnext my-3">
                   <article class="post-prev col-6">
                     
+                    
+                      <a href="/2022/07/01/416-%E5%88%86%E5%89%B2%E7%AD%89%E5%92%8C%E5%AD%90%E9%9B%86/" title="416.分割等和子集">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">416.分割等和子集</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
                     
                   </article>
                   <article class="post-next col-6">
