@@ -25,7 +25,7 @@
 <meta property="og:description" content="题目力扣链接 给定一个由表示变量之间关系的字符串方程组成的数组，每个字符串方程 equations[i] 的长度为 4，并采用两种不同的形式之一：&quot;a&#x3D;&#x3D;b&quot; 或&amp;nbsp;&quot;a!&#x3D;b&quot;。在这里，a 和 b 是小写字母（不一定不同），表示单字母变量名。  只有当可以将整数分配给变量名，以便满足所有给定的方程时才返回&amp;nbsp;true，否则返回 false。">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-07-03T10:10:48.328Z">
-<meta property="article:modified_time" content="2022-07-03T11:21:31.877Z">
+<meta property="article:modified_time" content="2022-07-03T16:12:42.559Z">
 <meta property="article:author" content="Boger">
 <meta property="article:tag" content="LeetCode">
 <meta property="article:tag" content="哈希表">
@@ -253,7 +253,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          2.3k 字
+          2.2k 字
         
       </span>
     
@@ -361,10 +361,7 @@
     <li><code>equations[i][2]</code>&nbsp;是&nbsp;<code>&#39;=&#39;</code></li>
 </ol>
 
-<h3 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h3><h4 id="测试数据"><a href="#测试数据" class="headerlink" title="测试数据"></a>测试数据</h4><blockquote>
-<p>疑问： a指向b b指向c c指向a 寻找a的根节点应是如何停止的？</p>
-</blockquote>
-<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs TEXT">[&quot;f==a&quot;,&quot;a==b&quot;,&quot;f!=e&quot;,&quot;a==c&quot;,&quot;b==e&quot;,&quot;c==f&quot;]<br></code></pre></td></tr></table></figure>
+<h3 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h3><h4 id="测试数据"><a href="#测试数据" class="headerlink" title="测试数据"></a>测试数据</h4><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs TEXT">[&quot;f==a&quot;,&quot;a==b&quot;,&quot;f!=e&quot;,&quot;a==c&quot;,&quot;b==e&quot;,&quot;c==f&quot;]<br></code></pre></td></tr></table></figure>
 
 <figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs TEXT">[&quot;t!=b&quot;,&quot;h!=u&quot;,&quot;l!=y&quot;,&quot;j==j&quot;,&quot;w==s&quot;,&quot;p==q&quot;,&quot;r!=t&quot;,&quot;r==i&quot;,&quot;e!=y&quot;,&quot;v==s&quot;,&quot;i!=p&quot;,&quot;h!=i&quot;,&quot;i==o&quot;,&quot;e==e&quot;,&quot;j!=h&quot;,&quot;y!=s&quot;,&quot;k==g&quot;,&quot;c==f&quot;,&quot;n==v&quot;,&quot;a==w&quot;,&quot;d==w&quot;,&quot;f!=e&quot;,&quot;v==s&quot;,&quot;w!=g&quot;,&quot;g!=s&quot;,&quot;j!=d&quot;,&quot;c!=u&quot;,&quot;y!=n&quot;,&quot;q!=j&quot;,&quot;d!=x&quot;,&quot;l==m&quot;,&quot;q!=b&quot;,&quot;r!=n&quot;,&quot;j!=o&quot;,&quot;w!=q&quot;,&quot;t!=e&quot;,&quot;a!=m&quot;,&quot;m!=j&quot;,&quot;j!=b&quot;,&quot;v!=w&quot;]<br></code></pre></td></tr></table></figure>
 
@@ -466,6 +463,12 @@
                 <div class="post-prevnext my-3">
                   <article class="post-prev col-6">
                     
+                    
+                      <a href="/2022/07/04/322-%E9%9B%B6%E9%92%B1%E5%85%91%E6%8D%A2/" title="322.零钱兑换">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">322.零钱兑换</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
                     
                   </article>
                   <article class="post-next col-6">
