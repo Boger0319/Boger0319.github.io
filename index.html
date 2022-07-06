@@ -62,7 +62,7 @@
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"boger.website","root":"/","version":"1.9.2","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":false,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":"cc9e29910773b89ea6e047f21c7f159c","google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+    var CONFIG = {"hostname":"boger.website","root":"/","version":"1.9.2","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":false,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"left","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":"cc9e29910773b89ea6e047f21c7f159c","google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
@@ -189,6 +189,18 @@
             </li>
           
         
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/links/">
+                <i class="iconfont icon-link-fill"></i>
+                友链
+              </a>
+            </li>
+          
+        
         
           <li class="nav-item" id="search-btn">
             <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
@@ -266,6 +278,372 @@
       <div class="index-btm post-metas">
         
         
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2022/07/07/Verilog-%E4%BA%8C-%E5%8D%81%E8%BF%9B%E5%88%B6%E7%BC%96%E7%A0%81%E5%99%A8%E4%BB%A3%E7%A0%81%E4%B8%8E%E4%BB%BF%E7%9C%9F/" target="_self">
+          Verilog-编码器-二-十进制编码器代码与仿真
+        </a>
+      </h1>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2022/07/07/Verilog-%E4%BA%8C-%E5%8D%81%E8%BF%9B%E5%88%B6%E7%BC%96%E7%A0%81%E5%99%A8%E4%BB%A3%E7%A0%81%E4%B8%8E%E4%BB%BF%E7%9C%9F/" target="_self">
+        <div>
+          二-十进制编码器Verilog 代码1234567891011121314module ttt (    input [9:0] i,    output [3:0] y    );    reg [3:0] y_tmp;    always @(*)        begin            y_tmp[0] &#x3D; ~(~i[1] &amp; ~i[3] &amp; ~i[5] &amp;
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E7%A1%AC%E4%BB%B6%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/" class="category-chain-item">硬件课程设计</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/%E7%A1%AC%E4%BB%B6%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/%E5%9F%BA%E6%9C%AC%E7%BB%84%E5%90%88%E7%94%B5%E8%B7%AF/" class="category-chain-item">基本组合电路</a>
+  
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Verilog/">#Verilog</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2022/07/07/Verilog-3%E4%BD%8D%E4%BA%8C%E8%BF%9B%E5%88%B6%E7%BC%96%E7%A0%81%E5%99%A8%E4%BB%A3%E7%A0%81%E4%B8%8E%E4%BB%BF%E7%9C%9F/" target="_self">
+          Verilog-编码器-3位二进制编码器代码与仿真
+        </a>
+      </h1>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2022/07/07/Verilog-3%E4%BD%8D%E4%BA%8C%E8%BF%9B%E5%88%B6%E7%BC%96%E7%A0%81%E5%99%A8%E4%BB%A3%E7%A0%81%E4%B8%8E%E4%BB%BF%E7%9C%9F/" target="_self">
+        <div>
+          3位二进制编码器Verilog 代码1234567891011121314151617181920212223242526module benco(    input [7:0] i,    output [2:0] y    );    reg [2:0] y_tmp;        always @(*) begin         if (i &#x3D;&#x3D; 8&amp;#x27;b00000001)
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E7%A1%AC%E4%BB%B6%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/" class="category-chain-item">硬件课程设计</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/%E7%A1%AC%E4%BB%B6%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/%E5%9F%BA%E6%9C%AC%E7%BB%84%E5%90%88%E7%94%B5%E8%B7%AF/" class="category-chain-item">基本组合电路</a>
+  
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Verilog/">#Verilog</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2022/07/06/Verilog-2%E9%80%891%E6%95%B0%E9%80%89%E5%99%A8%E4%BB%A3%E7%A0%81%E4%B8%8E%E4%BB%BF%E7%9C%9F/" target="_self">
+          Verilog-选择器-2选1数选器代码与仿真
+        </a>
+      </h1>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2022/07/06/Verilog-2%E9%80%891%E6%95%B0%E9%80%89%E5%99%A8%E4%BB%A3%E7%A0%81%E4%B8%8E%E4%BB%BF%E7%9C%9F/" target="_self">
+        <div>
+          2选1数选器Verilog 代码123456789module twoc1(    input ia,    input ib,    input s,    output y    );        assign y &#x3D; ~s&amp;ia | s&amp;ib;endmodule  Verilog 仿真 代码123456789101112131415161718192021222324252
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E7%A1%AC%E4%BB%B6%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/" class="category-chain-item">硬件课程设计</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/%E7%A1%AC%E4%BB%B6%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/%E5%9F%BA%E6%9C%AC%E7%BB%84%E5%90%88%E7%94%B5%E8%B7%AF/" class="category-chain-item">基本组合电路</a>
+  
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Verilog/">#Verilog</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2022/07/06/Verilog-%E4%BA%8C%E8%BF%9B%E5%88%B6%E5%8A%A0%E6%B3%95%E5%99%A8%E4%BB%A3%E7%A0%81%E4%B8%8E%E4%BB%BF%E7%9C%9F/" target="_self">
+          Verilog-加法器-二进制加法器代码与仿真
+        </a>
+      </h1>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2022/07/06/Verilog-%E4%BA%8C%E8%BF%9B%E5%88%B6%E5%8A%A0%E6%B3%95%E5%99%A8%E4%BB%A3%E7%A0%81%E4%B8%8E%E4%BB%BF%E7%9C%9F/" target="_self">
+        <div>
+          二进制加法器Verilog 代码12345678910module add4(    input[3:0] ia,    input[3:0] ib,    input cin,    output[3:0] sum,    output cout    );        assign &amp;#123;cout,sum&amp;#125; &#x3D; ia + ib + cin;endmodule  Verilog
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E7%A1%AC%E4%BB%B6%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/" class="category-chain-item">硬件课程设计</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/%E7%A1%AC%E4%BB%B6%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/%E5%9F%BA%E6%9C%AC%E7%BB%84%E5%90%88%E7%94%B5%E8%B7%AF/" class="category-chain-item">基本组合电路</a>
+  
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Verilog/">#Verilog</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2022/07/06/Verilog-%E4%B8%80%E4%BD%8D%E5%85%A8%E5%8A%A0%E5%99%A8%E4%BB%A3%E7%A0%81%E4%B8%8E%E4%BB%BF%E7%9C%9F/" target="_self">
+          Verilog-全加器-一位全加器代码与仿真
+        </a>
+      </h1>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2022/07/06/Verilog-%E4%B8%80%E4%BD%8D%E5%85%A8%E5%8A%A0%E5%99%A8%E4%BB%A3%E7%A0%81%E4%B8%8E%E4%BB%BF%E7%9C%9F/" target="_self">
+        <div>
+          一位全加器Verilog 代码123456789module fa1(    input ia,    input ib,    input cin,    output sum,    output cout    );    assign &amp;#123;cout, sum&amp;#125; &#x3D; ia + ib + cin;endmodule  Verilog 仿真 代码1234567891011121
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E7%A1%AC%E4%BB%B6%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/" class="category-chain-item">硬件课程设计</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/%E7%A1%AC%E4%BB%B6%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/%E5%9F%BA%E6%9C%AC%E7%BB%84%E5%90%88%E7%94%B5%E8%B7%AF/" class="category-chain-item">基本组合电路</a>
+  
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Verilog/">#Verilog</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2022/07/06/Verilog-%E4%B8%80%E4%BD%8D%E5%8D%8A%E5%8A%A0%E5%99%A8%E4%BB%A3%E7%A0%81%E4%B8%8E%E4%BB%BF%E7%9C%9F/" target="_self">
+          Verilog-全加器-一位半加器代码与仿真
+        </a>
+      </h1>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2022/07/06/Verilog-%E4%B8%80%E4%BD%8D%E5%8D%8A%E5%8A%A0%E5%99%A8%E4%BB%A3%E7%A0%81%E4%B8%8E%E4%BB%BF%E7%9C%9F/" target="_self">
+        <div>
+          一位半加器Verilog 代码123456789module ha1(    input ia,    input ib,    output sum,    output cout    );        assign &amp;#123;cout, sum&amp;#125; &#x3D; ia + ib;endmodule  Verilog 仿真 代码12345678910111213141516171819202
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E7%A1%AC%E4%BB%B6%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/" class="category-chain-item">硬件课程设计</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/%E7%A1%AC%E4%BB%B6%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/%E5%9F%BA%E6%9C%AC%E7%BB%84%E5%90%88%E7%94%B5%E8%B7%AF/" class="category-chain-item">基本组合电路</a>
+  
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Verilog/">#Verilog</a>
+            
+          </div>
         
       </div>
     </article>
@@ -460,388 +838,11 @@
     </article>
   </div>
 
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2022/07/05/P1420-%E6%9C%80%E9%95%BF%E8%BF%9E%E5%8F%B7/" target="_self">
-          P1420.最长连号
-        </a>
-      </h1>
-
-      
-      <a class="index-excerpt index-excerpt__noimg" href="/2022/07/05/P1420-%E6%9C%80%E9%95%BF%E8%BF%9E%E5%8F%B7/" target="_self">
-        <div>
-          题目洛谷链接 输入长度为 $n$ 的一个正整数序列，要求输出序列中最长连号的长度。 连号指在序列中，从小到大的连续自然数。 输入格式第一行，一个整数 $n$。 第二行，$n$ 个整数 $a_i$，之间用空格隔开。 输出格式一个数，最长连号的个数。 样例样例输入12101 5 6 2 3 4 5 6 8 9  样例输出15  提示数据规模与约定对于 $100%$% 的数据，保证 $1 \leq n
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-        
-          <div class="post-meta mr-3 d-flex align-items-center">
-            <i class="iconfont icon-category"></i>
-            
-
-<span class="category-chains">
-  
-  
-    
-      <span class="category-chain">
-        
-  <a href="/categories/%E6%B4%9B%E8%B0%B7/" class="category-chain-item">洛谷</a>
-  
-  
-    <span>></span>
-    
-  <a href="/categories/%E6%B4%9B%E8%B0%B7/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/" class="category-chain-item">动态规划</a>
-  
-  
-
-  
-
-      </span>
-    
-  
-</span>
-
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/">#动态规划</a>
-            
-              <a href="/tags/%E6%B4%9B%E8%B0%B7/">#洛谷</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2022/07/04/354-%E4%BF%84%E7%BD%97%E6%96%AF%E5%A5%97%E5%A8%83%E4%BF%A1%E5%B0%81%E9%97%AE%E9%A2%98/" target="_self">
-          354.俄罗斯套娃信封问题
-        </a>
-      </h1>
-
-      
-      <a class="index-excerpt index-excerpt__noimg" href="/2022/07/04/354-%E4%BF%84%E7%BD%97%E6%96%AF%E5%A5%97%E5%A8%83%E4%BF%A1%E5%B0%81%E9%97%AE%E9%A2%98/" target="_self">
-        <div>
-          题目力扣链接 给你一个二维整数数组 envelopes ，其中 envelopes[i] &#x3D; [wi, hi] ，表示第 i 个信封的宽度和高度。  当另一个信封的宽度和高度都比这个信封大的时候，这个信封就可以放进另一个信封里，如同俄罗斯套娃一样。  请计算 最多能有多少个 信封能组成一组“俄罗斯套娃”信封（即可以把一个信封放到另一个信封里面）。  注意：不允许旋转信封。 &amp;nbsp;  示例 1
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-        
-          <div class="post-meta mr-3 d-flex align-items-center">
-            <i class="iconfont icon-category"></i>
-            
-
-<span class="category-chains">
-  
-  
-    
-      <span class="category-chain">
-        
-  <a href="/categories/Leetcode/" class="category-chain-item">Leetcode</a>
-  
-  
-    <span>></span>
-    
-  <a href="/categories/Leetcode/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/" class="category-chain-item">动态规划</a>
-  
-  
-
-  
-
-      </span>
-    
-  
-</span>
-
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/LeetCode/">#LeetCode</a>
-            
-              <a href="/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/">#动态规划</a>
-            
-              <a href="/tags/%E4%BA%8C%E5%88%86%E6%B3%95/">#二分法</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2022/07/04/300-%E6%9C%80%E9%95%BF%E9%80%92%E5%A2%9E%E5%AD%90%E5%BA%8F%E5%88%97/" target="_self">
-          300.最长递增子序列
-        </a>
-      </h1>
-
-      
-      <a class="index-excerpt index-excerpt__noimg" href="/2022/07/04/300-%E6%9C%80%E9%95%BF%E9%80%92%E5%A2%9E%E5%AD%90%E5%BA%8F%E5%88%97/" target="_self">
-        <div>
-          题目力扣链接 给你一个整数数组 nums ，找到其中最长严格递增子序列的长度。  子序列&amp;nbsp;是由数组派生而来的序列，删除（或不删除）数组中的元素而不改变其余元素的顺序。例如，[3,6,2,7] 是数组 [0,3,1,6,2,2,7] 的子序列。 &amp;nbsp;  示例 1：   输入：nums &#x3D; [10,9,2,5,3,7,101,18] 输出：4 解释：最长递增子序列是 [2,3,7,1
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-        
-          <div class="post-meta mr-3 d-flex align-items-center">
-            <i class="iconfont icon-category"></i>
-            
-
-<span class="category-chains">
-  
-  
-    
-      <span class="category-chain">
-        
-  <a href="/categories/Leetcode/" class="category-chain-item">Leetcode</a>
-  
-  
-    <span>></span>
-    
-  <a href="/categories/Leetcode/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/" class="category-chain-item">动态规划</a>
-  
-  
-
-  
-
-      </span>
-    
-  
-</span>
-
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/LeetCode/">#LeetCode</a>
-            
-              <a href="/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/">#动态规划</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2022/07/04/322-%E9%9B%B6%E9%92%B1%E5%85%91%E6%8D%A2/" target="_self">
-          322.零钱兑换
-        </a>
-      </h1>
-
-      
-      <a class="index-excerpt index-excerpt__noimg" href="/2022/07/04/322-%E9%9B%B6%E9%92%B1%E5%85%91%E6%8D%A2/" target="_self">
-        <div>
-          题目力扣链接 给你一个整数数组 coins ，表示不同面额的硬币；以及一个整数 amount ，表示总金额。  计算并返回可以凑成总金额所需的 最少的硬币个数 。如果没有任何一种硬币组合能组成总金额，返回&amp;nbsp;-1 。  你可以认为每种硬币的数量是无限的。  &amp;nbsp;  示例&amp;nbsp;1：   输入：coins &#x3D; [1, 2, 5], amount &#x3D; 11 输出：3  解释：11
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-        
-          <div class="post-meta mr-3 d-flex align-items-center">
-            <i class="iconfont icon-category"></i>
-            
-
-<span class="category-chains">
-  
-  
-    
-      <span class="category-chain">
-        
-  <a href="/categories/Leetcode/" class="category-chain-item">Leetcode</a>
-  
-  
-    <span>></span>
-    
-  <a href="/categories/Leetcode/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/" class="category-chain-item">动态规划</a>
-  
-  
-
-  
-
-      </span>
-    
-  
-</span>
-
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/LeetCode/">#LeetCode</a>
-            
-              <a href="/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/">#动态规划</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2022/07/03/990-%E7%AD%89%E5%BC%8F%E6%96%B9%E7%A8%8B%E7%9A%84%E5%8F%AF%E6%BB%A1%E8%B6%B3%E6%80%A7/" target="_self">
-          990.等式方程的可满足性
-        </a>
-      </h1>
-
-      
-      <a class="index-excerpt index-excerpt__noimg" href="/2022/07/03/990-%E7%AD%89%E5%BC%8F%E6%96%B9%E7%A8%8B%E7%9A%84%E5%8F%AF%E6%BB%A1%E8%B6%B3%E6%80%A7/" target="_self">
-        <div>
-          题目力扣链接 给定一个由表示变量之间关系的字符串方程组成的数组，每个字符串方程 equations[i] 的长度为 4，并采用两种不同的形式之一：&quot;a&#x3D;&#x3D;b&quot; 或&amp;nbsp;&quot;a!&#x3D;b&quot;。在这里，a 和 b 是小写字母（不一定不同），表示单字母变量名。  只有当可以将整数分配给变量名，以便满足所有给定的方程时才返回&amp;nbsp;true，否则返回 false。
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-        
-          <div class="post-meta mr-3 d-flex align-items-center">
-            <i class="iconfont icon-category"></i>
-            
-
-<span class="category-chains">
-  
-  
-    
-      <span class="category-chain">
-        
-  <a href="/categories/Leetcode/" class="category-chain-item">Leetcode</a>
-  
-  
-    <span>></span>
-    
-  <a href="/categories/Leetcode/%E5%93%88%E5%B8%8C%E8%A1%A8/" class="category-chain-item">哈希表</a>
-  
-  
-
-  
-
-      </span>
-    
-  
-</span>
-
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/LeetCode/">#LeetCode</a>
-            
-              <a href="/tags/%E5%93%88%E5%B8%8C%E8%A1%A8/">#哈希表</a>
-            
-              <a href="/tags/%E5%B9%B6%E6%9F%A5%E9%9B%86/">#并查集</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2022/07/03/4268-%E6%80%A7%E6%84%9F%E7%B4%A0%E6%95%B0/" target="_self">
-          4268.性感素数
-        </a>
-      </h1>
-
-      
-      <a class="index-excerpt index-excerpt__noimg" href="/2022/07/03/4268-%E6%80%A7%E6%84%9F%E7%B4%A0%E6%95%B0/" target="_self">
-        <div>
-          题目AcWing链接 “性感素数 ”是指形如 (p,p+6) 这样的一对素数。 之所以叫这个名字，是因为拉丁语管“六”叫“sex”（即英语的“性感”）。 现给定一个整数，请你判断其是否为一个性感素数。
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-        
-          <div class="post-meta mr-3 d-flex align-items-center">
-            <i class="iconfont icon-category"></i>
-            
-
-<span class="category-chains">
-  
-  
-    
-      <span class="category-chain">
-        
-  <a href="/categories/AcWing/" class="category-chain-item">AcWing</a>
-  
-  
-
-      </span>
-    
-  
-</span>
-
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/%E8%B4%A8%E6%95%B0/">#质数</a>
-            
-              <a href="/tags/AcWing/">#AcWing</a>
-            
-              <a href="/tags/%E6%9A%91%E5%81%87%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%982022/">#暑假每日一题2022</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
 
 
   <nav aria-label="navigation">
     <span class="pagination" id="pagination">
-      <span class="page-number current">1</span><a class="page-number" href="/page/2/#board">2</a><a class="page-number" href="/page/3/#board">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/8/#board">8</a><a class="extend next" rel="next" href="/page/2/#board"><i class="iconfont icon-arrowright"></i></a>
+      <span class="page-number current">1</span><a class="page-number" href="/page/2/#board">2</a><a class="page-number" href="/page/3/#board">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/9/#board">9</a><a class="extend next" rel="next" href="/page/2/#board"><i class="iconfont icon-arrowright"></i></a>
     </span>
   </nav>
 

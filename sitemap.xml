@@ -2,6 +2,60 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://boger.website/2022/07/07/Verilog-%E4%BA%8C-%E5%8D%81%E8%BF%9B%E5%88%B6%E7%BC%96%E7%A0%81%E5%99%A8%E4%BB%A3%E7%A0%81%E4%B8%8E%E4%BB%BF%E7%9C%9F/</loc>
+    
+    <lastmod>2022-07-06</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://boger.website/2022/07/07/Verilog-3%E4%BD%8D%E4%BA%8C%E8%BF%9B%E5%88%B6%E7%BC%96%E7%A0%81%E5%99%A8%E4%BB%A3%E7%A0%81%E4%B8%8E%E4%BB%BF%E7%9C%9F/</loc>
+    
+    <lastmod>2022-07-06</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://boger.website/2022/07/06/Verilog-2%E9%80%891%E6%95%B0%E9%80%89%E5%99%A8%E4%BB%A3%E7%A0%81%E4%B8%8E%E4%BB%BF%E7%9C%9F/</loc>
+    
+    <lastmod>2022-07-06</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://boger.website/2022/07/06/Verilog-%E4%B8%80%E4%BD%8D%E5%8D%8A%E5%8A%A0%E5%99%A8%E4%BB%A3%E7%A0%81%E4%B8%8E%E4%BB%BF%E7%9C%9F/</loc>
+    
+    <lastmod>2022-07-06</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://boger.website/2022/07/06/Verilog-%E4%B8%80%E4%BD%8D%E5%85%A8%E5%8A%A0%E5%99%A8%E4%BB%A3%E7%A0%81%E4%B8%8E%E4%BB%BF%E7%9C%9F/</loc>
+    
+    <lastmod>2022-07-06</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://boger.website/2022/07/06/Verilog-%E4%BA%8C%E8%BF%9B%E5%88%B6%E5%8A%A0%E6%B3%95%E5%99%A8%E4%BB%A3%E7%A0%81%E4%B8%8E%E4%BB%BF%E7%9C%9F/</loc>
+    
+    <lastmod>2022-07-06</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://boger.website/2022/07/05/P1510-%E7%B2%BE%E5%8D%AB%E5%A1%AB%E6%B5%B7/</loc>
     
     <lastmod>2022-07-05</lastmod>
@@ -715,7 +769,7 @@
 
   <url>
     <loc>https://boger.website/</loc>
-    <lastmod>2022-07-05</lastmod>
+    <lastmod>2022-07-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -723,147 +777,154 @@
   
   <url>
     <loc>https://boger.website/tags/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95/</loc>
-    <lastmod>2022-07-05</lastmod>
+    <lastmod>2022-07-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://boger.website/tags/LeetCode/</loc>
-    <lastmod>2022-07-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://boger.website/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/</loc>
-    <lastmod>2022-07-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://boger.website/tags/%E6%95%B0%E5%AD%A6/</loc>
-    <lastmod>2022-07-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://boger.website/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/</loc>
-    <lastmod>2022-07-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://boger.website/tags/Leetcode/</loc>
-    <lastmod>2022-07-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://boger.website/tags/%E5%9B%9E%E6%BA%AF%E7%AE%97%E6%B3%95/</loc>
-    <lastmod>2022-07-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://boger.website/tags/%E5%93%88%E5%B8%8C%E8%A1%A8/</loc>
-    <lastmod>2022-07-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://boger.website/tags/%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3/</loc>
-    <lastmod>2022-07-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://boger.website/tags/%E5%8F%8C%E6%8C%87%E9%92%88%E6%B3%95/</loc>
-    <lastmod>2022-07-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://boger.website/tags/%E6%AC%A7%E6%8B%89%E5%9B%BE/</loc>
-    <lastmod>2022-07-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://boger.website/tags/%E4%BA%8C%E5%88%86%E6%B3%95/</loc>
-    <lastmod>2022-07-05</lastmod>
+    <lastmod>2022-07-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://boger.website/tags/01%E8%83%8C%E5%8C%85/</loc>
-    <lastmod>2022-07-05</lastmod>
+    <lastmod>2022-07-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://boger.website/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/</loc>
+    <lastmod>2022-07-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://boger.website/tags/%E6%95%B0%E5%AD%A6/</loc>
+    <lastmod>2022-07-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://boger.website/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/</loc>
+    <lastmod>2022-07-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://boger.website/tags/Leetcode/</loc>
+    <lastmod>2022-07-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://boger.website/tags/%E5%9B%9E%E6%BA%AF%E7%AE%97%E6%B3%95/</loc>
+    <lastmod>2022-07-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://boger.website/tags/%E5%93%88%E5%B8%8C%E8%A1%A8/</loc>
+    <lastmod>2022-07-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://boger.website/tags/%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3/</loc>
+    <lastmod>2022-07-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://boger.website/tags/%E5%8F%8C%E6%8C%87%E9%92%88%E6%B3%95/</loc>
+    <lastmod>2022-07-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://boger.website/tags/%E6%AC%A7%E6%8B%89%E5%9B%BE/</loc>
+    <lastmod>2022-07-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://boger.website/tags/%E4%BA%8C%E5%88%86%E6%B3%95/</loc>
+    <lastmod>2022-07-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://boger.website/tags/%E8%B4%A8%E6%95%B0/</loc>
-    <lastmod>2022-07-05</lastmod>
+    <lastmod>2022-07-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://boger.website/tags/AcWing/</loc>
-    <lastmod>2022-07-05</lastmod>
+    <lastmod>2022-07-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://boger.website/tags/%E6%9A%91%E5%81%87%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%982022/</loc>
-    <lastmod>2022-07-05</lastmod>
+    <lastmod>2022-07-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://boger.website/tags/%E9%80%92%E5%BD%92/</loc>
-    <lastmod>2022-07-05</lastmod>
+    <lastmod>2022-07-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://boger.website/tags/%E6%A8%A1%E6%8B%9F/</loc>
-    <lastmod>2022-07-05</lastmod>
+    <lastmod>2022-07-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://boger.website/tags/%E5%B9%B6%E6%9F%A5%E9%9B%86/</loc>
-    <lastmod>2022-07-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://boger.website/tags/%E5%AD%97%E4%BD%93/</loc>
-    <lastmod>2022-07-05</lastmod>
+    <lastmod>2022-07-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://boger.website/tags/%E6%B4%9B%E8%B0%B7/</loc>
-    <lastmod>2022-07-05</lastmod>
+    <lastmod>2022-07-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://boger.website/tags/Verilog/</loc>
+    <lastmod>2022-07-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://boger.website/tags/%E5%AD%97%E4%BD%93/</loc>
+    <lastmod>2022-07-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
@@ -872,105 +933,119 @@
   
   <url>
     <loc>https://boger.website/categories/Leetcode/</loc>
-    <lastmod>2022-07-05</lastmod>
+    <lastmod>2022-07-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://boger.website/categories/Leetcode/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95/</loc>
-    <lastmod>2022-07-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://boger.website/categories/Leetcode/%E5%9B%9E%E6%BA%AF%E7%AE%97%E6%B3%95/</loc>
-    <lastmod>2022-07-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://boger.website/categories/Leetcode/%E6%95%B0%E7%BB%84/</loc>
-    <lastmod>2022-07-05</lastmod>
+    <lastmod>2022-07-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://boger.website/categories/Leetcode/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/</loc>
-    <lastmod>2022-07-05</lastmod>
+    <lastmod>2022-07-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://boger.website/categories/Leetcode/%E5%9B%9E%E6%BA%AF%E7%AE%97%E6%B3%95/</loc>
+    <lastmod>2022-07-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://boger.website/categories/Leetcode/%E6%95%B0%E7%BB%84/</loc>
+    <lastmod>2022-07-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://boger.website/categories/Leetcode/%E5%93%88%E5%B8%8C%E8%A1%A8/</loc>
-    <lastmod>2022-07-05</lastmod>
+    <lastmod>2022-07-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://boger.website/categories/Leetcode/%E5%9B%9E%E6%BA%AF%E7%AE%97%E6%B3%95/%E7%BB%84%E5%90%88/</loc>
-    <lastmod>2022-07-05</lastmod>
+    <lastmod>2022-07-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://boger.website/categories/Leetcode/%E5%9B%9E%E6%BA%AF%E7%AE%97%E6%B3%95/%E5%AD%90%E9%9B%86/</loc>
-    <lastmod>2022-07-05</lastmod>
+    <lastmod>2022-07-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://boger.website/categories/AcWing/</loc>
-    <lastmod>2022-07-05</lastmod>
+    <lastmod>2022-07-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://boger.website/categories/AcWing/%E5%93%88%E5%B8%8C%E8%A1%A8/</loc>
-    <lastmod>2022-07-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://boger.website/categories/Hexo/</loc>
-    <lastmod>2022-07-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://boger.website/categories/%E7%AE%97%E6%B3%95/</loc>
-    <lastmod>2022-07-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://boger.website/categories/%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/</loc>
-    <lastmod>2022-07-05</lastmod>
+    <lastmod>2022-07-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://boger.website/categories/%E6%B4%9B%E8%B0%B7/</loc>
-    <lastmod>2022-07-05</lastmod>
+    <lastmod>2022-07-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://boger.website/categories/%E7%A1%AC%E4%BB%B6%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/</loc>
+    <lastmod>2022-07-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://boger.website/categories/%E6%B4%9B%E8%B0%B7/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/</loc>
-    <lastmod>2022-07-05</lastmod>
+    <lastmod>2022-07-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://boger.website/categories/Hexo/</loc>
+    <lastmod>2022-07-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://boger.website/categories/%E7%AE%97%E6%B3%95/</loc>
+    <lastmod>2022-07-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://boger.website/categories/%E7%A1%AC%E4%BB%B6%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/%E5%9F%BA%E6%9C%AC%E7%BB%84%E5%90%88%E7%94%B5%E8%B7%AF/</loc>
+    <lastmod>2022-07-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://boger.website/categories/%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/</loc>
+    <lastmod>2022-07-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>

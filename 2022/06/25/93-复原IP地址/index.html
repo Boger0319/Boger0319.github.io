@@ -74,7 +74,7 @@
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"boger.website","root":"/","version":"1.9.2","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":false,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":"cc9e29910773b89ea6e047f21c7f159c","google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+    var CONFIG = {"hostname":"boger.website","root":"/","version":"1.9.2","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":false,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"left","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":"cc9e29910773b89ea6e047f21c7f159c","google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
@@ -201,6 +201,18 @@
             </li>
           
         
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/links/">
+                <i class="iconfont icon-link-fill"></i>
+                友链
+              </a>
+            </li>
+          
+        
         
           <li class="nav-item" id="search-btn">
             <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
@@ -293,6 +305,16 @@
   <div class="row nomargin-x">
     <div class="side-col d-none d-lg-block col-lg-2">
       
+  <aside class="sidebar" style="padding-left: 2rem; margin-right: -1rem">
+    <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
 <aside class="sidebar d-none d-xl-block" style="margin-right:-1rem;z-index:-1"><ins class="adsbygoogle" style="display:flex;justify-content:center;min-width:160px;max-width:300px;width:100%;height:600px;position:sticky;top:2rem" data-ad-client="ca-pub-6485259272832194" data-ad-slot="3912815308"></ins><script> (adsbygoogle = window.adsbygoogle || []).push({}); </script></aside>
     </div>
 
@@ -310,7 +332,7 @@
 <p><strong>有效 IP 地址</strong> 正好由四个整数（每个整数位于 0 到 255 之间组成，且不能含有前导 0），整数之间用 ‘.’ 分隔。</p>
 <span id="more"></span>
 <ul>
-<li>例如：”0.1.2.201” 和 “192.168.1.1” 是 <strong>有效</strong> IP 地址，但是 “0.011.255.245”、”192.168.1.312” 和 “<a href="mailto:&#49;&#x39;&#50;&#46;&#x31;&#x36;&#56;&#x40;&#x31;&#46;&#49;">&#49;&#x39;&#50;&#46;&#x31;&#x36;&#56;&#x40;&#x31;&#46;&#49;</a>“ 是 <strong>无效</strong> IP 地址。<br>给定一个只包含数字的字符串 s ，用以表示一个 IP 地址，返回所有可能的<strong>有效 IP 地址</strong>，这些地址可以通过在 s 中插入 ‘.’ 来形成。你 <strong>不能</strong> 重新排序或删除 s 中的任何数字。你可以按 <strong>任何</strong> 顺序返回答案。</li>
+<li>例如：”0.1.2.201” 和 “192.168.1.1” 是 <strong>有效</strong> IP 地址，但是 “0.011.255.245”、”192.168.1.312” 和 “<a href="mailto:&#x31;&#57;&#50;&#x2e;&#49;&#54;&#56;&#64;&#x31;&#x2e;&#x31;">&#x31;&#57;&#50;&#x2e;&#49;&#54;&#56;&#64;&#x31;&#x2e;&#x31;</a>“ 是 <strong>无效</strong> IP 地址。<br>给定一个只包含数字的字符串 s ，用以表示一个 IP 地址，返回所有可能的<strong>有效 IP 地址</strong>，这些地址可以通过在 s 中插入 ‘.’ 来形成。你 <strong>不能</strong> 重新排序或删除 s 中的任何数字。你可以按 <strong>任何</strong> 顺序返回答案。</li>
 </ul>
 <p>示例 1：</p>
 <pre><code class="hljs">输入：s = &quot;25525511135&quot;
@@ -465,16 +487,6 @@
 
     <div class="side-col d-none d-lg-block col-lg-2">
       
-  <aside class="sidebar" style="margin-left: -1rem">
-    <div id="toc">
-  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
-  <div class="toc-body" id="toc-body"></div>
-</div>
-
-
-
-  </aside>
-
 
     </div>
   </div>
