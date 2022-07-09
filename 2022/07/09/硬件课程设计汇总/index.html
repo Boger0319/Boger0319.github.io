@@ -17,15 +17,15 @@
   <meta name="author" content="Boger">
   <meta name="keywords" content="">
   
-    <meta name="description" content="2路分配器Verilog 代码12345678910111213141516171819202122232425262728293031323334353637383940&#96;timescale 1ns &#x2F; 1ps&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F; Company:">
+    <meta name="description" content="经典全选16题(1) 构建基本组合电路器件，然后生成对应的IP核 加法器 二进制加法器 十进制加法器   全加器 半加器 一位全加器   选择器 2选1数选器   编码器 二进制编码器 二-十进制编码器 优先编码器   译码器 二进制译码器 二-十进制译码器   数值比较器 1位数值比较器 1位数值比较器（带输入端） ！用这个   数据分配器 2路分配器    (2) 分别通过例化、IP核调用两种">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Verilog-数据分配器-2路分配器代码与仿真">
-<meta property="og:url" content="https://boger.website/2022/07/07/Verilog-2%E8%B7%AF%E5%88%86%E9%85%8D%E5%99%A8%E4%BB%A3%E7%A0%81%E4%B8%8E%E4%BB%BF%E7%9C%9F/index.html">
+<meta property="og:title" content="硬件课程设计-代码汇总">
+<meta property="og:url" content="https://boger.website/2022/07/09/%E7%A1%AC%E4%BB%B6%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1%E6%B1%87%E6%80%BB/index.html">
 <meta property="og:site_name" content="Boger">
-<meta property="og:description" content="2路分配器Verilog 代码12345678910111213141516171819202122232425262728293031323334353637383940&#96;timescale 1ns &#x2F; 1ps&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F; Company:">
+<meta property="og:description" content="经典全选16题(1) 构建基本组合电路器件，然后生成对应的IP核 加法器 二进制加法器 十进制加法器   全加器 半加器 一位全加器   选择器 2选1数选器   编码器 二进制编码器 二-十进制编码器 优先编码器   译码器 二进制译码器 二-十进制译码器   数值比较器 1位数值比较器 1位数值比较器（带输入端） ！用这个   数据分配器 2路分配器    (2) 分别通过例化、IP核调用两种">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2022-07-07T09:07:17.599Z">
-<meta property="article:modified_time" content="2022-07-09T08:14:48.359Z">
+<meta property="article:published_time" content="2022-07-09T09:33:38.333Z">
+<meta property="article:modified_time" content="2022-07-09T09:57:57.696Z">
 <meta property="article:author" content="Boger">
 <meta property="article:tag" content="Verilog">
 <meta name="twitter:card" content="summary_large_image">
@@ -34,7 +34,7 @@
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>Verilog-数据分配器-2路分配器代码与仿真 - Boger</title>
+  <title>硬件课程设计-代码汇总 - Boger</title>
   
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
@@ -240,7 +240,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="Verilog-数据分配器-2路分配器代码与仿真"></span>
+            <span id="subtitle" data-typed-text="硬件课程设计-代码汇总"></span>
           
         </div>
 
@@ -251,8 +251,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2022-07-07 17:07" pubdate>
-          2022年7月7日 下午
+        <time datetime="2022-07-09 17:33" pubdate>
+          2022年7月9日 下午
         </time>
       </span>
     
@@ -263,7 +263,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          903 字
+          282 字
         
       </span>
     
@@ -274,7 +274,7 @@
         
         
         
-          8 分钟
+          3 分钟
         
       </span>
     
@@ -322,14 +322,71 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">Verilog-数据分配器-2路分配器代码与仿真</h1>
+            <h1 style="display: none">硬件课程设计-代码汇总</h1>
             
             
               <div class="markdown-body">
                 
-                <h3 id="2路分配器"><a href="#2路分配器" class="headerlink" title="2路分配器"></a>2路分配器</h3><h4 id="Verilog-代码"><a href="#Verilog-代码" class="headerlink" title="Verilog 代码"></a>Verilog 代码</h4><figure class="highlight verilog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><code class="hljs Verilog"><span class="hljs-meta">`<span class="hljs-keyword">timescale</span> 1ns / 1ps</span><br><span class="hljs-comment">//////////////////////////////////////////////////////////////////////////////////</span><br><span class="hljs-comment">// Company: </span><br><span class="hljs-comment">// Engineer: </span><br><span class="hljs-comment">// </span><br><span class="hljs-comment">// Create Date: 2022/07/06 22:58:50</span><br><span class="hljs-comment">// Design Name: </span><br><span class="hljs-comment">// Module Name: 2c1</span><br><span class="hljs-comment">// Project Name: </span><br><span class="hljs-comment">// Target Devices: </span><br><span class="hljs-comment">// Tool Versions: </span><br><span class="hljs-comment">// Description: </span><br><span class="hljs-comment">// </span><br><span class="hljs-comment">// Dependencies: </span><br><span class="hljs-comment">// </span><br><span class="hljs-comment">// Revision:</span><br><span class="hljs-comment">// Revision 0.01 - File Created</span><br><span class="hljs-comment">// Additional Comments:</span><br><span class="hljs-comment">// </span><br><span class="hljs-comment">//////////////////////////////////////////////////////////////////////////////////</span><br><br><br><span class="hljs-keyword">module</span> ototwo(<br>    <span class="hljs-keyword">input</span> D,<br>    <span class="hljs-keyword">input</span> a,<br>    <span class="hljs-keyword">output</span> <span class="hljs-keyword">reg</span> y1,<br>    <span class="hljs-keyword">output</span> <span class="hljs-keyword">reg</span> y0<br>    );<br>    <br>    <span class="hljs-keyword">always</span> @(a <span class="hljs-keyword">or</span> D)<br>        <span class="hljs-keyword">begin</span><br>        y0 = <span class="hljs-number">1&#x27;b0</span>;<br>        y1 = <span class="hljs-number">1&#x27;b0</span>;<br>        <span class="hljs-keyword">if</span> (a == <span class="hljs-number">1&#x27;b0</span>)<br>            y0 = D;<br>        <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (a == <span class="hljs-number">1&#x27;b1</span>)<br>            y1 = D;<br>        <span class="hljs-keyword">end</span><br><span class="hljs-keyword">endmodule</span><br><br></code></pre></td></tr></table></figure>
+                <h3 id="经典全选16题"><a href="#经典全选16题" class="headerlink" title="经典全选16题"></a>经典全选16题</h3><h4 id="1-构建基本组合电路器件，然后生成对应的IP核"><a href="#1-构建基本组合电路器件，然后生成对应的IP核" class="headerlink" title="(1) 构建基本组合电路器件，然后生成对应的IP核"></a>(1) 构建基本组合电路器件，然后生成对应的IP核</h4><ul>
+<li>加法器<ul>
+<li><a href="/2022/07/07/Verilog-1%E4%BD%8D%E4%BA%8C%E8%BF%9B%E5%88%B6%E5%8A%A0%E6%B3%95%E5%99%A8%E4%BB%A3%E7%A0%81%E4%B8%8E%E4%BB%BF%E7%9C%9F/" title="二进制加法器">二进制加法器</a></li>
+<li><a href="/2022/07/07/Verilog-1%E4%BD%8D%E5%8D%81%E8%BF%9B%E5%88%B6%E5%8A%A0%E6%B3%95%E5%99%A8%E4%BB%A3%E7%A0%81%E4%B8%8E%E4%BB%BF%E7%9C%9F/" title="十进制加法器">十进制加法器</a></li>
+</ul>
+</li>
+<li>全加器<ul>
+<li><a href="/2022/07/06/Verilog-1%E4%BD%8D%E5%8D%8A%E5%8A%A0%E5%99%A8%E4%BB%A3%E7%A0%81%E4%B8%8E%E4%BB%BF%E7%9C%9F/" title="半加器">半加器</a></li>
+<li><a href="/2022/07/06/Verilog-1%E4%BD%8D%E5%85%A8%E5%8A%A0%E5%99%A8%E4%BB%A3%E7%A0%81%E4%B8%8E%E4%BB%BF%E7%9C%9F/" title="一位全加器">一位全加器</a></li>
+</ul>
+</li>
+<li>选择器<ul>
+<li><a href="/2022/07/06/Verilog-2%E9%80%891%E6%95%B0%E9%80%89%E5%99%A8%E4%BB%A3%E7%A0%81%E4%B8%8E%E4%BB%BF%E7%9C%9F/" title="2选1数选器">2选1数选器</a></li>
+</ul>
+</li>
+<li>编码器<ul>
+<li><a href="/2022/07/07/Verilog-3%E4%BD%8D%E4%BA%8C%E8%BF%9B%E5%88%B6%E7%BC%96%E7%A0%81%E5%99%A8%E4%BB%A3%E7%A0%81%E4%B8%8E%E4%BB%BF%E7%9C%9F/" title="二进制编码器">二进制编码器</a></li>
+<li><a href="/2022/07/07/Verilog-%E4%BA%8C-%E5%8D%81%E8%BF%9B%E5%88%B6%E7%BC%96%E7%A0%81%E5%99%A8%E4%BB%A3%E7%A0%81%E4%B8%8E%E4%BB%BF%E7%9C%9F/" title="二-十进制编码器">二-十进制编码器</a></li>
+<li><a href="/2022/07/07/Verilog-%E4%BC%98%E5%85%88%E7%BC%96%E7%A0%81%E5%99%A8%E4%BB%A3%E7%A0%81%E4%B8%8E%E4%BB%BF%E7%9C%9F/" title="优先编码器">优先编码器</a></li>
+</ul>
+</li>
+<li>译码器<ul>
+<li><a href="/2022/07/07/Verilog-%E4%BA%8C%E8%BF%9B%E5%88%B6%E8%AF%91%E7%A0%81%E5%99%A8%E4%BB%A3%E7%A0%81%E4%B8%8E%E4%BB%BF%E7%9C%9F/" title="二进制译码器">二进制译码器</a></li>
+<li><a href="/2022/07/07/Verilog-%E4%BA%8C-%E5%8D%81%E8%BF%9B%E5%88%B6%E8%AF%91%E7%A0%81%E5%99%A8%E4%BB%A3%E7%A0%81%E4%B8%8E%E4%BB%BF%E7%9C%9F/" title="二-十进制译码器">二-十进制译码器</a></li>
+</ul>
+</li>
+<li>数值比较器<ul>
+<li><a href="/2022/07/07/Verilog-1%E4%BD%8D%E6%95%B0%E5%80%BC%E6%AF%94%E8%BE%83%E5%99%A8%E4%BB%A3%E7%A0%81%E4%B8%8E%E4%BB%BF%E7%9C%9F/" title="1位数值比较器">1位数值比较器</a></li>
+<li><a href="/2022/07/08/Verilog-1%E4%BD%8D%E6%95%B0%E5%80%BC%E6%AF%94%E8%BE%83%E5%99%A8-%E5%B8%A6%E8%BE%93%E5%85%A5%E7%AB%AF-%E4%BB%A3%E7%A0%81%E4%B8%8E%E4%BB%BF%E7%9C%9F/" title="1位数值比较器（带输入端）">1位数值比较器（带输入端）</a> <span style="color: red;">！用这个</span></li>
+</ul>
+</li>
+<li>数据分配器<ul>
+<li><a href="/2022/07/07/Verilog-2%E8%B7%AF%E5%88%86%E9%85%8D%E5%99%A8%E4%BB%A3%E7%A0%81%E4%B8%8E%E4%BB%BF%E7%9C%9F/" title="2路分配器">2路分配器</a></li>
+</ul>
+</li>
+</ul>
+<h4 id="2-分别通过例化、IP核调用两种方法扩充功能"><a href="#2-分别通过例化、IP核调用两种方法扩充功能" class="headerlink" title="(2) 分别通过例化、IP核调用两种方法扩充功能"></a>(2) 分别通过例化、IP核调用两种方法扩充功能</h4><ul>
+<li>加法器<ul>
+<li><a href="/2022/07/06/Verilog-4%E4%BD%8D%E4%BA%8C%E8%BF%9B%E5%88%B6%E5%8A%A0%E6%B3%95%E5%99%A8%E4%BB%A3%E7%A0%81%E4%B8%8E%E4%BB%BF%E7%9C%9F/" title="由1位二进制加法器生成4位二进制加法器">由1位二进制加法器生成4位二进制加法器</a></li>
+<li><a href="/2022/07/07/Verilog-4%E4%BD%8D%E5%8D%81%E8%BF%9B%E5%88%B6%E5%8A%A0%E6%B3%95%E5%99%A8%E4%BB%A3%E7%A0%81%E4%B8%8E%E4%BB%BF%E7%9C%9F/" title="由1位十进制加法器生成4位十进制加法器">由1位十进制加法器生成4位十进制加法器</a></li>
+</ul>
+</li>
+<li>全加器<ul>
+<li><a href="/2022/07/07/Verilog-4%E4%BD%8D%E5%85%A8%E5%8A%A0%E5%99%A8%E4%BB%A3%E7%A0%81%E4%B8%8E%E4%BB%BF%E7%9C%9F/" title="由一位全加器生成四位全加器">由一位全加器生成四位全加器</a></li>
+</ul>
+</li>
+<li>选择器<ul>
+<li><a href="/2022/07/06/Verilog-2%E9%80%891%E6%95%B0%E9%80%89%E5%99%A8%E4%BB%A3%E7%A0%81%E4%B8%8E%E4%BB%BF%E7%9C%9F/" title="由2选1数选器生成4选1数选器">由2选1数选器生成4选1数选器</a></li>
+</ul>
+</li>
+<li>数值比较器<ul>
+<li><a href="/2022/07/08/Verilog-4%E4%BD%8D%E6%95%B0%E5%80%BC%E6%AF%94%E8%BE%83%E5%99%A8%E4%BB%A3%E7%A0%81%E4%B8%8E%E4%BB%BF%E7%9C%9F/" title="由1位数值比较器生成4位数值比较器">由1位数值比较器生成4位数值比较器</a></li>
+</ul>
+</li>
+<li>数据分配器<ul>
+<li><a href="/2022/07/09/Verilog-4%E8%B7%AF%E5%88%86%E9%85%8D%E5%99%A8%E4%BB%A3%E7%A0%81%E4%B8%8E%E4%BB%BF%E7%9C%9F/" title="由2路分配器生成4路分配器">由2路分配器生成4路分配器</a></li>
+</ul>
+</li>
+</ul>
 
-<h4 id="Verilog-仿真-代码"><a href="#Verilog-仿真-代码" class="headerlink" title="Verilog 仿真 代码"></a>Verilog 仿真 代码</h4><figure class="highlight verilog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><code class="hljs Verilog"><span class="hljs-meta">`<span class="hljs-keyword">timescale</span> 1ns / 1ps</span><br><br><span class="hljs-keyword">module</span> ototwo_tb;<br>    <span class="hljs-keyword">reg</span> D;<br>    <span class="hljs-keyword">reg</span> a;<br>    <span class="hljs-keyword">wire</span> y1;<br>    <span class="hljs-keyword">wire</span> y0;<br>    <br>    ototwo tb(<br>        <span class="hljs-variable">.D</span>(D),<br>        <span class="hljs-variable">.a</span>(a),<br>        <span class="hljs-variable">.y1</span>(y1),<br>        <span class="hljs-variable">.y0</span>(y0)<br>    );<br>    <br>    <span class="hljs-keyword">initial</span> <span class="hljs-keyword">begin</span><br>        #<span class="hljs-number">0</span> a = <span class="hljs-number">0</span>;<br>        #<span class="hljs-number">0</span> D = <span class="hljs-number">0</span>;<br>        <span class="hljs-keyword">end</span><br>        <br>    <span class="hljs-keyword">initial</span> <span class="hljs-keyword">begin</span><br>        #<span class="hljs-number">20</span> D = <span class="hljs-number">1</span>;<br>        #<span class="hljs-number">20</span> <span class="hljs-built_in">$stop</span>;<br>        <span class="hljs-keyword">end</span><br>        <br>    <span class="hljs-keyword">initial</span> <span class="hljs-keyword">begin</span>   <br>        #<span class="hljs-number">10</span> a = <span class="hljs-number">1</span>;<br>        #<span class="hljs-number">10</span> a = <span class="hljs-number">0</span>;<br>        #<span class="hljs-number">10</span> a = <span class="hljs-number">1</span>;<br>        <span class="hljs-keyword">end</span><br><span class="hljs-keyword">endmodule</span><br></code></pre></td></tr></table></figure>
                 
               </div>
             
@@ -349,13 +406,6 @@
         
   <a href="/categories/%E7%A1%AC%E4%BB%B6%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/" class="category-chain-item">硬件课程设计</a>
   
-  
-    <span>></span>
-    
-  <a href="/categories/%E7%A1%AC%E4%BB%B6%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/%E5%9F%BA%E6%9C%AC%E7%BB%84%E5%90%88%E7%94%B5%E8%B7%AF/" class="category-chain-item">基本组合电路</a>
-  
-  
-
   
 
       </span>
@@ -381,8 +431,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>Verilog-数据分配器-2路分配器代码与仿真</div>
-      <div>https://boger.website/2022/07/07/Verilog-2路分配器代码与仿真/</div>
+      <div>硬件课程设计-代码汇总</div>
+      <div>https://boger.website/2022/07/09/硬件课程设计汇总/</div>
     </div>
     <div class="license-meta">
       
@@ -394,7 +444,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2022年7月7日</div>
+          <div>2022年7月9日</div>
         </div>
       
       
@@ -424,18 +474,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2022/07/07/Verilog-%E4%BA%8C-%E5%8D%81%E8%BF%9B%E5%88%B6%E8%AF%91%E7%A0%81%E5%99%A8%E4%BB%A3%E7%A0%81%E4%B8%8E%E4%BB%BF%E7%9C%9F/" title="Verilog-译码器-二-十进制译码器代码与仿真">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">Verilog-译码器-二-十进制译码器代码与仿真</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2022/07/07/Verilog-%E4%BA%8C%E8%BF%9B%E5%88%B6%E8%AF%91%E7%A0%81%E5%99%A8%E4%BB%A3%E7%A0%81%E4%B8%8E%E4%BB%BF%E7%9C%9F/" title="Verilog-译码器-二进制译码器代码与仿真">
-                        <span class="hidden-mobile">Verilog-译码器-二进制译码器代码与仿真</span>
+                      <a href="/2022/07/09/Verilog-4%E8%B7%AF%E5%88%86%E9%85%8D%E5%99%A8%E4%BB%A3%E7%A0%81%E4%B8%8E%E4%BB%BF%E7%9C%9F/" title="Verilog-选择器-4路分配器代码与仿真">
+                        <span class="hidden-mobile">Verilog-选择器-4路分配器代码与仿真</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
