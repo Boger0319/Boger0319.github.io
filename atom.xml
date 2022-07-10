@@ -1,0 +1,559 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Boger</title>
+  
+  <subtitle>要像一座卓立的塔，绝不因暴雨而倾斜。</subtitle>
+  <link href="https://boger.website/atom.xml" rel="self"/>
+  
+  <link href="https://boger.website/"/>
+  <updated>2022-07-09T10:18:44.125Z</updated>
+  <id>https://boger.website/</id>
+  
+  <author>
+    <name>Boger</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>硬件课程设计-代码汇总</title>
+    <link href="https://boger.website/2022/07/09/%E7%A1%AC%E4%BB%B6%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1%E6%B1%87%E6%80%BB/"/>
+    <id>https://boger.website/2022/07/09/%E7%A1%AC%E4%BB%B6%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1%E6%B1%87%E6%80%BB/</id>
+    <published>2022-07-09T09:33:38.333Z</published>
+    <updated>2022-07-09T10:18:44.125Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;经典全选16题&quot;&gt;&lt;a href=&quot;#经典全选16题&quot; class=&quot;headerlink&quot; title=&quot;经典全选16题&quot;&gt;&lt;/a&gt;经典全选16题&lt;/h3&gt;&lt;h4 id=&quot;1-构建基本组合电路器件，然后生成对应的IP核&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="硬件课程设计" scheme="https://boger.website/categories/%E7%A1%AC%E4%BB%B6%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/"/>
+    
+    
+    <category term="Verilog" scheme="https://boger.website/tags/Verilog/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Verilog-选择器-4路分配器代码与仿真</title>
+    <link href="https://boger.website/2022/07/09/Verilog-4%E8%B7%AF%E5%88%86%E9%85%8D%E5%99%A8%E4%BB%A3%E7%A0%81%E4%B8%8E%E4%BB%BF%E7%9C%9F/"/>
+    <id>https://boger.website/2022/07/09/Verilog-4%E8%B7%AF%E5%88%86%E9%85%8D%E5%99%A8%E4%BB%A3%E7%A0%81%E4%B8%8E%E4%BB%BF%E7%9C%9F/</id>
+    <published>2022-07-09T08:14:09.443Z</published>
+    <updated>2022-07-09T08:17:47.096Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;4路分配器&quot;&gt;&lt;a href=&quot;#4路分配器&quot; class=&quot;headerlink&quot; title=&quot;4路分配器&quot;&gt;&lt;/a&gt;4路分配器&lt;/h3&gt;&lt;h4 id=&quot;IP核组成线路&quot;&gt;&lt;a href=&quot;#IP核组成线路&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="硬件课程设计" scheme="https://boger.website/categories/%E7%A1%AC%E4%BB%B6%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/"/>
+    
+    <category term="IP核调用" scheme="https://boger.website/categories/%E7%A1%AC%E4%BB%B6%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/IP%E6%A0%B8%E8%B0%83%E7%94%A8/"/>
+    
+    
+    <category term="Verilog" scheme="https://boger.website/tags/Verilog/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Verilog-数值比较器-1位数值比较器（带输入端）代码与仿真</title>
+    <link href="https://boger.website/2022/07/08/Verilog-1%E4%BD%8D%E6%95%B0%E5%80%BC%E6%AF%94%E8%BE%83%E5%99%A8-%E5%B8%A6%E8%BE%93%E5%85%A5%E7%AB%AF-%E4%BB%A3%E7%A0%81%E4%B8%8E%E4%BB%BF%E7%9C%9F/"/>
+    <id>https://boger.website/2022/07/08/Verilog-1%E4%BD%8D%E6%95%B0%E5%80%BC%E6%AF%94%E8%BE%83%E5%99%A8-%E5%B8%A6%E8%BE%93%E5%85%A5%E7%AB%AF-%E4%BB%A3%E7%A0%81%E4%B8%8E%E4%BB%BF%E7%9C%9F/</id>
+    <published>2022-07-07T19:08:37.182Z</published>
+    <updated>2022-07-07T19:10:13.007Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;1位数值比较器（带输入端）&quot;&gt;&lt;a href=&quot;#1位数值比较器（带输入端）&quot; class=&quot;headerlink&quot; title=&quot;1位数值比较器（带输入端）&quot;&gt;&lt;/a&gt;1位数值比较器（带输入端）&lt;/h3&gt;&lt;h4 id=&quot;Verilog-代码&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="硬件课程设计" scheme="https://boger.website/categories/%E7%A1%AC%E4%BB%B6%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/"/>
+    
+    <category term="基本组合电路" scheme="https://boger.website/categories/%E7%A1%AC%E4%BB%B6%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/%E5%9F%BA%E6%9C%AC%E7%BB%84%E5%90%88%E7%94%B5%E8%B7%AF/"/>
+    
+    
+    <category term="Verilog" scheme="https://boger.website/tags/Verilog/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Verilog-数值比较器-4位数值比较器代码与仿真</title>
+    <link href="https://boger.website/2022/07/08/Verilog-4%E4%BD%8D%E6%95%B0%E5%80%BC%E6%AF%94%E8%BE%83%E5%99%A8%E4%BB%A3%E7%A0%81%E4%B8%8E%E4%BB%BF%E7%9C%9F/"/>
+    <id>https://boger.website/2022/07/08/Verilog-4%E4%BD%8D%E6%95%B0%E5%80%BC%E6%AF%94%E8%BE%83%E5%99%A8%E4%BB%A3%E7%A0%81%E4%B8%8E%E4%BB%BF%E7%9C%9F/</id>
+    <published>2022-07-07T19:05:10.132Z</published>
+    <updated>2022-07-07T19:11:31.007Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;4位数值比较器&quot;&gt;&lt;a href=&quot;#4位数值比较器&quot; class=&quot;headerlink&quot; title=&quot;4位数值比较器&quot;&gt;&lt;/a&gt;4位数值比较器&lt;/h3&gt;&lt;h4 id=&quot;IP核组成线路&quot;&gt;&lt;a href=&quot;#IP核组成线路&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="硬件课程设计" scheme="https://boger.website/categories/%E7%A1%AC%E4%BB%B6%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/"/>
+    
+    <category term="IP核调用" scheme="https://boger.website/categories/%E7%A1%AC%E4%BB%B6%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/IP%E6%A0%B8%E8%B0%83%E7%94%A8/"/>
+    
+    
+    <category term="Verilog" scheme="https://boger.website/tags/Verilog/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Verilog-选择器-4选1数选器代码与仿真</title>
+    <link href="https://boger.website/2022/07/07/Verilog-4%E9%80%891%E6%95%B0%E9%80%89%E5%99%A8%E4%BB%A3%E7%A0%81%E4%B8%8E%E4%BB%BF%E7%9C%9F/"/>
+    <id>https://boger.website/2022/07/07/Verilog-4%E9%80%891%E6%95%B0%E9%80%89%E5%99%A8%E4%BB%A3%E7%A0%81%E4%B8%8E%E4%BB%BF%E7%9C%9F/</id>
+    <published>2022-07-07T15:00:32.837Z</published>
+    <updated>2022-07-07T19:28:41.173Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;4选1数选器&quot;&gt;&lt;a href=&quot;#4选1数选器&quot; class=&quot;headerlink&quot; title=&quot;4选1数选器&quot;&gt;&lt;/a&gt;4选1数选器&lt;/h3&gt;&lt;h4 id=&quot;IP核组成线路&quot;&gt;&lt;a href=&quot;#IP核组成线路&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="硬件课程设计" scheme="https://boger.website/categories/%E7%A1%AC%E4%BB%B6%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/"/>
+    
+    <category term="IP核调用" scheme="https://boger.website/categories/%E7%A1%AC%E4%BB%B6%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/IP%E6%A0%B8%E8%B0%83%E7%94%A8/"/>
+    
+    
+    <category term="Verilog" scheme="https://boger.website/tags/Verilog/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Verilog-全加器-4位全加器代码与仿真</title>
+    <link href="https://boger.website/2022/07/07/Verilog-4%E4%BD%8D%E5%85%A8%E5%8A%A0%E5%99%A8%E4%BB%A3%E7%A0%81%E4%B8%8E%E4%BB%BF%E7%9C%9F/"/>
+    <id>https://boger.website/2022/07/07/Verilog-4%E4%BD%8D%E5%85%A8%E5%8A%A0%E5%99%A8%E4%BB%A3%E7%A0%81%E4%B8%8E%E4%BB%BF%E7%9C%9F/</id>
+    <published>2022-07-07T14:11:02.668Z</published>
+    <updated>2022-07-07T14:14:33.959Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;4位全加器&quot;&gt;&lt;a href=&quot;#4位全加器&quot; class=&quot;headerlink&quot; title=&quot;4位全加器&quot;&gt;&lt;/a&gt;4位全加器&lt;/h3&gt;&lt;h4 id=&quot;IP核组成线路&quot;&gt;&lt;a href=&quot;#IP核组成线路&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="硬件课程设计" scheme="https://boger.website/categories/%E7%A1%AC%E4%BB%B6%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/"/>
+    
+    <category term="IP核调用" scheme="https://boger.website/categories/%E7%A1%AC%E4%BB%B6%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/IP%E6%A0%B8%E8%B0%83%E7%94%A8/"/>
+    
+    
+    <category term="Verilog" scheme="https://boger.website/tags/Verilog/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Verilog-加法器-4位十进制加法器代码与仿真</title>
+    <link href="https://boger.website/2022/07/07/Verilog-4%E4%BD%8D%E5%8D%81%E8%BF%9B%E5%88%B6%E5%8A%A0%E6%B3%95%E5%99%A8%E4%BB%A3%E7%A0%81%E4%B8%8E%E4%BB%BF%E7%9C%9F/"/>
+    <id>https://boger.website/2022/07/07/Verilog-4%E4%BD%8D%E5%8D%81%E8%BF%9B%E5%88%B6%E5%8A%A0%E6%B3%95%E5%99%A8%E4%BB%A3%E7%A0%81%E4%B8%8E%E4%BB%BF%E7%9C%9F/</id>
+    <published>2022-07-07T12:51:34.854Z</published>
+    <updated>2022-07-07T13:21:42.192Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;4位十进制加法器&quot;&gt;&lt;a href=&quot;#4位十进制加法器&quot; class=&quot;headerlink&quot; title=&quot;4位十进制加法器&quot;&gt;&lt;/a&gt;4位十进制加法器&lt;/h3&gt;&lt;h4 id=&quot;IP核组成线路&quot;&gt;&lt;a href=&quot;#IP核组成线路&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="硬件课程设计" scheme="https://boger.website/categories/%E7%A1%AC%E4%BB%B6%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/"/>
+    
+    <category term="IP核调用" scheme="https://boger.website/categories/%E7%A1%AC%E4%BB%B6%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/IP%E6%A0%B8%E8%B0%83%E7%94%A8/"/>
+    
+    
+    <category term="Verilog" scheme="https://boger.website/tags/Verilog/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Verilog-加法器-1位二进制加法器代码与仿真</title>
+    <link href="https://boger.website/2022/07/07/Verilog-1%E4%BD%8D%E4%BA%8C%E8%BF%9B%E5%88%B6%E5%8A%A0%E6%B3%95%E5%99%A8%E4%BB%A3%E7%A0%81%E4%B8%8E%E4%BB%BF%E7%9C%9F/"/>
+    <id>https://boger.website/2022/07/07/Verilog-1%E4%BD%8D%E4%BA%8C%E8%BF%9B%E5%88%B6%E5%8A%A0%E6%B3%95%E5%99%A8%E4%BB%A3%E7%A0%81%E4%B8%8E%E4%BB%BF%E7%9C%9F/</id>
+    <published>2022-07-07T12:26:41.036Z</published>
+    <updated>2022-07-07T07:43:28.254Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;1位二进制加法器&quot;&gt;&lt;a href=&quot;#1位二进制加法器&quot; class=&quot;headerlink&quot; title=&quot;1位二进制加法器&quot;&gt;&lt;/a&gt;1位二进制加法器&lt;/h3&gt;&lt;h4 id=&quot;Verilog-代码&quot;&gt;&lt;a href=&quot;#Verilog-代码&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="硬件课程设计" scheme="https://boger.website/categories/%E7%A1%AC%E4%BB%B6%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/"/>
+    
+    <category term="基本组合电路" scheme="https://boger.website/categories/%E7%A1%AC%E4%BB%B6%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/%E5%9F%BA%E6%9C%AC%E7%BB%84%E5%90%88%E7%94%B5%E8%B7%AF/"/>
+    
+    
+    <category term="Verilog" scheme="https://boger.website/tags/Verilog/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Verilog-译码器-二-十进制译码器代码与仿真</title>
+    <link href="https://boger.website/2022/07/07/Verilog-%E4%BA%8C-%E5%8D%81%E8%BF%9B%E5%88%B6%E8%AF%91%E7%A0%81%E5%99%A8%E4%BB%A3%E7%A0%81%E4%B8%8E%E4%BB%BF%E7%9C%9F/"/>
+    <id>https://boger.website/2022/07/07/Verilog-%E4%BA%8C-%E5%8D%81%E8%BF%9B%E5%88%B6%E8%AF%91%E7%A0%81%E5%99%A8%E4%BB%A3%E7%A0%81%E4%B8%8E%E4%BB%BF%E7%9C%9F/</id>
+    <published>2022-07-07T09:11:41.691Z</published>
+    <updated>2022-07-07T09:12:21.300Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;二进制译码器&quot;&gt;&lt;a href=&quot;#二进制译码器&quot; class=&quot;headerlink&quot; title=&quot;二进制译码器&quot;&gt;&lt;/a&gt;二进制译码器&lt;/h3&gt;&lt;h4 id=&quot;Verilog-代码&quot;&gt;&lt;a href=&quot;#Verilog-代码&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="硬件课程设计" scheme="https://boger.website/categories/%E7%A1%AC%E4%BB%B6%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/"/>
+    
+    <category term="基本组合电路" scheme="https://boger.website/categories/%E7%A1%AC%E4%BB%B6%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/%E5%9F%BA%E6%9C%AC%E7%BB%84%E5%90%88%E7%94%B5%E8%B7%AF/"/>
+    
+    
+    <category term="Verilog" scheme="https://boger.website/tags/Verilog/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Verilog-数据分配器-2路分配器代码与仿真</title>
+    <link href="https://boger.website/2022/07/07/Verilog-2%E8%B7%AF%E5%88%86%E9%85%8D%E5%99%A8%E4%BB%A3%E7%A0%81%E4%B8%8E%E4%BB%BF%E7%9C%9F/"/>
+    <id>https://boger.website/2022/07/07/Verilog-2%E8%B7%AF%E5%88%86%E9%85%8D%E5%99%A8%E4%BB%A3%E7%A0%81%E4%B8%8E%E4%BB%BF%E7%9C%9F/</id>
+    <published>2022-07-07T09:07:17.599Z</published>
+    <updated>2022-07-09T08:14:48.359Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;2路分配器&quot;&gt;&lt;a href=&quot;#2路分配器&quot; class=&quot;headerlink&quot; title=&quot;2路分配器&quot;&gt;&lt;/a&gt;2路分配器&lt;/h3&gt;&lt;h4 id=&quot;Verilog-代码&quot;&gt;&lt;a href=&quot;#Verilog-代码&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="硬件课程设计" scheme="https://boger.website/categories/%E7%A1%AC%E4%BB%B6%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/"/>
+    
+    <category term="基本组合电路" scheme="https://boger.website/categories/%E7%A1%AC%E4%BB%B6%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/%E5%9F%BA%E6%9C%AC%E7%BB%84%E5%90%88%E7%94%B5%E8%B7%AF/"/>
+    
+    
+    <category term="Verilog" scheme="https://boger.website/tags/Verilog/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Verilog-译码器-二进制译码器代码与仿真</title>
+    <link href="https://boger.website/2022/07/07/Verilog-%E4%BA%8C%E8%BF%9B%E5%88%B6%E8%AF%91%E7%A0%81%E5%99%A8%E4%BB%A3%E7%A0%81%E4%B8%8E%E4%BB%BF%E7%9C%9F/"/>
+    <id>https://boger.website/2022/07/07/Verilog-%E4%BA%8C%E8%BF%9B%E5%88%B6%E8%AF%91%E7%A0%81%E5%99%A8%E4%BB%A3%E7%A0%81%E4%B8%8E%E4%BB%BF%E7%9C%9F/</id>
+    <published>2022-07-07T08:32:55.779Z</published>
+    <updated>2022-07-07T09:07:51.688Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;二进制译码器&quot;&gt;&lt;a href=&quot;#二进制译码器&quot; class=&quot;headerlink&quot; title=&quot;二进制译码器&quot;&gt;&lt;/a&gt;二进制译码器&lt;/h3&gt;&lt;h4 id=&quot;Verilog-代码&quot;&gt;&lt;a href=&quot;#Verilog-代码&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="硬件课程设计" scheme="https://boger.website/categories/%E7%A1%AC%E4%BB%B6%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/"/>
+    
+    <category term="基本组合电路" scheme="https://boger.website/categories/%E7%A1%AC%E4%BB%B6%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/%E5%9F%BA%E6%9C%AC%E7%BB%84%E5%90%88%E7%94%B5%E8%B7%AF/"/>
+    
+    
+    <category term="Verilog" scheme="https://boger.website/tags/Verilog/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>3537.树查找</title>
+    <link href="https://boger.website/2022/07/07/3537-%E6%A0%91%E6%9F%A5%E6%89%BE/"/>
+    <id>https://boger.website/2022/07/07/3537-%E6%A0%91%E6%9F%A5%E6%89%BE/</id>
+    <published>2022-07-07T08:01:57.520Z</published>
+    <updated>2022-07-10T16:02:37.580Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;题目&quot;&gt;&lt;a href=&quot;#题目&quot; class=&quot;headerlink&quot; title=&quot;题目&quot;&gt;&lt;/a&gt;题目&lt;/h3&gt;&lt;p&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="AcWing" scheme="https://boger.website/categories/AcWing/"/>
+    
+    
+    <category term="质数" scheme="https://boger.website/tags/%E8%B4%A8%E6%95%B0/"/>
+    
+    <category term="AcWing" scheme="https://boger.website/tags/AcWing/"/>
+    
+    <category term="暑假每日一题2022" scheme="https://boger.website/tags/%E6%9A%91%E5%81%87%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%982022/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Verilog-加法器-1位十进制加法器代码与仿真</title>
+    <link href="https://boger.website/2022/07/07/Verilog-1%E4%BD%8D%E5%8D%81%E8%BF%9B%E5%88%B6%E5%8A%A0%E6%B3%95%E5%99%A8%E4%BB%A3%E7%A0%81%E4%B8%8E%E4%BB%BF%E7%9C%9F/"/>
+    <id>https://boger.website/2022/07/07/Verilog-1%E4%BD%8D%E5%8D%81%E8%BF%9B%E5%88%B6%E5%8A%A0%E6%B3%95%E5%99%A8%E4%BB%A3%E7%A0%81%E4%B8%8E%E4%BB%BF%E7%9C%9F/</id>
+    <published>2022-07-07T07:11:52.014Z</published>
+    <updated>2022-07-07T07:22:39.667Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;1位十进制加法器&quot;&gt;&lt;a href=&quot;#1位十进制加法器&quot; class=&quot;headerlink&quot; title=&quot;1位十进制加法器&quot;&gt;&lt;/a&gt;1位十进制加法器&lt;/h3&gt;&lt;h4 id=&quot;Verilog-代码&quot;&gt;&lt;a href=&quot;#Verilog-代码&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="硬件课程设计" scheme="https://boger.website/categories/%E7%A1%AC%E4%BB%B6%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/"/>
+    
+    <category term="基本组合电路" scheme="https://boger.website/categories/%E7%A1%AC%E4%BB%B6%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/%E5%9F%BA%E6%9C%AC%E7%BB%84%E5%90%88%E7%94%B5%E8%B7%AF/"/>
+    
+    
+    <category term="Verilog" scheme="https://boger.website/tags/Verilog/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Verilog-数值比较器-1位数值比较器代码与仿真</title>
+    <link href="https://boger.website/2022/07/07/Verilog-1%E4%BD%8D%E6%95%B0%E5%80%BC%E6%AF%94%E8%BE%83%E5%99%A8%E4%BB%A3%E7%A0%81%E4%B8%8E%E4%BB%BF%E7%9C%9F/"/>
+    <id>https://boger.website/2022/07/07/Verilog-1%E4%BD%8D%E6%95%B0%E5%80%BC%E6%AF%94%E8%BE%83%E5%99%A8%E4%BB%A3%E7%A0%81%E4%B8%8E%E4%BB%BF%E7%9C%9F/</id>
+    <published>2022-07-07T06:38:35.324Z</published>
+    <updated>2022-07-07T06:40:12.790Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;1位数值比较器&quot;&gt;&lt;a href=&quot;#1位数值比较器&quot; class=&quot;headerlink&quot; title=&quot;1位数值比较器&quot;&gt;&lt;/a&gt;1位数值比较器&lt;/h3&gt;&lt;h4 id=&quot;Verilog-代码&quot;&gt;&lt;a href=&quot;#Verilog-代码&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="硬件课程设计" scheme="https://boger.website/categories/%E7%A1%AC%E4%BB%B6%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/"/>
+    
+    <category term="基本组合电路" scheme="https://boger.website/categories/%E7%A1%AC%E4%BB%B6%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/%E5%9F%BA%E6%9C%AC%E7%BB%84%E5%90%88%E7%94%B5%E8%B7%AF/"/>
+    
+    
+    <category term="Verilog" scheme="https://boger.website/tags/Verilog/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Verilog-编码器-优先编码器代码与仿真</title>
+    <link href="https://boger.website/2022/07/07/Verilog-%E4%BC%98%E5%85%88%E7%BC%96%E7%A0%81%E5%99%A8%E4%BB%A3%E7%A0%81%E4%B8%8E%E4%BB%BF%E7%9C%9F/"/>
+    <id>https://boger.website/2022/07/07/Verilog-%E4%BC%98%E5%85%88%E7%BC%96%E7%A0%81%E5%99%A8%E4%BB%A3%E7%A0%81%E4%B8%8E%E4%BB%BF%E7%9C%9F/</id>
+    <published>2022-07-07T05:56:13.296Z</published>
+    <updated>2022-07-07T05:57:44.054Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;优先编码器&quot;&gt;&lt;a href=&quot;#优先编码器&quot; class=&quot;headerlink&quot; title=&quot;优先编码器&quot;&gt;&lt;/a&gt;优先编码器&lt;/h3&gt;&lt;h4 id=&quot;Verilog-代码&quot;&gt;&lt;a href=&quot;#Verilog-代码&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="硬件课程设计" scheme="https://boger.website/categories/%E7%A1%AC%E4%BB%B6%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/"/>
+    
+    <category term="基本组合电路" scheme="https://boger.website/categories/%E7%A1%AC%E4%BB%B6%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/%E5%9F%BA%E6%9C%AC%E7%BB%84%E5%90%88%E7%94%B5%E8%B7%AF/"/>
+    
+    
+    <category term="Verilog" scheme="https://boger.website/tags/Verilog/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Verilog-编码器-二-十进制编码器代码与仿真</title>
+    <link href="https://boger.website/2022/07/07/Verilog-%E4%BA%8C-%E5%8D%81%E8%BF%9B%E5%88%B6%E7%BC%96%E7%A0%81%E5%99%A8%E4%BB%A3%E7%A0%81%E4%B8%8E%E4%BB%BF%E7%9C%9F/"/>
+    <id>https://boger.website/2022/07/07/Verilog-%E4%BA%8C-%E5%8D%81%E8%BF%9B%E5%88%B6%E7%BC%96%E7%A0%81%E5%99%A8%E4%BB%A3%E7%A0%81%E4%B8%8E%E4%BB%BF%E7%9C%9F/</id>
+    <published>2022-07-06T16:37:43.776Z</published>
+    <updated>2022-07-06T16:38:37.502Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;二-十进制编码器&quot;&gt;&lt;a href=&quot;#二-十进制编码器&quot; class=&quot;headerlink&quot; title=&quot;二-十进制编码器&quot;&gt;&lt;/a&gt;二-十进制编码器&lt;/h3&gt;&lt;h4 id=&quot;Verilog-代码&quot;&gt;&lt;a href=&quot;#Verilog-代码&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="硬件课程设计" scheme="https://boger.website/categories/%E7%A1%AC%E4%BB%B6%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/"/>
+    
+    <category term="基本组合电路" scheme="https://boger.website/categories/%E7%A1%AC%E4%BB%B6%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/%E5%9F%BA%E6%9C%AC%E7%BB%84%E5%90%88%E7%94%B5%E8%B7%AF/"/>
+    
+    
+    <category term="Verilog" scheme="https://boger.website/tags/Verilog/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Verilog-编码器-3位二进制编码器代码与仿真</title>
+    <link href="https://boger.website/2022/07/07/Verilog-3%E4%BD%8D%E4%BA%8C%E8%BF%9B%E5%88%B6%E7%BC%96%E7%A0%81%E5%99%A8%E4%BB%A3%E7%A0%81%E4%B8%8E%E4%BB%BF%E7%9C%9F/"/>
+    <id>https://boger.website/2022/07/07/Verilog-3%E4%BD%8D%E4%BA%8C%E8%BF%9B%E5%88%B6%E7%BC%96%E7%A0%81%E5%99%A8%E4%BB%A3%E7%A0%81%E4%B8%8E%E4%BB%BF%E7%9C%9F/</id>
+    <published>2022-07-06T16:11:53.112Z</published>
+    <updated>2022-07-06T16:13:02.918Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;3位二进制编码器&quot;&gt;&lt;a href=&quot;#3位二进制编码器&quot; class=&quot;headerlink&quot; title=&quot;3位二进制编码器&quot;&gt;&lt;/a&gt;3位二进制编码器&lt;/h3&gt;&lt;h4 id=&quot;Verilog-代码&quot;&gt;&lt;a href=&quot;#Verilog-代码&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="硬件课程设计" scheme="https://boger.website/categories/%E7%A1%AC%E4%BB%B6%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/"/>
+    
+    <category term="基本组合电路" scheme="https://boger.website/categories/%E7%A1%AC%E4%BB%B6%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/%E5%9F%BA%E6%9C%AC%E7%BB%84%E5%90%88%E7%94%B5%E8%B7%AF/"/>
+    
+    
+    <category term="Verilog" scheme="https://boger.website/tags/Verilog/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Verilog-选择器-2选1数选器代码与仿真</title>
+    <link href="https://boger.website/2022/07/06/Verilog-2%E9%80%891%E6%95%B0%E9%80%89%E5%99%A8%E4%BB%A3%E7%A0%81%E4%B8%8E%E4%BB%BF%E7%9C%9F/"/>
+    <id>https://boger.website/2022/07/06/Verilog-2%E9%80%891%E6%95%B0%E9%80%89%E5%99%A8%E4%BB%A3%E7%A0%81%E4%B8%8E%E4%BB%BF%E7%9C%9F/</id>
+    <published>2022-07-06T15:29:04.957Z</published>
+    <updated>2022-07-06T15:30:49.638Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;2选1数选器&quot;&gt;&lt;a href=&quot;#2选1数选器&quot; class=&quot;headerlink&quot; title=&quot;2选1数选器&quot;&gt;&lt;/a&gt;2选1数选器&lt;/h3&gt;&lt;h4 id=&quot;Verilog-代码&quot;&gt;&lt;a href=&quot;#Verilog-代码&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="硬件课程设计" scheme="https://boger.website/categories/%E7%A1%AC%E4%BB%B6%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/"/>
+    
+    <category term="基本组合电路" scheme="https://boger.website/categories/%E7%A1%AC%E4%BB%B6%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/%E5%9F%BA%E6%9C%AC%E7%BB%84%E5%90%88%E7%94%B5%E8%B7%AF/"/>
+    
+    
+    <category term="Verilog" scheme="https://boger.website/tags/Verilog/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Verilog-加法器-4位二进制加法器代码与仿真</title>
+    <link href="https://boger.website/2022/07/06/Verilog-4%E4%BD%8D%E4%BA%8C%E8%BF%9B%E5%88%B6%E5%8A%A0%E6%B3%95%E5%99%A8%E4%BB%A3%E7%A0%81%E4%B8%8E%E4%BB%BF%E7%9C%9F/"/>
+    <id>https://boger.website/2022/07/06/Verilog-4%E4%BD%8D%E4%BA%8C%E8%BF%9B%E5%88%B6%E5%8A%A0%E6%B3%95%E5%99%A8%E4%BB%A3%E7%A0%81%E4%B8%8E%E4%BB%BF%E7%9C%9F/</id>
+    <published>2022-07-06T14:31:51.326Z</published>
+    <updated>2022-07-07T12:39:52.838Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;4位二进制加法器&quot;&gt;&lt;a href=&quot;#4位二进制加法器&quot; class=&quot;headerlink&quot; title=&quot;4位二进制加法器&quot;&gt;&lt;/a&gt;4位二进制加法器&lt;/h3&gt;&lt;h4 id=&quot;IP核组成线路&quot;&gt;&lt;a href=&quot;#IP核组成线路&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="硬件课程设计" scheme="https://boger.website/categories/%E7%A1%AC%E4%BB%B6%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/"/>
+    
+    <category term="IP核调用" scheme="https://boger.website/categories/%E7%A1%AC%E4%BB%B6%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/IP%E6%A0%B8%E8%B0%83%E7%94%A8/"/>
+    
+    
+    <category term="Verilog" scheme="https://boger.website/tags/Verilog/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Verilog-全加器-1位全加器代码与仿真</title>
+    <link href="https://boger.website/2022/07/06/Verilog-1%E4%BD%8D%E5%85%A8%E5%8A%A0%E5%99%A8%E4%BB%A3%E7%A0%81%E4%B8%8E%E4%BB%BF%E7%9C%9F/"/>
+    <id>https://boger.website/2022/07/06/Verilog-1%E4%BD%8D%E5%85%A8%E5%8A%A0%E5%99%A8%E4%BB%A3%E7%A0%81%E4%B8%8E%E4%BB%BF%E7%9C%9F/</id>
+    <published>2022-07-06T12:40:15.490Z</published>
+    <updated>2022-07-07T07:43:00.382Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;1位全加器&quot;&gt;&lt;a href=&quot;#1位全加器&quot; class=&quot;headerlink&quot; title=&quot;1位全加器&quot;&gt;&lt;/a&gt;1位全加器&lt;/h3&gt;&lt;h4 id=&quot;Verilog-代码&quot;&gt;&lt;a href=&quot;#Verilog-代码&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="硬件课程设计" scheme="https://boger.website/categories/%E7%A1%AC%E4%BB%B6%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/"/>
+    
+    <category term="基本组合电路" scheme="https://boger.website/categories/%E7%A1%AC%E4%BB%B6%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/%E5%9F%BA%E6%9C%AC%E7%BB%84%E5%90%88%E7%94%B5%E8%B7%AF/"/>
+    
+    
+    <category term="Verilog" scheme="https://boger.website/tags/Verilog/"/>
+    
+  </entry>
+  
+</feed>
