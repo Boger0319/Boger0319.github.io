@@ -6,7 +6,7 @@
   <link href="https://boger.website/atom.xml" rel="self"/>
   
   <link href="https://boger.website/"/>
-  <updated>2022-07-09T10:18:44.125Z</updated>
+  <updated>2022-07-25T12:20:35.902Z</updated>
   <id>https://boger.website/</id>
   
   <author>
@@ -15,6 +15,62 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>能力综合提升Part1</title>
+    <link href="https://boger.website/2022/07/25/%E8%83%BD%E5%8A%9B%E7%BB%BC%E5%90%88%E6%8F%90%E5%8D%87Part1/"/>
+    <id>https://boger.website/2022/07/25/%E8%83%BD%E5%8A%9B%E7%BB%BC%E5%90%88%E6%8F%90%E5%8D%87Part1/</id>
+    <published>2022-07-25T12:11:29.693Z</published>
+    <updated>2022-07-25T12:20:35.902Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;小玉买文具&quot;&gt;&lt;a href=&quot;#小玉买文具&quot; class=&quot;headerlink&quot; title=&quot;小玉买文具&quot;&gt;&lt;/a&gt;小玉买文具&lt;/h1&gt;&lt;h2 id=&quot;题目描述&quot;&gt;&lt;a href=&quot;#题目描述&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="洛谷" scheme="https://boger.website/categories/%E6%B4%9B%E8%B0%B7/"/>
+    
+    
+    <category term="洛谷" scheme="https://boger.website/tags/%E6%B4%9B%E8%B0%B7/"/>
+    
+    <category term="入门" scheme="https://boger.website/tags/%E5%85%A5%E9%97%A8/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>3381.手机键盘</title>
+    <link href="https://boger.website/2022/07/13/3381-%E6%89%8B%E6%9C%BA%E9%94%AE%E7%9B%98/"/>
+    <id>https://boger.website/2022/07/13/3381-%E6%89%8B%E6%9C%BA%E9%94%AE%E7%9B%98/</id>
+    <published>2022-07-13T09:28:06.005Z</published>
+    <updated>2022-07-13T09:31:16.464Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;题目&quot;&gt;&lt;a href=&quot;#题目&quot; class=&quot;headerlink&quot; title=&quot;题目&quot;&gt;&lt;/a&gt;题目&lt;/h3&gt;&lt;p&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="AcWing" scheme="https://boger.website/categories/AcWing/"/>
+    
+    
+    <category term="模拟" scheme="https://boger.website/tags/%E6%A8%A1%E6%8B%9F/"/>
+    
+    <category term="AcWing" scheme="https://boger.website/tags/AcWing/"/>
+    
+    <category term="暑假每日一题2022" scheme="https://boger.website/tags/%E6%9A%91%E5%81%87%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%982022/"/>
+    
+  </entry>
   
   <entry>
     <title>硬件课程设计-代码汇总</title>
@@ -316,7 +372,7 @@
     <link href="https://boger.website/2022/07/07/3537-%E6%A0%91%E6%9F%A5%E6%89%BE/"/>
     <id>https://boger.website/2022/07/07/3537-%E6%A0%91%E6%9F%A5%E6%89%BE/</id>
     <published>2022-07-07T08:01:57.520Z</published>
-    <updated>2022-07-10T16:02:37.580Z</updated>
+    <updated>2022-07-13T09:29:15.961Z</updated>
     
     
       
@@ -332,11 +388,11 @@
     <category term="AcWing" scheme="https://boger.website/categories/AcWing/"/>
     
     
-    <category term="质数" scheme="https://boger.website/tags/%E8%B4%A8%E6%95%B0/"/>
-    
     <category term="AcWing" scheme="https://boger.website/tags/AcWing/"/>
     
     <category term="暑假每日一题2022" scheme="https://boger.website/tags/%E6%9A%91%E5%81%87%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%982022/"/>
+    
+    <category term="数组" scheme="https://boger.website/tags/%E6%95%B0%E7%BB%84/"/>
     
   </entry>
   
@@ -488,60 +544,6 @@
         
         
     <summary type="html">&lt;h3 id=&quot;2选1数选器&quot;&gt;&lt;a href=&quot;#2选1数选器&quot; class=&quot;headerlink&quot; title=&quot;2选1数选器&quot;&gt;&lt;/a&gt;2选1数选器&lt;/h3&gt;&lt;h4 id=&quot;Verilog-代码&quot;&gt;&lt;a href=&quot;#Verilog-代码&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="硬件课程设计" scheme="https://boger.website/categories/%E7%A1%AC%E4%BB%B6%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/"/>
-    
-    <category term="基本组合电路" scheme="https://boger.website/categories/%E7%A1%AC%E4%BB%B6%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/%E5%9F%BA%E6%9C%AC%E7%BB%84%E5%90%88%E7%94%B5%E8%B7%AF/"/>
-    
-    
-    <category term="Verilog" scheme="https://boger.website/tags/Verilog/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Verilog-加法器-4位二进制加法器代码与仿真</title>
-    <link href="https://boger.website/2022/07/06/Verilog-4%E4%BD%8D%E4%BA%8C%E8%BF%9B%E5%88%B6%E5%8A%A0%E6%B3%95%E5%99%A8%E4%BB%A3%E7%A0%81%E4%B8%8E%E4%BB%BF%E7%9C%9F/"/>
-    <id>https://boger.website/2022/07/06/Verilog-4%E4%BD%8D%E4%BA%8C%E8%BF%9B%E5%88%B6%E5%8A%A0%E6%B3%95%E5%99%A8%E4%BB%A3%E7%A0%81%E4%B8%8E%E4%BB%BF%E7%9C%9F/</id>
-    <published>2022-07-06T14:31:51.326Z</published>
-    <updated>2022-07-07T12:39:52.838Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h3 id=&quot;4位二进制加法器&quot;&gt;&lt;a href=&quot;#4位二进制加法器&quot; class=&quot;headerlink&quot; title=&quot;4位二进制加法器&quot;&gt;&lt;/a&gt;4位二进制加法器&lt;/h3&gt;&lt;h4 id=&quot;IP核组成线路&quot;&gt;&lt;a href=&quot;#IP核组成线路&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="硬件课程设计" scheme="https://boger.website/categories/%E7%A1%AC%E4%BB%B6%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/"/>
-    
-    <category term="IP核调用" scheme="https://boger.website/categories/%E7%A1%AC%E4%BB%B6%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/IP%E6%A0%B8%E8%B0%83%E7%94%A8/"/>
-    
-    
-    <category term="Verilog" scheme="https://boger.website/tags/Verilog/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Verilog-全加器-1位全加器代码与仿真</title>
-    <link href="https://boger.website/2022/07/06/Verilog-1%E4%BD%8D%E5%85%A8%E5%8A%A0%E5%99%A8%E4%BB%A3%E7%A0%81%E4%B8%8E%E4%BB%BF%E7%9C%9F/"/>
-    <id>https://boger.website/2022/07/06/Verilog-1%E4%BD%8D%E5%85%A8%E5%8A%A0%E5%99%A8%E4%BB%A3%E7%A0%81%E4%B8%8E%E4%BB%BF%E7%9C%9F/</id>
-    <published>2022-07-06T12:40:15.490Z</published>
-    <updated>2022-07-07T07:43:00.382Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h3 id=&quot;1位全加器&quot;&gt;&lt;a href=&quot;#1位全加器&quot; class=&quot;headerlink&quot; title=&quot;1位全加器&quot;&gt;&lt;/a&gt;1位全加器&lt;/h3&gt;&lt;h4 id=&quot;Verilog-代码&quot;&gt;&lt;a href=&quot;#Verilog-代码&quot; class=&quot;headerlink&quot;</summary>
         
       
     
