@@ -6,7 +6,7 @@
   <link href="https://boger.website/atom.xml" rel="self"/>
   
   <link href="https://boger.website/"/>
-  <updated>2022-08-10T01:31:51.923Z</updated>
+  <updated>2022-09-12T12:05:49.482Z</updated>
   <id>https://boger.website/</id>
   
   <author>
@@ -17,11 +17,68 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>2022CCPC网络预选赛</title>
+    <link href="https://boger.website/2022/09/12/2022-CCPC-%E7%BD%91%E7%BB%9C%E9%A2%84%E9%80%89%E8%B5%9B/"/>
+    <id>https://boger.website/2022/09/12/2022-CCPC-%E7%BD%91%E7%BB%9C%E9%A2%84%E9%80%89%E8%B5%9B/</id>
+    <published>2022-09-12T11:55:23.576Z</published>
+    <updated>2022-09-12T12:05:49.482Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;题目&quot;&gt;&lt;a href=&quot;#题目&quot; class=&quot;headerlink&quot; title=&quot;题目&quot;&gt;&lt;/a&gt;题目&lt;/h3&gt;
+
+	&lt;div class=&quot;row&quot;&gt;
+    &lt;embed</summary>
+        
+      
+    
+    
+    
+    <category term="CCPC" scheme="https://boger.website/categories/CCPC/"/>
+    
+    
+    <category term="CCPC" scheme="https://boger.website/tags/CCPC/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>P1002-NOIP2002普及组-过河卒</title>
+    <link href="https://boger.website/2022/08/15/P1002-NOIP2002%E6%99%AE%E5%8F%8A%E7%BB%84-%E8%BF%87%E6%B2%B3%E5%8D%92/"/>
+    <id>https://boger.website/2022/08/15/P1002-NOIP2002%E6%99%AE%E5%8F%8A%E7%BB%84-%E8%BF%87%E6%B2%B3%E5%8D%92/</id>
+    <published>2022-08-15T14:25:13.360Z</published>
+    <updated>2022-08-15T14:28:56.037Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;NOIP2002-普及组-过河卒&quot;&gt;&lt;a href=&quot;#NOIP2002-普及组-过河卒&quot; class=&quot;headerlink&quot; title=&quot;[NOIP2002 普及组] 过河卒&quot;&gt;&lt;/a&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="洛谷" scheme="https://boger.website/categories/%E6%B4%9B%E8%B0%B7/"/>
+    
+    <category term="动态规划" scheme="https://boger.website/categories/%E6%B4%9B%E8%B0%B7/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
+    
+    
+    <category term="动态规划" scheme="https://boger.website/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
+    
+    <category term="洛谷" scheme="https://boger.website/tags/%E6%B4%9B%E8%B0%B7/"/>
+    
+  </entry>
+  
+  <entry>
     <title>动态规划之背包DP</title>
     <link href="https://boger.website/2022/08/10/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E4%B9%8B%E8%83%8C%E5%8C%85DP/"/>
     <id>https://boger.website/2022/08/10/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E4%B9%8B%E8%83%8C%E5%8C%85DP/</id>
     <published>2022-08-10T01:27:50.000Z</published>
-    <updated>2022-08-10T01:31:51.923Z</updated>
+    <updated>2022-08-11T00:58:55.788Z</updated>
     
     
       
@@ -488,60 +545,6 @@
         
         
     <summary type="html">&lt;h3 id=&quot;1位数值比较器&quot;&gt;&lt;a href=&quot;#1位数值比较器&quot; class=&quot;headerlink&quot; title=&quot;1位数值比较器&quot;&gt;&lt;/a&gt;1位数值比较器&lt;/h3&gt;&lt;h4 id=&quot;Verilog-代码&quot;&gt;&lt;a href=&quot;#Verilog-代码&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="硬件课程设计" scheme="https://boger.website/categories/%E7%A1%AC%E4%BB%B6%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/"/>
-    
-    <category term="基本组合电路" scheme="https://boger.website/categories/%E7%A1%AC%E4%BB%B6%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/%E5%9F%BA%E6%9C%AC%E7%BB%84%E5%90%88%E7%94%B5%E8%B7%AF/"/>
-    
-    
-    <category term="Verilog" scheme="https://boger.website/tags/Verilog/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Verilog-编码器-优先编码器代码与仿真</title>
-    <link href="https://boger.website/2022/07/07/Verilog-%E4%BC%98%E5%85%88%E7%BC%96%E7%A0%81%E5%99%A8%E4%BB%A3%E7%A0%81%E4%B8%8E%E4%BB%BF%E7%9C%9F/"/>
-    <id>https://boger.website/2022/07/07/Verilog-%E4%BC%98%E5%85%88%E7%BC%96%E7%A0%81%E5%99%A8%E4%BB%A3%E7%A0%81%E4%B8%8E%E4%BB%BF%E7%9C%9F/</id>
-    <published>2022-07-07T05:56:13.296Z</published>
-    <updated>2022-07-07T05:57:44.054Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h3 id=&quot;优先编码器&quot;&gt;&lt;a href=&quot;#优先编码器&quot; class=&quot;headerlink&quot; title=&quot;优先编码器&quot;&gt;&lt;/a&gt;优先编码器&lt;/h3&gt;&lt;h4 id=&quot;Verilog-代码&quot;&gt;&lt;a href=&quot;#Verilog-代码&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="硬件课程设计" scheme="https://boger.website/categories/%E7%A1%AC%E4%BB%B6%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/"/>
-    
-    <category term="基本组合电路" scheme="https://boger.website/categories/%E7%A1%AC%E4%BB%B6%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/%E5%9F%BA%E6%9C%AC%E7%BB%84%E5%90%88%E7%94%B5%E8%B7%AF/"/>
-    
-    
-    <category term="Verilog" scheme="https://boger.website/tags/Verilog/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Verilog-编码器-二-十进制编码器代码与仿真</title>
-    <link href="https://boger.website/2022/07/07/Verilog-%E4%BA%8C-%E5%8D%81%E8%BF%9B%E5%88%B6%E7%BC%96%E7%A0%81%E5%99%A8%E4%BB%A3%E7%A0%81%E4%B8%8E%E4%BB%BF%E7%9C%9F/"/>
-    <id>https://boger.website/2022/07/07/Verilog-%E4%BA%8C-%E5%8D%81%E8%BF%9B%E5%88%B6%E7%BC%96%E7%A0%81%E5%99%A8%E4%BB%A3%E7%A0%81%E4%B8%8E%E4%BB%BF%E7%9C%9F/</id>
-    <published>2022-07-06T16:37:43.776Z</published>
-    <updated>2022-07-06T16:38:37.502Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h3 id=&quot;二-十进制编码器&quot;&gt;&lt;a href=&quot;#二-十进制编码器&quot; class=&quot;headerlink&quot; title=&quot;二-十进制编码器&quot;&gt;&lt;/a&gt;二-十进制编码器&lt;/h3&gt;&lt;h4 id=&quot;Verilog-代码&quot;&gt;&lt;a href=&quot;#Verilog-代码&quot;</summary>
         
       
     
