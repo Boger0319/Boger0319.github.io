@@ -4,6 +4,33 @@
   
   
   <entry>
+    <title>1. 棋盘问题</title>
+    <link href="/2022/10/29/%E6%A3%8B%E7%9B%98%E9%97%AE%E9%A2%98/"/>
+    <url>/2022/10/29/%E6%A3%8B%E7%9B%98%E9%97%AE%E9%A2%98/</url>
+    
+    <content type="html"><![CDATA[<h3 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h3><p>在一个给定形状的棋盘（形状可能是不规则的）上面摆放棋子，棋子没有区别。要求摆放时任意的两个棋子不能放在棋盘中的同一行或者同一列，请编程求解对于给定形状和大小的棋盘，摆放k个棋子的所有可行的摆放方案C。</p><h3 id="Input"><a href="#Input" class="headerlink" title="Input"></a>Input</h3><p>输入含有多组测试数据。</p><p>每组数据的第一行是两个正整数，n k，用一个空格隔开，表示了将在一个n*n的矩阵内描述棋盘，以及摆放棋子的数目。 n &lt;= 8 , k &lt;= n</p><p>当为-1 -1时表示输入结束。</p><p>随后的n行描述了棋盘的形状：每行有n个字符，其中 # 表示棋盘区域， . 表示空白区域（数据保证不出现多余的空白行或者空白列）。</p><h3 id="Output"><a href="#Output" class="headerlink" title="Output"></a>Output</h3><p>对于每一组数据，给出一行输出，输出摆放的方案数目C （数据保证C&lt;2^31）。</p><h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;string&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;string.h&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;iostream&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;algorithm&gt;</span></span><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;<br><span class="hljs-keyword">typedef</span> <span class="hljs-type">long</span> <span class="hljs-type">long</span> ll;<br><br><span class="hljs-type">int</span> n, k; <span class="hljs-comment">// n * n 行矩阵， 共放 k 枚棋子</span><br><span class="hljs-type">bool</span> st[<span class="hljs-number">10</span>]; <span class="hljs-comment">// 标记第 i 列已经放了棋子</span><br>ll ans = <span class="hljs-number">0</span>; <span class="hljs-comment">// 最终答案数</span><br>string s[<span class="hljs-number">10</span>]; <span class="hljs-comment">// 棋盘矩阵</span><br><br><span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">dfs</span><span class="hljs-params">(<span class="hljs-type">int</span> cnt, <span class="hljs-type">int</span> line)</span> <span class="hljs-comment">// 已经放置了 cnt 枚棋子， 正要检测第 line 行</span></span><br><span class="hljs-function"></span>&#123;<br>    <span class="hljs-keyword">if</span> (cnt == k) <span class="hljs-comment">// 放置棋子数 == 总棋子数 计算结果 返回</span><br>    &#123;<br>        ans++;<br>        <span class="hljs-keyword">return</span>;<br>    &#125;<br>    <span class="hljs-keyword">if</span> (line &gt;= n) <span class="hljs-keyword">return</span>; <span class="hljs-comment">// 超过矩阵行数 返回</span><br>    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">0</span>;i &lt; n;++i)<br>    &#123;<br>        <span class="hljs-keyword">if</span> (!st[i] &amp;&amp; s[line][i] == <span class="hljs-string">&#x27;#&#x27;</span>)<br>        &#123;<br>            <span class="hljs-comment">// 回溯过程</span><br>            st[i] = <span class="hljs-literal">true</span>; <span class="hljs-comment">// 标记第 i 列已经放置棋子</span><br>            <span class="hljs-built_in">dfs</span>(cnt + <span class="hljs-number">1</span>, line + <span class="hljs-number">1</span>);<br>            st[i] = <span class="hljs-literal">false</span>; <span class="hljs-comment">// 取消标记</span><br>        &#125;<br>    &#125;<br>    <span class="hljs-built_in">dfs</span>(cnt, line + <span class="hljs-number">1</span>);<br>&#125;<br><br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span><br><span class="hljs-function"></span>&#123;<br>    cin &gt;&gt; fixed;<br>    <span class="hljs-built_in">memset</span>(st, <span class="hljs-number">0</span>, <span class="hljs-keyword">sizeof</span> st);<br>    <span class="hljs-keyword">while</span> (cin &gt;&gt; n &gt;&gt; k &amp;&amp; n != <span class="hljs-number">-1</span> &amp;&amp; k != <span class="hljs-number">-1</span>)<br>    &#123;<br>        <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">0</span>; i &lt; n;++i) cin &gt;&gt; s[i];<br>        ans = <span class="hljs-number">0</span>;<br>        <span class="hljs-built_in">dfs</span>(<span class="hljs-number">0</span>,<span class="hljs-number">0</span>);<br>        cout &lt;&lt; ans &lt;&lt; endl;<br>    &#125;<br>    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    <categories>
+      
+      <category>kuangbin专题</category>
+      
+      <category>专题一 简单搜索</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>DFS</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>数据结构-顺序表</title>
     <link href="/2022/10/23/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E9%A1%BA%E5%BA%8F%E8%A1%A8/"/>
     <url>/2022/10/23/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E9%A1%BA%E5%BA%8F%E8%A1%A8/</url>

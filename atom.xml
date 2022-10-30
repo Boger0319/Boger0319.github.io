@@ -6,7 +6,7 @@
   <link href="https://boger.website/atom.xml" rel="self"/>
   
   <link href="https://boger.website/"/>
-  <updated>2022-10-23T14:50:44.843Z</updated>
+  <updated>2022-10-30T09:58:15.765Z</updated>
   <id>https://boger.website/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>1. 棋盘问题</title>
+    <link href="https://boger.website/2022/10/29/%E6%A3%8B%E7%9B%98%E9%97%AE%E9%A2%98/"/>
+    <id>https://boger.website/2022/10/29/%E6%A3%8B%E7%9B%98%E9%97%AE%E9%A2%98/</id>
+    <published>2022-10-29T12:00:00.000Z</published>
+    <updated>2022-10-30T09:58:15.765Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;题目&quot;&gt;&lt;a href=&quot;#题目&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="kuangbin专题" scheme="https://boger.website/categories/kuangbin%E4%B8%93%E9%A2%98/"/>
+    
+    <category term="专题一 简单搜索" scheme="https://boger.website/categories/kuangbin%E4%B8%93%E9%A2%98/%E4%B8%93%E9%A2%98%E4%B8%80-%E7%AE%80%E5%8D%95%E6%90%9C%E7%B4%A2/"/>
+    
+    
+    <category term="DFS" scheme="https://boger.website/tags/DFS/"/>
+    
+  </entry>
   
   <entry>
     <title>数据结构-顺序表</title>
@@ -522,33 +549,6 @@
     <category term="暑假每日一题2022" scheme="https://boger.website/tags/%E6%9A%91%E5%81%87%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%982022/"/>
     
     <category term="数组" scheme="https://boger.website/tags/%E6%95%B0%E7%BB%84/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Verilog-加法器-1位十进制加法器代码与仿真</title>
-    <link href="https://boger.website/2022/07/07/Verilog-1%E4%BD%8D%E5%8D%81%E8%BF%9B%E5%88%B6%E5%8A%A0%E6%B3%95%E5%99%A8%E4%BB%A3%E7%A0%81%E4%B8%8E%E4%BB%BF%E7%9C%9F/"/>
-    <id>https://boger.website/2022/07/07/Verilog-1%E4%BD%8D%E5%8D%81%E8%BF%9B%E5%88%B6%E5%8A%A0%E6%B3%95%E5%99%A8%E4%BB%A3%E7%A0%81%E4%B8%8E%E4%BB%BF%E7%9C%9F/</id>
-    <published>2022-07-07T07:11:52.014Z</published>
-    <updated>2022-07-07T07:22:39.667Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h3 id=&quot;1位十进制加法器&quot;&gt;&lt;a href=&quot;#1位十进制加法器&quot; class=&quot;headerlink&quot; title=&quot;1位十进制加法器&quot;&gt;&lt;/a&gt;1位十进制加法器&lt;/h3&gt;&lt;h4 id=&quot;Verilog-代码&quot;&gt;&lt;a href=&quot;#Verilog-代码&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="硬件课程设计" scheme="https://boger.website/categories/%E7%A1%AC%E4%BB%B6%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/"/>
-    
-    <category term="基本组合电路" scheme="https://boger.website/categories/%E7%A1%AC%E4%BB%B6%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/%E5%9F%BA%E6%9C%AC%E7%BB%84%E5%90%88%E7%94%B5%E8%B7%AF/"/>
-    
-    
-    <category term="Verilog" scheme="https://boger.website/tags/Verilog/"/>
     
   </entry>
   
