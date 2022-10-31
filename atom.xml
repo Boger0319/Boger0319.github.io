@@ -6,7 +6,7 @@
   <link href="https://boger.website/atom.xml" rel="self"/>
   
   <link href="https://boger.website/"/>
-  <updated>2022-10-30T09:58:15.765Z</updated>
+  <updated>2022-10-31T13:49:40.799Z</updated>
   <id>https://boger.website/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>2. Dungeon Master</title>
+    <link href="https://boger.website/2022/10/31/Dungeon%20Master/"/>
+    <id>https://boger.website/2022/10/31/Dungeon%20Master/</id>
+    <published>2022-10-31T12:00:00.000Z</published>
+    <updated>2022-10-31T13:49:40.799Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;题目&quot;&gt;&lt;a href=&quot;#题目&quot; class=&quot;headerlink&quot; title=&quot;题目&quot;&gt;&lt;/a&gt;题目&lt;/h3&gt;&lt;p&gt;You are trapped in a 3D dungeon and need to find the quickest way</summary>
+        
+      
+    
+    
+    
+    <category term="kuangbin专题" scheme="https://boger.website/categories/kuangbin%E4%B8%93%E9%A2%98/"/>
+    
+    <category term="专题一 简单搜索" scheme="https://boger.website/categories/kuangbin%E4%B8%93%E9%A2%98/%E4%B8%93%E9%A2%98%E4%B8%80-%E7%AE%80%E5%8D%95%E6%90%9C%E7%B4%A2/"/>
+    
+    
+    <category term="BFS" scheme="https://boger.website/tags/BFS/"/>
+    
+  </entry>
   
   <entry>
     <title>1. 棋盘问题</title>
@@ -520,35 +547,6 @@
     
     
     <category term="Verilog" scheme="https://boger.website/tags/Verilog/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>3537.树查找</title>
-    <link href="https://boger.website/2022/07/07/3537-%E6%A0%91%E6%9F%A5%E6%89%BE/"/>
-    <id>https://boger.website/2022/07/07/3537-%E6%A0%91%E6%9F%A5%E6%89%BE/</id>
-    <published>2022-07-07T08:01:57.520Z</published>
-    <updated>2022-07-13T09:29:15.961Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h3 id=&quot;题目&quot;&gt;&lt;a href=&quot;#题目&quot; class=&quot;headerlink&quot; title=&quot;题目&quot;&gt;&lt;/a&gt;题目&lt;/h3&gt;&lt;p&gt;&lt;a</summary>
-        
-      
-    
-    
-    
-    <category term="AcWing" scheme="https://boger.website/categories/AcWing/"/>
-    
-    
-    <category term="AcWing" scheme="https://boger.website/tags/AcWing/"/>
-    
-    <category term="暑假每日一题2022" scheme="https://boger.website/tags/%E6%9A%91%E5%81%87%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%982022/"/>
-    
-    <category term="数组" scheme="https://boger.website/tags/%E6%95%B0%E7%BB%84/"/>
     
   </entry>
   
