@@ -6,7 +6,7 @@
   <link href="https://boger.website/atom.xml" rel="self"/>
   
   <link href="https://boger.website/"/>
-  <updated>2022-11-03T10:11:19.214Z</updated>
+  <updated>2022-11-03T10:47:47.529Z</updated>
   <id>https://boger.website/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>5. Find The Multiple</title>
+    <link href="https://boger.website/2022/11/03/Find%20The%20Multiple/"/>
+    <id>https://boger.website/2022/11/03/Find%20The%20Multiple/</id>
+    <published>2022-11-03T10:30:00.000Z</published>
+    <updated>2022-11-03T10:47:47.529Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;题目&quot;&gt;&lt;a href=&quot;#题目&quot; class=&quot;headerlink&quot; title=&quot;题目&quot;&gt;&lt;/a&gt;题目&lt;/h3&gt;&lt;p&gt;Given a positive integer n, write a program to find out a nonzero</summary>
+        
+      
+    
+    
+    
+    <category term="kuangbin专题" scheme="https://boger.website/categories/kuangbin%E4%B8%93%E9%A2%98/"/>
+    
+    <category term="专题一 简单搜索" scheme="https://boger.website/categories/kuangbin%E4%B8%93%E9%A2%98/%E4%B8%93%E9%A2%98%E4%B8%80-%E7%AE%80%E5%8D%95%E6%90%9C%E7%B4%A2/"/>
+    
+    
+    <category term="模拟" scheme="https://boger.website/tags/%E6%A8%A1%E6%8B%9F/"/>
+    
+    <category term="DFS" scheme="https://boger.website/tags/DFS/"/>
+    
+  </entry>
   
   <entry>
     <title>4. Fliptile</title>
@@ -509,33 +538,6 @@
         
         
     <summary type="html">&lt;h3 id=&quot;1位二进制加法器&quot;&gt;&lt;a href=&quot;#1位二进制加法器&quot; class=&quot;headerlink&quot; title=&quot;1位二进制加法器&quot;&gt;&lt;/a&gt;1位二进制加法器&lt;/h3&gt;&lt;h4 id=&quot;Verilog-代码&quot;&gt;&lt;a href=&quot;#Verilog-代码&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="硬件课程设计" scheme="https://boger.website/categories/%E7%A1%AC%E4%BB%B6%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/"/>
-    
-    <category term="基本组合电路" scheme="https://boger.website/categories/%E7%A1%AC%E4%BB%B6%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/%E5%9F%BA%E6%9C%AC%E7%BB%84%E5%90%88%E7%94%B5%E8%B7%AF/"/>
-    
-    
-    <category term="Verilog" scheme="https://boger.website/tags/Verilog/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Verilog-译码器-二-十进制译码器代码与仿真</title>
-    <link href="https://boger.website/2022/07/07/Verilog-%E4%BA%8C-%E5%8D%81%E8%BF%9B%E5%88%B6%E8%AF%91%E7%A0%81%E5%99%A8%E4%BB%A3%E7%A0%81%E4%B8%8E%E4%BB%BF%E7%9C%9F/"/>
-    <id>https://boger.website/2022/07/07/Verilog-%E4%BA%8C-%E5%8D%81%E8%BF%9B%E5%88%B6%E8%AF%91%E7%A0%81%E5%99%A8%E4%BB%A3%E7%A0%81%E4%B8%8E%E4%BB%BF%E7%9C%9F/</id>
-    <published>2022-07-07T09:11:41.691Z</published>
-    <updated>2022-07-07T09:12:21.300Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h3 id=&quot;二进制译码器&quot;&gt;&lt;a href=&quot;#二进制译码器&quot; class=&quot;headerlink&quot; title=&quot;二进制译码器&quot;&gt;&lt;/a&gt;二进制译码器&lt;/h3&gt;&lt;h4 id=&quot;Verilog-代码&quot;&gt;&lt;a href=&quot;#Verilog-代码&quot;</summary>
         
       
     
