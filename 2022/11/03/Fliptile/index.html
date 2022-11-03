@@ -17,24 +17,24 @@
   <meta name="author" content="Boger">
   <meta name="keywords" content="">
   
-    <meta name="description" content="题目Farmer John has been informed of the location of a fugitive cow and wants to catch her immediately. He starts at a point N (0 ≤ N ≤ 100,000) on a number line and the cow is at a point K (0 ≤ K ≤ 100">
+    <meta name="description" content="题目Farmer John knows that an intellectually satisfied cow is a happy cow who will give more milk. He has arranged a brainy activity for cows in which they manipulate an M × N grid (1 ≤ M ≤ 15; 1 ≤ N ≤">
 <meta property="og:type" content="article">
-<meta property="og:title" content="3. Catch That Cow">
-<meta property="og:url" content="https://boger.website/2022/11/01/Catch%20That%20Cow/index.html">
+<meta property="og:title" content="4. Fliptile">
+<meta property="og:url" content="https://boger.website/2022/11/03/Fliptile/index.html">
 <meta property="og:site_name" content="Boger">
-<meta property="og:description" content="题目Farmer John has been informed of the location of a fugitive cow and wants to catch her immediately. He starts at a point N (0 ≤ N ≤ 100,000) on a number line and the cow is at a point K (0 ≤ K ≤ 100">
+<meta property="og:description" content="题目Farmer John knows that an intellectually satisfied cow is a happy cow who will give more milk. He has arranged a brainy activity for cows in which they manipulate an M × N grid (1 ≤ M ≤ 15; 1 ≤ N ≤">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2022-10-31T16:00:00.000Z">
-<meta property="article:modified_time" content="2022-10-31T16:04:06.633Z">
+<meta property="article:published_time" content="2022-11-03T10:00:00.000Z">
+<meta property="article:modified_time" content="2022-11-03T10:11:19.214Z">
 <meta property="article:author" content="Boger">
-<meta property="article:tag" content="BFS">
+<meta property="article:tag" content="二进制枚举">
 <meta name="twitter:card" content="summary_large_image">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>3. Catch That Cow - Boger</title>
+  <title>4. Fliptile - Boger</title>
   
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
@@ -241,7 +241,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="3. Catch That Cow"></span>
+            <span id="subtitle" data-typed-text="4. Fliptile"></span>
           
         </div>
 
@@ -252,8 +252,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2022-11-01 00:00" pubdate>
-          2022年11月1日 凌晨
+        <time datetime="2022-11-03 18:00" pubdate>
+          2022年11月3日 晚上
         </time>
       </span>
     
@@ -264,7 +264,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          1.6k 字
+          3.1k 字
         
       </span>
     
@@ -275,7 +275,7 @@
         
         
         
-          14 分钟
+          26 分钟
         
       </span>
     
@@ -323,20 +323,31 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">3. Catch That Cow</h1>
+            <h1 style="display: none">4. Fliptile</h1>
             
             
               <div class="markdown-body">
                 
-                <h3 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h3><p>Farmer John has been informed of the location of a fugitive cow and wants to catch her immediately. He starts at a point N (0 ≤ N ≤ 100,000) on a number line and the cow is at a point K (0 ≤ K ≤ 100,000) on the same number line. Farmer John has two modes of transportation: walking and teleporting.</p>
-<ul>
-<li>Walking: FJ can move from any point X to the points X - 1 or X + 1 in a single minute</li>
-<li>Teleporting: FJ can move from any point X to the point 2 × X in a single minute.</li>
-</ul>
-<p>If the cow, unaware of its pursuit, does not move at all, how long does it take for Farmer John to retrieve it?</p>
-<h3 id="Input"><a href="#Input" class="headerlink" title="Input"></a>Input</h3><p>Line 1: Two space-separated integers: N and K</p>
-<h3 id="Output"><a href="#Output" class="headerlink" title="Output"></a>Output</h3><p>Line 1: The least amount of time, in minutes, it takes for Farmer John to catch the fugitive cow.</p>
-<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;queue&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;cstring&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;iostream&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;algorithm&gt;</span></span><br><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;<br><br><span class="hljs-type">const</span> <span class="hljs-type">int</span> N = <span class="hljs-number">1e5</span> + <span class="hljs-number">3</span>;<br><span class="hljs-type">int</span> op, ed;<br><span class="hljs-type">int</span> ans = <span class="hljs-number">0</span>;<br><br>queue&lt;<span class="hljs-type">int</span>&gt; q;<br><span class="hljs-type">int</span> vis[N];<br><br><span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">bfs</span><span class="hljs-params">()</span></span><br><span class="hljs-function"></span>&#123;<br>    <span class="hljs-keyword">while</span> (!q.<span class="hljs-built_in">empty</span>())<br>    &#123;<br>        <span class="hljs-type">int</span> x = q.<span class="hljs-built_in">front</span>();<br>        q.<span class="hljs-built_in">pop</span>();<br>        <span class="hljs-keyword">if</span> (x - <span class="hljs-number">1</span> == ed || x + <span class="hljs-number">1</span> == ed || x * <span class="hljs-number">2</span> == ed)<br>        &#123;<br>            ans = vis[x] + <span class="hljs-number">1</span>;<br>            <span class="hljs-keyword">return</span>;<br>        &#125;<br>        <span class="hljs-keyword">if</span> (x &gt;= <span class="hljs-number">0</span> &amp;&amp; !vis[x - <span class="hljs-number">1</span>]) q.<span class="hljs-built_in">push</span>(x - <span class="hljs-number">1</span>), vis[x - <span class="hljs-number">1</span>] = vis[x] + <span class="hljs-number">1</span>;<br>        <span class="hljs-keyword">if</span> (x + <span class="hljs-number">1</span> &lt;= N &amp;&amp; !vis[x + <span class="hljs-number">1</span>]) q.<span class="hljs-built_in">push</span>(x + <span class="hljs-number">1</span>), vis[x + <span class="hljs-number">1</span>] = vis[x] + <span class="hljs-number">1</span>;<br>        <span class="hljs-keyword">if</span> (x &lt;&lt; <span class="hljs-number">1</span> &lt;= N &amp;&amp; !vis[x &lt;&lt; <span class="hljs-number">1</span>]) q.<span class="hljs-built_in">push</span>(x &lt;&lt; <span class="hljs-number">1</span>), vis[x &lt;&lt; <span class="hljs-number">1</span>] = vis[x] + <span class="hljs-number">1</span>;<br><span class="hljs-comment">//      注意下面的书写方式 若先检测vis数组 而数组开的不够大 则可能出现数组越界现象</span><br><span class="hljs-comment">//      if (!vis[x - 1] &amp;&amp; x &gt;= 0) q.push(x - 1), vis[x - 1] = vis[x] + 1;</span><br><span class="hljs-comment">//      if (!vis[x + 1] &amp;&amp; x + 1 &lt;= N) q.push(x + 1), vis[x + 1] = vis[x] + 1;</span><br><span class="hljs-comment">//      if (!vis[x &lt;&lt; 1] &amp;&amp; x &lt;&lt; 1 &lt;= N) q.push(x &lt;&lt; 1), vis[x &lt;&lt; 1] = vis[x] + 1;</span><br>    &#125;<br>&#125;<br><br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span><br><span class="hljs-function"></span>&#123;<br>    <span class="hljs-built_in">memset</span>(vis, <span class="hljs-number">0</span>, <span class="hljs-keyword">sizeof</span> vis);<br>    cin &gt;&gt; op &gt;&gt; ed;<br>    <span class="hljs-keyword">if</span> (op == ed)<br>    &#123;<br>        cout &lt;&lt; <span class="hljs-number">0</span> &lt;&lt; endl;<br>        <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>    &#125;<br>    q.<span class="hljs-built_in">push</span>(op);<br>    <span class="hljs-built_in">bfs</span>();<br>    cout &lt;&lt; ans &lt;&lt; endl;<br>    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
+                <h3 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h3><p>Farmer John knows that an intellectually satisfied cow is a happy cow who will give more milk. He has arranged a brainy activity for cows in which they manipulate an <em>M</em> × <em>N</em> grid (1 ≤ <em>M</em> ≤ 15; 1 ≤ <em>N</em> ≤ 15) of square tiles, each of which is colored black on one side and white on the other side.</p>
+<p>As one would guess, when a single white tile is flipped, it changes to black; when a single black tile is flipped, it changes to white. The cows are rewarded when they flip the tiles so that each tile has the white side face up. However, the cows have rather large hooves and when they try to flip a certain tile, they also flip all the adjacent tiles (tiles that share a full edge with the flipped tile). Since the flips are tiring, the cows want to minimize the number of flips they have to make.</p>
+<p>Help the cows determine the minimum number of flips required, and the locations to flip to achieve that minimum. If there are multiple ways to achieve the task with the minimum amount of flips, return the one with the least lexicographical ordering in the output when considered as a string. If the task is impossible, print one line with the word “IMPOSSIBLE”.</p>
+<h3 id="Input"><a href="#Input" class="headerlink" title="Input"></a>Input</h3><p>Line 1: Two space-separated integers: <em>M</em> and <em>N</em></p>
+<p>Lines 2.. <em>M</em>+1: Line <em>i</em>+1 describes the colors (left to right) of row i of the grid with<em>N</em></p>
+<p>space-separated integers which are 1 for black and 0 for white</p>
+<h3 id="Output"><a href="#Output" class="headerlink" title="Output"></a>Output</h3><p>Lines 1..<em>M</em>: Each line contains <em>N</em><br> space-separated integers, each specifying how many times to flip that particular location.</p>
+<h3 id="Sample"><a href="#Sample" class="headerlink" title="Sample"></a>Sample</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-number">4</span> <span class="hljs-number">4</span><br><span class="hljs-number">1</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">1</span><br><span class="hljs-number">0</span> <span class="hljs-number">1</span> <span class="hljs-number">1</span> <span class="hljs-number">0</span><br><span class="hljs-number">0</span> <span class="hljs-number">1</span> <span class="hljs-number">1</span> <span class="hljs-number">0</span><br><span class="hljs-number">1</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">1</span><br></code></pre></td></tr></table></figure>
+
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span><br><span class="hljs-number">1</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">1</span><br><span class="hljs-number">1</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">1</span><br><span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span><br></code></pre></td></tr></table></figure>
+
+<h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><blockquote>
+<p>这题我一直不是很明白，不明白题解里面说用第一行就能枚举出所有行的情况是什么意思，我希望可以解释明白</p>
+</blockquote>
+<p>首先，我们知道，在集合中，一个集合中，每个元素都有两种选择，取或者不取，所以，它的子集的数量 $num = 2 ^ n$ ，那么我们来看第一行，把其看作是一个集合，那么所有的可能也就是 $2^m$，这个过程也就是二进制枚举的过程；</p>
+<p>我们把第一行中每种情况进行枚举，出现了一种可能后，便约束着下一行的选取，因为这一行过后只有下一行能够改变这一行剩余的 $1$，所以说第二行改变的可能完全按照第一行中剩余$1$的位置来改变，第三行按照第二行…当按照这个情况来模拟到最后一行时，若最后一行仍有$1$无法清除，则证明这次枚举是无法成立的，也就是说，我们从第一行的情况，按照顺序模拟到了最后一行，且这些模拟只是按照条件判断出来的，所以，第一行的情况决定了剩下所有行的情况。</p>
+<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><blockquote>
+<p>代码十分不简洁 将就着看</p>
+</blockquote>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;vector&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;cstring&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;iostream&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;algorithm&gt;</span></span><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;<br><br><span class="hljs-type">const</span> <span class="hljs-type">int</span> N = <span class="hljs-number">17</span>;<br><span class="hljs-type">int</span> n, m;<br><span class="hljs-type">bool</span> x[N][N], backup[N][N], ans[N][N];<br><br><span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">flip</span><span class="hljs-params">(<span class="hljs-type">int</span> i, <span class="hljs-type">int</span> j)</span></span><br><span class="hljs-function"></span>&#123;<br>    x[i][j] = !x[i][j];<br>    <span class="hljs-keyword">if</span> (i &gt; <span class="hljs-number">0</span>) x[i - <span class="hljs-number">1</span>][j] = !x[i - <span class="hljs-number">1</span>][j];<br>    <span class="hljs-keyword">if</span> (i &lt; n - <span class="hljs-number">1</span>) x[i + <span class="hljs-number">1</span>][j] = !x[i + <span class="hljs-number">1</span>][j];<br>    <span class="hljs-keyword">if</span> (j &gt; <span class="hljs-number">0</span>) x[i][j - <span class="hljs-number">1</span>] = !x[i][j - <span class="hljs-number">1</span>];<br>    <span class="hljs-keyword">if</span> (j &lt; m - <span class="hljs-number">1</span>) x[i][j + <span class="hljs-number">1</span>] = !x[i][j + <span class="hljs-number">1</span>];<br>&#125;<br><br>vector&lt;pair&lt;<span class="hljs-type">int</span>, string&gt;&gt; vecans;<br><br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span><br><span class="hljs-function"></span>&#123;<br>    cin &gt;&gt; n &gt;&gt; m;<br>    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">0</span>; i &lt; n; ++i)<br>        <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> j = <span class="hljs-number">0</span>; j &lt; m; ++j)<br>            cin &gt;&gt; x[i][j];<br><br>    <span class="hljs-built_in">memcpy</span>(backup, x, <span class="hljs-keyword">sizeof</span> x);<br><br>    <span class="hljs-type">bool</span> out = <span class="hljs-literal">false</span>;<br><br>    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">1</span> &lt;&lt; m; ++i)<br>    &#123;<br>        <span class="hljs-built_in">memcpy</span>(x, backup, <span class="hljs-keyword">sizeof</span> backup);<br>        <span class="hljs-built_in">memset</span>(ans, <span class="hljs-number">0</span>, <span class="hljs-keyword">sizeof</span> ans);<br>        <span class="hljs-type">int</span> num = i;<br>        <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> j = m - <span class="hljs-number">1</span>; j &gt; <span class="hljs-number">-1</span>; --j)<br>        &#123;<br>            <span class="hljs-keyword">if</span> (num &amp; <span class="hljs-number">1</span>)<br>            &#123;<br>                ans[<span class="hljs-number">0</span>][j] = <span class="hljs-number">1</span>;<br>                <span class="hljs-built_in">flip</span>(<span class="hljs-number">0</span>, j);<br>            &#125;<br>            num &gt;&gt;= <span class="hljs-number">1</span>;<br>        &#125;<br><br>        <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> j = <span class="hljs-number">1</span>; j &lt; n; ++j)<br>            <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> k = <span class="hljs-number">0</span>; k &lt; m; ++k)<br>                <span class="hljs-keyword">if</span> (x[j - <span class="hljs-number">1</span>][k])<br>                    ans[j][k] = <span class="hljs-number">1</span>, <span class="hljs-built_in">flip</span>(j, k);<br><br>        <span class="hljs-type">bool</span> suc = <span class="hljs-literal">true</span>;<br>        <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> j = <span class="hljs-number">0</span>;j &lt; m;++j)<br>            <span class="hljs-keyword">if</span> (x[n - <span class="hljs-number">1</span>][j])  suc = <span class="hljs-literal">false</span>;<br><br>        <span class="hljs-keyword">if</span> (suc)<br>        &#123;<br>            out = <span class="hljs-literal">true</span>;<br>            string s;<br>            <span class="hljs-type">int</span> cnt = <span class="hljs-number">0</span>;<br>            <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> j = <span class="hljs-number">0</span>;j &lt; n;++j)<br>                <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> k = <span class="hljs-number">0</span>;k &lt; m;++k)<br>                &#123;<br>                    <span class="hljs-keyword">if</span> (ans[j][k]) ++cnt;<br>                    s += <span class="hljs-string">&#x27;0&#x27;</span> + ans[j][k];<br>                &#125;<br>            vecans.<span class="hljs-built_in">push_back</span>(&#123;cnt, s&#125;);<br>        &#125;<br><br>    &#125;<br><br>    <span class="hljs-built_in">sort</span>(vecans.<span class="hljs-built_in">begin</span>(), vecans.<span class="hljs-built_in">end</span>());<br><br>    <span class="hljs-keyword">if</span> (!out) cout &lt;&lt; <span class="hljs-string">&quot;IMPOSSIBLE&quot;</span> &lt;&lt; endl;<br>    <span class="hljs-keyword">else</span> <br>    &#123;<br>        <span class="hljs-type">int</span> idx = <span class="hljs-number">0</span>;<br>        <span class="hljs-keyword">while</span> (idx &lt; n * m)<br>        &#123;<br>            cout &lt;&lt; vecans[<span class="hljs-number">0</span>].second[idx++] &lt;&lt; <span class="hljs-string">&quot; &quot;</span>;<br>            <span class="hljs-keyword">if</span> (idx % m == <span class="hljs-number">0</span>) cout &lt;&lt; <span class="hljs-string">&#x27;\n&#x27;</span>;<br>        &#125;<br>    &#125;<br>    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
                 
               </div>
             
@@ -376,7 +387,7 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/BFS/">#BFS</a>
+        <a href="/tags/%E4%BA%8C%E8%BF%9B%E5%88%B6%E6%9E%9A%E4%B8%BE/">#二进制枚举</a>
       
     </div>
   
@@ -388,8 +399,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>3. Catch That Cow</div>
-      <div>https://boger.website/2022/11/01/Catch That Cow/</div>
+      <div>4. Fliptile</div>
+      <div>https://boger.website/2022/11/03/Fliptile/</div>
     </div>
     <div class="license-meta">
       
@@ -401,7 +412,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2022年11月1日</div>
+          <div>2022年11月3日</div>
         </div>
       
       
@@ -431,18 +442,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2022/11/03/Fliptile/" title="4. Fliptile">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">4. Fliptile</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2022/10/31/Dungeon%20Master/" title="2. Dungeon Master">
-                        <span class="hidden-mobile">2. Dungeon Master</span>
+                      <a href="/2022/11/01/Catch%20That%20Cow/" title="3. Catch That Cow">
+                        <span class="hidden-mobile">3. Catch That Cow</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
