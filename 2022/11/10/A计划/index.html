@@ -17,15 +17,15 @@
   <meta name="author" content="Boger">
   <meta name="keywords" content="">
   
-    <meta name="description" content="链接poj → 迷宫问题 题目定义一个二维数组： 1234567int maze[5][5] &#x3D; &amp;#123;	0, 1, 0, 0, 0,	0, 1, 0, 1, 0,	0, 0, 0, 0, 0,	0, 1, 1, 1, 0,	0, 0, 0, 1, 0,&amp;#125;;  它表示一个迷宫，其中的1表示墙壁，0表示可以走的路，只能横着走或竖着走，不能斜着走，要求编程序找出从左上角到右下角的最短路">
+    <meta name="description" content="链接acwing → A计划 题目可怜的公主在一次次被魔王掳走一次次被骑士们救回来之后，而今，不幸的她再一次面临生命的考验。魔王已经发出消息说将在T时刻吃掉公主，因为他听信谣言说吃公主的肉也能长生不老。年迈的国王正是心急如焚，告招天下勇士来拯救公主。不过公主早已习以为常，她深信智勇的骑士LJ肯定能将她救出。 现据密探所报，公主被关在一个两层的迷宫里，迷宫的入口是S（0，0，0），公主的位置用P表示">
 <meta property="og:type" content="article">
-<meta property="og:title" content="11. 迷宫问题">
-<meta property="og:url" content="https://boger.website/2022/11/10/%E8%BF%B7%E5%AE%AB%E9%97%AE%E9%A2%98/index.html">
+<meta property="og:title" content="1. A计划">
+<meta property="og:url" content="https://boger.website/2022/11/10/A%E8%AE%A1%E5%88%92/index.html">
 <meta property="og:site_name" content="Boger">
-<meta property="og:description" content="链接poj → 迷宫问题 题目定义一个二维数组： 1234567int maze[5][5] &#x3D; &amp;#123;	0, 1, 0, 0, 0,	0, 1, 0, 1, 0,	0, 0, 0, 0, 0,	0, 1, 1, 1, 0,	0, 0, 0, 1, 0,&amp;#125;;  它表示一个迷宫，其中的1表示墙壁，0表示可以走的路，只能横着走或竖着走，不能斜着走，要求编程序找出从左上角到右下角的最短路">
+<meta property="og:description" content="链接acwing → A计划 题目可怜的公主在一次次被魔王掳走一次次被骑士们救回来之后，而今，不幸的她再一次面临生命的考验。魔王已经发出消息说将在T时刻吃掉公主，因为他听信谣言说吃公主的肉也能长生不老。年迈的国王正是心急如焚，告招天下勇士来拯救公主。不过公主早已习以为常，她深信智勇的骑士LJ肯定能将她救出。 现据密探所报，公主被关在一个两层的迷宫里，迷宫的入口是S（0，0，0），公主的位置用P表示">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2022-11-09T16:00:00.000Z">
-<meta property="article:modified_time" content="2022-11-10T05:38:26.111Z">
+<meta property="article:published_time" content="2022-11-10T07:00:00.000Z">
+<meta property="article:modified_time" content="2022-11-10T09:09:42.638Z">
 <meta property="article:author" content="Boger">
 <meta property="article:tag" content="BFS">
 <meta name="twitter:card" content="summary_large_image">
@@ -34,7 +34,7 @@
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>11. 迷宫问题 - Boger</title>
+  <title>1. A计划 - Boger</title>
   
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
@@ -241,7 +241,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="11. 迷宫问题"></span>
+            <span id="subtitle" data-typed-text="1. A计划"></span>
           
         </div>
 
@@ -252,8 +252,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2022-11-10 00:00" pubdate>
-          2022年11月10日 凌晨
+        <time datetime="2022-11-10 15:00" pubdate>
+          2022年11月10日 下午
         </time>
       </span>
     
@@ -264,7 +264,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          1.7k 字
+          2.1k 字
         
       </span>
     
@@ -275,7 +275,7 @@
         
         
         
-          15 分钟
+          18 分钟
         
       </span>
     
@@ -323,24 +323,26 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">11. 迷宫问题</h1>
+            <h1 style="display: none">1. A计划</h1>
             
             
               <div class="markdown-body">
                 
-                <h3 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h3><p>poj → <a target="_blank" rel="noopener" href="https://vjudge.net/problem/POJ-3984">迷宫问题</a></p>
-<h3 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h3><p>定义一个二维数组：</p>
-<figure class="highlight autohotkey"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs autohotkey">int maze[<span class="hljs-number">5</span>][<span class="hljs-number">5</span>] = &#123;<br><span class="hljs-built_in">	0,</span> <span class="hljs-number">1</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>,<br><span class="hljs-built_in">	0,</span> <span class="hljs-number">1</span>, <span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">0</span>,<br><span class="hljs-built_in">	0,</span> <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>,<br><span class="hljs-built_in">	0,</span> <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">0</span>,<br><span class="hljs-built_in">	0,</span> <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">0</span>,<br>&#125;<span class="hljs-comment">;</span><br></code></pre></td></tr></table></figure>
+                <h3 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h3><p>acwing → <a target="_blank" rel="noopener" href="https://www.acwing.com/problem/content/4236/">A计划</a></p>
+<h3 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h3><p>可怜的公主在一次次被魔王掳走一次次被骑士们救回来之后，而今，不幸的她再一次面临生命的考验。魔王已经发出消息说将在T时刻吃掉公主，因为他听信谣言说吃公主的肉也能长生不老。年迈的国王正是心急如焚，告招天下勇士来拯救公主。不过公主早已习以为常，她深信智勇的骑士LJ肯定能将她救出。</p>
+<p>现据密探所报，公主被关在一个两层的迷宫里，迷宫的入口是S（0，0，0），公主的位置用P表示，时空传输机用#表示，墙用*表示，平地用.表示。骑士们一进入时空传输机就会被转到另一层的相对位置，但如果被转到的位置是墙的话，那骑士们就会被撞死。骑士们在一层中只能前后左右移动，每移动一格花1时刻。层间的移动只能通过时空传输机，且不需要任何时间。</p>
+<h3 id="输入"><a href="#输入" class="headerlink" title="输入"></a>输入</h3><p>输入的第一行C表示共有C个测试数据，每个测试数据的前一行有三个整数N，M，T。 N，M迷宫的大小N<em>M（1 &lt;= N,M &lt;=10)。T如上所意。接下去的前N</em>M表示迷宫的第一层的布置情况，后N*M表示迷宫第二层的布置情况。</p>
+<h3 id="输出"><a href="#输出" class="headerlink" title="输出"></a>输出</h3><p>如果骑士们能够在T时刻能找到公主就输出“YES”，否则输出“NO”。</p>
+<h3 id="样例"><a href="#样例" class="headerlink" title="样例"></a>样例</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-number">1</span><br><span class="hljs-number">5</span> <span class="hljs-number">5</span> <span class="hljs-number">14</span><br>S*#*.<br>.#...<br>.....<br>****.<br>...#.<br><br>..*.P<br>#.*..<br>***..<br>...*.<br>*.#..<br></code></pre></td></tr></table></figure>
 
-<p>它表示一个迷宫，其中的1表示墙壁，0表示可以走的路，只能横着走或竖着走，不能斜着走，要求编程序找出从左上角到右下角的最短路线。</p>
-<h3 id="输入"><a href="#输入" class="headerlink" title="输入"></a>输入</h3><p>一个5 × 5的二维数组，表示一个迷宫。数据保证有唯一解。</p>
-<h3 id="输出"><a href="#输出" class="headerlink" title="输出"></a>输出</h3><p>左上角到右下角的最短路径，格式如样例所示。</p>
-<h3 id="样例"><a href="#样例" class="headerlink" title="样例"></a>样例</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-number">0</span> <span class="hljs-number">1</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span><br><span class="hljs-number">0</span> <span class="hljs-number">1</span> <span class="hljs-number">0</span> <span class="hljs-number">1</span> <span class="hljs-number">0</span><br><span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span><br><span class="hljs-number">0</span> <span class="hljs-number">1</span> <span class="hljs-number">1</span> <span class="hljs-number">1</span> <span class="hljs-number">0</span><br><span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">1</span> <span class="hljs-number">0</span><br></code></pre></td></tr></table></figure>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs cpp">YES<br></code></pre></td></tr></table></figure>
 
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs cpp">(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>)<br>(<span class="hljs-number">1</span>, <span class="hljs-number">0</span>)<br>(<span class="hljs-number">2</span>, <span class="hljs-number">0</span>)<br>(<span class="hljs-number">2</span>, <span class="hljs-number">1</span>)<br>(<span class="hljs-number">2</span>, <span class="hljs-number">2</span>)<br>(<span class="hljs-number">2</span>, <span class="hljs-number">3</span>)<br>(<span class="hljs-number">2</span>, <span class="hljs-number">4</span>)<br>(<span class="hljs-number">3</span>, <span class="hljs-number">4</span>)<br>(<span class="hljs-number">4</span>, <span class="hljs-number">4</span>)<br></code></pre></td></tr></table></figure>
-
-<h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><p>个人认为是最标准最基础的一道BFS搜索题目，应该放在第一题的位置</p>
-<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;iostream&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;cstring&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;queue&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;algorithm&gt;</span></span><br><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;<br><br><span class="hljs-keyword">typedef</span> pair&lt;<span class="hljs-type">int</span>, <span class="hljs-type">int</span>&gt; pii;<br><span class="hljs-type">const</span> <span class="hljs-type">int</span> N = <span class="hljs-number">20</span>;<br><span class="hljs-type">int</span> n,m; <span class="hljs-comment">// n * m</span><br><span class="hljs-type">char</span> maze[N][N];<br><span class="hljs-type">bool</span> vis[N][N];<br><br><span class="hljs-keyword">typedef</span> <span class="hljs-keyword">struct</span> <span class="hljs-title class_">path</span><br>&#123;<br>	<span class="hljs-type">int</span> i, j, cost;<br>	vector&lt;pii&gt; rec;<br>&#125; path;<br><br><span class="hljs-function">path <span class="hljs-title">bfs</span><span class="hljs-params">(<span class="hljs-type">int</span> x, <span class="hljs-type">int</span> y)</span></span><br><span class="hljs-function"></span>&#123;<br>	path init, ans;<br>    pii i_T;<br>    i_T.first = x, i_T.second = y;<br>	init.i = x, init.j = y, init.cost = <span class="hljs-number">0</span>, init.rec.<span class="hljs-built_in">push_back</span>(i_T);<br>	queue&lt;path&gt; q;<br>	q.<span class="hljs-built_in">push</span>(init);<br>	<br>	<span class="hljs-built_in">memset</span>(vis, <span class="hljs-number">0</span>, <span class="hljs-keyword">sizeof</span> vis);<br>	<span class="hljs-type">int</span> f[<span class="hljs-number">4</span>][<span class="hljs-number">2</span>] = &#123;&#123;<span class="hljs-number">0</span>, <span class="hljs-number">1</span>&#125;, &#123;<span class="hljs-number">0</span>, <span class="hljs-number">-1</span>&#125;, &#123;<span class="hljs-number">1</span>, <span class="hljs-number">0</span>&#125;, &#123;<span class="hljs-number">-1</span>, <span class="hljs-number">0</span>&#125;&#125;;<br>	<br>	<span class="hljs-keyword">while</span> (!q.<span class="hljs-built_in">empty</span>())<br>	&#123;<br>		path now = q.<span class="hljs-built_in">front</span>();<br>		q.<span class="hljs-built_in">pop</span>();<br>		<span class="hljs-type">int</span> i = now.i, j = now.j, c = now.cost;<br>		vector&lt;pii&gt; load = now.rec;<br>		<span class="hljs-keyword">if</span> (i == n - <span class="hljs-number">1</span> &amp;&amp; j == m - <span class="hljs-number">1</span>) <br>		&#123;<br>			ans = now;<br>			<span class="hljs-keyword">break</span>;<br>		&#125;<br>		<br>		vis[i][j] = <span class="hljs-literal">true</span>;<br>		<span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> t = <span class="hljs-number">0</span>;t &lt; <span class="hljs-number">4</span>;++t)<br>		&#123;<br>			<span class="hljs-type">int</span> a = i + f[t][<span class="hljs-number">0</span>], b = j + f[t][<span class="hljs-number">1</span>];<br>			<span class="hljs-keyword">if</span> (!vis[a][b] &amp;&amp; maze[a][b] == <span class="hljs-string">&#x27;0&#x27;</span>)<br>			&#123;<br>				path newp;<br>				newp.i = a, newp.j = b, newp.cost = c + <span class="hljs-number">1</span>;<br>                pii tmp;<br>                tmp.first = a, tmp.second = b;<br>				load.<span class="hljs-built_in">push_back</span>(tmp);<br>				newp.rec = load;<br>				q.<span class="hljs-built_in">push</span>(newp);<br>			&#125;<br>		&#125;<br>	&#125;<br>	<br>	<span class="hljs-keyword">return</span> ans;<br>&#125;<br><br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span><br><span class="hljs-function"></span>&#123;<br>  n = <span class="hljs-number">5</span>, m = <span class="hljs-number">5</span>;<br>	<span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">0</span>;i &lt; n;++i)<br>		<span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> j = <span class="hljs-number">0</span>;j &lt; m;++j)<br>			cin &gt;&gt; maze[i][j];<br><br>	path ans;	<br>	ans = <span class="hljs-built_in">bfs</span>(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>);	<br>	<span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">0</span>;i &lt; ans.rec.<span class="hljs-built_in">size</span>();++i)<br>		cout &lt;&lt; <span class="hljs-string">&quot;(&quot;</span> &lt;&lt; ans.rec[i].first &lt;&lt; <span class="hljs-string">&quot;, &quot;</span> &lt;&lt; ans.rec[i].second &lt;&lt; <span class="hljs-string">&quot;)&quot;</span> &lt;&lt; endl;<br>	<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
+<h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><p>个人觉得这题需要注意的点：</p>
+<ol>
+<li>踏入 <strong>#</strong> 则意味着时空传输，若两层都为 <strong>#</strong> 那你就寄在时空里了</li>
+<li>使用时空传输机时是不需要时间的，记得判断</li>
+</ol>
+<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;bits/stdc++.h&gt;</span></span><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;<br><br><span class="hljs-type">int</span> T;<br><span class="hljs-type">int</span> n, m, t;<br><span class="hljs-type">char</span> maze[<span class="hljs-number">2</span>][<span class="hljs-number">13</span>][<span class="hljs-number">13</span>];<br><span class="hljs-type">bool</span> vis[<span class="hljs-number">2</span>][<span class="hljs-number">13</span>][<span class="hljs-number">13</span>];<br><span class="hljs-type">int</span> turn[<span class="hljs-number">4</span>][<span class="hljs-number">2</span>] = &#123;&#123;<span class="hljs-number">0</span>, <span class="hljs-number">1</span>&#125;, &#123;<span class="hljs-number">0</span>, <span class="hljs-number">-1</span>&#125;, &#123;<span class="hljs-number">1</span>, <span class="hljs-number">0</span>&#125;, &#123;<span class="hljs-number">-1</span>, <span class="hljs-number">0</span>&#125;&#125;;<br><br><span class="hljs-keyword">typedef</span> <span class="hljs-keyword">struct</span> <span class="hljs-title class_">node</span><br>&#123;<br>    <span class="hljs-type">int</span> i, j, k, cost;<br>&#125; node;<br><br><span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">bfs</span><span class="hljs-params">()</span></span><br><span class="hljs-function"></span>&#123;<br>    queue&lt;node&gt; q;<br>    node init;<br>    init.i = <span class="hljs-number">0</span>, init.j = <span class="hljs-number">0</span>, init.k = <span class="hljs-number">0</span>, init.cost = <span class="hljs-number">0</span>;<br>    vis[<span class="hljs-number">0</span>][<span class="hljs-number">0</span>][<span class="hljs-number">0</span>] = <span class="hljs-literal">true</span>;<br>    q.<span class="hljs-built_in">push</span>(init);<br><br>    <span class="hljs-keyword">while</span> (!q.<span class="hljs-built_in">empty</span>())<br>    &#123;<br>        node x = q.<span class="hljs-built_in">front</span>();<br>        q.<span class="hljs-built_in">pop</span>();<br><br>        <span class="hljs-keyword">if</span> (maze[x.i][x.j][x.k] == <span class="hljs-string">&#x27;P&#x27;</span>)<br>        &#123;<br>            <span class="hljs-keyword">if</span> (x.cost &lt;= t) cout &lt;&lt; <span class="hljs-string">&quot;YES&quot;</span> &lt;&lt; endl;<br>            <span class="hljs-keyword">else</span> cout &lt;&lt; <span class="hljs-string">&quot;NO&quot;</span> &lt;&lt; endl;<br>            <span class="hljs-keyword">return</span>;<br>        &#125;<br><br>        <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">0</span>;i &lt; <span class="hljs-number">4</span>;++i)<br>        &#123;<br>            <span class="hljs-type">int</span> a = x.i, b = x.j + turn[i][<span class="hljs-number">0</span>], c = x.k + turn[i][<span class="hljs-number">1</span>];<br>            <span class="hljs-keyword">if</span> (b &lt; <span class="hljs-number">0</span> || b &gt;= n || c &lt; <span class="hljs-number">0</span> || c &gt;= m) <span class="hljs-keyword">continue</span>;<br>            <span class="hljs-keyword">if</span> (vis[a][b][c] || maze[a][b][c] == <span class="hljs-string">&#x27;*&#x27;</span>) <span class="hljs-keyword">continue</span>;<br>            <span class="hljs-keyword">if</span> (maze[a][b][c] == <span class="hljs-string">&#x27;#&#x27;</span> &amp;&amp; (maze[a^<span class="hljs-number">1</span>][b][c] == <span class="hljs-string">&#x27;#&#x27;</span> || maze[a^<span class="hljs-number">1</span>][b][c] == <span class="hljs-string">&#x27;*&#x27;</span>))<br>            &#123;<br>                maze[a][b][c] = <span class="hljs-string">&#x27;*&#x27;</span>, maze[a^<span class="hljs-number">1</span>][b][c] = <span class="hljs-string">&#x27;*&#x27;</span>;<br>                <span class="hljs-keyword">continue</span>;<br>            &#125;<br><br>            node tmp;<br>            tmp.i = a, tmp.j = b, tmp.k = c, tmp.cost = x.cost + <span class="hljs-number">1</span>;<br>            <span class="hljs-keyword">if</span> (maze[a][b][c] == <span class="hljs-string">&#x27;#&#x27;</span>) tmp.i ^= <span class="hljs-number">1</span>, vis[a^<span class="hljs-number">1</span>][b][c] = <span class="hljs-literal">true</span>;<br>            vis[a][b][c] = <span class="hljs-literal">true</span>;<br>            q.<span class="hljs-built_in">push</span>(tmp);<br>        &#125;<br>    &#125;<br>    cout &lt;&lt; <span class="hljs-string">&quot;NO&quot;</span> &lt;&lt; endl;<br>&#125;<br><br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span><br><span class="hljs-function"></span>&#123;<br>    cin &gt;&gt; T;<br>    <span class="hljs-keyword">while</span> (T--)<br>    &#123;<br>        <span class="hljs-built_in">memset</span>(vis, <span class="hljs-number">0</span>, <span class="hljs-keyword">sizeof</span> vis);<br>        cin &gt;&gt; n &gt;&gt; m &gt;&gt; t;<br>        <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">0</span>;i &lt; n;++i)<br>            <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> j = <span class="hljs-number">0</span>; j&lt; m;++j)<br>                cin &gt;&gt; maze[<span class="hljs-number">0</span>][i][j];<br>        <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">0</span>;i &lt; n;++i)<br>            <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> j = <span class="hljs-number">0</span>; j&lt; m;++j)<br>                cin &gt;&gt; maze[<span class="hljs-number">1</span>][i][j];<br>        <span class="hljs-built_in">bfs</span>();<br>    &#125;<br>    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
                 
               </div>
             
@@ -363,7 +365,7 @@
   
     <span>></span>
     
-  <a href="/categories/kuangbin%E4%B8%93%E9%A2%98/%E4%B8%93%E9%A2%98%E4%B8%80-%E7%AE%80%E5%8D%95%E6%90%9C%E7%B4%A2/" class="category-chain-item">专题一 简单搜索</a>
+  <a href="/categories/kuangbin%E4%B8%93%E9%A2%98/%E4%B8%93%E9%A2%98%E4%BA%8C-%E6%90%9C%E7%B4%A2%E8%BF%9B%E9%98%B6/" class="category-chain-item">专题二 搜索进阶</a>
   
   
 
@@ -392,8 +394,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>11. 迷宫问题</div>
-      <div>https://boger.website/2022/11/10/迷宫问题/</div>
+      <div>1. A计划</div>
+      <div>https://boger.website/2022/11/10/A计划/</div>
     </div>
     <div class="license-meta">
       
@@ -435,18 +437,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2022/11/10/Oil%20Deposits/" title="12. Oil Deposits">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">12. Oil Deposits</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2022/11/06/Pots/" title="8. Pots">
-                        <span class="hidden-mobile">8. Pots</span>
+                      <a href="/2022/11/10/Oil%20Deposits/" title="12. Oil Deposits">
+                        <span class="hidden-mobile">12. Oil Deposits</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
