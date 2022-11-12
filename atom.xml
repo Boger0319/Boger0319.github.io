@@ -6,7 +6,7 @@
   <link href="https://boger.website/atom.xml" rel="self"/>
   
   <link href="https://boger.website/"/>
-  <updated>2022-11-10T09:09:42.638Z</updated>
+  <updated>2022-11-12T12:00:19.535Z</updated>
   <id>https://boger.website/</id>
   
   <author>
@@ -17,11 +17,65 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>14. Find a way</title>
+    <link href="https://boger.website/2022/11/12/Find%20a%20way/"/>
+    <id>https://boger.website/2022/11/12/Find%20a%20way/</id>
+    <published>2022-11-12T11:00:00.000Z</published>
+    <updated>2022-11-12T12:00:19.535Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;链接&quot;&gt;&lt;a href=&quot;#链接&quot; class=&quot;headerlink&quot; title=&quot;链接&quot;&gt;&lt;/a&gt;链接&lt;/h3&gt;&lt;p&gt;vjudge → hdu → &lt;a href=&quot;https://vjudge.net/problem/HDU-2612&quot;&gt;Find a</summary>
+        
+      
+    
+    
+    
+    <category term="kuangbin专题" scheme="https://boger.website/categories/kuangbin%E4%B8%93%E9%A2%98/"/>
+    
+    <category term="专题一 简单搜索" scheme="https://boger.website/categories/kuangbin%E4%B8%93%E9%A2%98/%E4%B8%93%E9%A2%98%E4%B8%80-%E7%AE%80%E5%8D%95%E6%90%9C%E7%B4%A2/"/>
+    
+    
+    <category term="BFS" scheme="https://boger.website/tags/BFS/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>13. 非常可乐</title>
+    <link href="https://boger.website/2022/11/12/%E9%9D%9E%E5%B8%B8%E5%8F%AF%E4%B9%90/"/>
+    <id>https://boger.website/2022/11/12/%E9%9D%9E%E5%B8%B8%E5%8F%AF%E4%B9%90/</id>
+    <published>2022-11-12T10:00:00.000Z</published>
+    <updated>2022-11-12T10:55:06.838Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;链接&quot;&gt;&lt;a href=&quot;#链接&quot; class=&quot;headerlink&quot; title=&quot;链接&quot;&gt;&lt;/a&gt;链接&lt;/h3&gt;&lt;p&gt;vjudge → hdu → &lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="kuangbin专题" scheme="https://boger.website/categories/kuangbin%E4%B8%93%E9%A2%98/"/>
+    
+    <category term="专题一 简单搜索" scheme="https://boger.website/categories/kuangbin%E4%B8%93%E9%A2%98/%E4%B8%93%E9%A2%98%E4%B8%80-%E7%AE%80%E5%8D%95%E6%90%9C%E7%B4%A2/"/>
+    
+    
+    <category term="BFS" scheme="https://boger.website/tags/BFS/"/>
+    
+  </entry>
+  
+  <entry>
     <title>1. A计划</title>
     <link href="https://boger.website/2022/11/10/A%E8%AE%A1%E5%88%92/"/>
     <id>https://boger.website/2022/11/10/A%E8%AE%A1%E5%88%92/</id>
     <published>2022-11-10T07:00:00.000Z</published>
-    <updated>2022-11-10T09:09:42.638Z</updated>
+    <updated>2022-11-11T10:18:31.476Z</updated>
     
     
       
@@ -48,7 +102,7 @@
     <link href="https://boger.website/2022/11/10/Oil%20Deposits/"/>
     <id>https://boger.website/2022/11/10/Oil%20Deposits/</id>
     <published>2022-11-10T05:00:00.000Z</published>
-    <updated>2022-11-10T09:06:19.570Z</updated>
+    <updated>2022-11-11T10:16:45.448Z</updated>
     
     
       
@@ -499,58 +553,6 @@
     <category term="AcWing" scheme="https://boger.website/tags/AcWing/"/>
     
     <category term="暑假每日一题2022" scheme="https://boger.website/tags/%E6%9A%91%E5%81%87%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%982022/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>硬件课程设计-代码汇总</title>
-    <link href="https://boger.website/2022/07/09/%E7%A1%AC%E4%BB%B6%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1%E6%B1%87%E6%80%BB/"/>
-    <id>https://boger.website/2022/07/09/%E7%A1%AC%E4%BB%B6%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1%E6%B1%87%E6%80%BB/</id>
-    <published>2022-07-09T09:33:38.333Z</published>
-    <updated>2022-07-09T10:18:44.125Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h3 id=&quot;经典全选16题&quot;&gt;&lt;a href=&quot;#经典全选16题&quot; class=&quot;headerlink&quot; title=&quot;经典全选16题&quot;&gt;&lt;/a&gt;经典全选16题&lt;/h3&gt;&lt;h4 id=&quot;1-构建基本组合电路器件，然后生成对应的IP核&quot;&gt;&lt;a</summary>
-        
-      
-    
-    
-    
-    <category term="硬件课程设计" scheme="https://boger.website/categories/%E7%A1%AC%E4%BB%B6%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/"/>
-    
-    
-    <category term="Verilog" scheme="https://boger.website/tags/Verilog/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Verilog-选择器-4路分配器代码与仿真</title>
-    <link href="https://boger.website/2022/07/09/Verilog-4%E8%B7%AF%E5%88%86%E9%85%8D%E5%99%A8%E4%BB%A3%E7%A0%81%E4%B8%8E%E4%BB%BF%E7%9C%9F/"/>
-    <id>https://boger.website/2022/07/09/Verilog-4%E8%B7%AF%E5%88%86%E9%85%8D%E5%99%A8%E4%BB%A3%E7%A0%81%E4%B8%8E%E4%BB%BF%E7%9C%9F/</id>
-    <published>2022-07-09T08:14:09.443Z</published>
-    <updated>2022-07-09T08:17:47.096Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h3 id=&quot;4路分配器&quot;&gt;&lt;a href=&quot;#4路分配器&quot; class=&quot;headerlink&quot; title=&quot;4路分配器&quot;&gt;&lt;/a&gt;4路分配器&lt;/h3&gt;&lt;h4 id=&quot;IP核组成线路&quot;&gt;&lt;a href=&quot;#IP核组成线路&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="硬件课程设计" scheme="https://boger.website/categories/%E7%A1%AC%E4%BB%B6%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/"/>
-    
-    <category term="IP核调用" scheme="https://boger.website/categories/%E7%A1%AC%E4%BB%B6%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/IP%E6%A0%B8%E8%B0%83%E7%94%A8/"/>
-    
-    
-    <category term="Verilog" scheme="https://boger.website/tags/Verilog/"/>
     
   </entry>
   
