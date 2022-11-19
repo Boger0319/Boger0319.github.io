@@ -6,7 +6,7 @@
   <link href="https://boger.website/atom.xml" rel="self"/>
   
   <link href="https://boger.website/"/>
-  <updated>2022-11-12T12:00:19.535Z</updated>
+  <updated>2022-11-19T15:21:18.636Z</updated>
   <id>https://boger.website/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>4. Silver Cow Party</title>
+    <link href="https://boger.website/2022/11/19/Silver%20Cow%20Party/"/>
+    <id>https://boger.website/2022/11/19/Silver%20Cow%20Party/</id>
+    <published>2022-11-19T15:00:00.000Z</published>
+    <updated>2022-11-19T15:21:18.636Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;链接&quot;&gt;&lt;a href=&quot;#链接&quot; class=&quot;headerlink&quot; title=&quot;链接&quot;&gt;&lt;/a&gt;链接&lt;/h3&gt;&lt;p&gt;vjudge → poj → &lt;a href=&quot;https://vjudge.net/problem/POJ-3268&quot;&gt;Silver</summary>
+        
+      
+    
+    
+    
+    <category term="kuangbin专题" scheme="https://boger.website/categories/kuangbin%E4%B8%93%E9%A2%98/"/>
+    
+    <category term="专题四 最短路练习" scheme="https://boger.website/categories/kuangbin%E4%B8%93%E9%A2%98/%E4%B8%93%E9%A2%98%E5%9B%9B-%E6%9C%80%E7%9F%AD%E8%B7%AF%E7%BB%83%E4%B9%A0/"/>
+    
+    
+    <category term="SPFA" scheme="https://boger.website/tags/SPFA/"/>
+    
+  </entry>
   
   <entry>
     <title>14. Find a way</title>
@@ -524,35 +551,6 @@
     <category term="洛谷" scheme="https://boger.website/tags/%E6%B4%9B%E8%B0%B7/"/>
     
     <category term="入门" scheme="https://boger.website/tags/%E5%85%A5%E9%97%A8/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>3381.手机键盘</title>
-    <link href="https://boger.website/2022/07/13/3381-%E6%89%8B%E6%9C%BA%E9%94%AE%E7%9B%98/"/>
-    <id>https://boger.website/2022/07/13/3381-%E6%89%8B%E6%9C%BA%E9%94%AE%E7%9B%98/</id>
-    <published>2022-07-13T09:28:06.005Z</published>
-    <updated>2022-07-13T09:31:16.464Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h3 id=&quot;题目&quot;&gt;&lt;a href=&quot;#题目&quot; class=&quot;headerlink&quot; title=&quot;题目&quot;&gt;&lt;/a&gt;题目&lt;/h3&gt;&lt;p&gt;&lt;a</summary>
-        
-      
-    
-    
-    
-    <category term="AcWing" scheme="https://boger.website/categories/AcWing/"/>
-    
-    
-    <category term="模拟" scheme="https://boger.website/tags/%E6%A8%A1%E6%8B%9F/"/>
-    
-    <category term="AcWing" scheme="https://boger.website/tags/AcWing/"/>
-    
-    <category term="暑假每日一题2022" scheme="https://boger.website/tags/%E6%9A%91%E5%81%87%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%982022/"/>
     
   </entry>
   
