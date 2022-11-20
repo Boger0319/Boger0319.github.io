@@ -6,7 +6,7 @@
   <link href="https://boger.website/atom.xml" rel="self"/>
   
   <link href="https://boger.website/"/>
-  <updated>2022-11-20T06:40:17.709Z</updated>
+  <updated>2022-11-20T11:32:21.705Z</updated>
   <id>https://boger.website/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>自用模板库</title>
+    <link href="https://boger.website/2022/11/20/%E8%87%AA%E7%94%A8%E6%A8%A1%E6%9D%BF/"/>
+    <id>https://boger.website/2022/11/20/%E8%87%AA%E7%94%A8%E6%A8%A1%E6%9D%BF/</id>
+    <published>2022-11-20T11:00:00.000Z</published>
+    <updated>2022-11-20T11:32:21.705Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;CPP模板&quot;&gt;&lt;a href=&quot;#CPP模板&quot; class=&quot;headerlink&quot; title=&quot;CPP模板&quot;&gt;&lt;/a&gt;CPP模板&lt;/h3&gt;&lt;figure class=&quot;highlight cpp&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td</summary>
+        
+      
+    
+    
+    
+    <category term="C/C++" scheme="https://boger.website/categories/C-C/"/>
+    
+    
+    <category term="模板" scheme="https://boger.website/tags/%E6%A8%A1%E6%9D%BF/"/>
+    
+  </entry>
   
   <entry>
     <title>1. Til the Cows Come Home</title>
@@ -528,33 +553,6 @@
     <category term="动态规划" scheme="https://boger.website/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
     
     <category term="背包" scheme="https://boger.website/tags/%E8%83%8C%E5%8C%85/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>基础算法模板</title>
-    <link href="https://boger.website/2022/07/30/%E5%9F%BA%E7%A1%80%E7%AE%97%E6%B3%95%E6%A8%A1%E6%9D%BF/"/>
-    <id>https://boger.website/2022/07/30/%E5%9F%BA%E7%A1%80%E7%AE%97%E6%B3%95%E6%A8%A1%E6%9D%BF/</id>
-    <published>2022-07-30T03:53:39.000Z</published>
-    <updated>2022-09-27T07:04:50.273Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;blockquote&gt;
-&lt;p&gt;代码来源：Acwing Y大 仅用作自用学习&lt;br&gt;&lt;a href=&quot;https://www.acwing.com/blog/content/277/&quot;&gt;原文章链接&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;blockquote&gt;
-&lt;p&gt;采用</summary>
-        
-      
-    
-    
-    
-    
-    <category term="模板" scheme="https://boger.website/tags/%E6%A8%A1%E6%9D%BF/"/>
     
   </entry>
   

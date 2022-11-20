@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://boger.website/2022/11/20/%E8%87%AA%E7%94%A8%E6%A8%A1%E6%9D%BF/</loc>
+    
+    <lastmod>2022-11-20</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://boger.website/2022/11/20/Til%20the%20Cows%20Come%20Home/</loc>
     
     <lastmod>2022-11-20</lastmod>
@@ -1504,6 +1513,13 @@
   
   <url>
     <loc>https://boger.website/categories/kuangbin%E4%B8%93%E9%A2%98/%E4%B8%93%E9%A2%98%E5%9B%9B-%E6%9C%80%E7%9F%AD%E8%B7%AF%E7%BB%83%E4%B9%A0/</loc>
+    <lastmod>2022-11-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://boger.website/categories/C-C/</loc>
     <lastmod>2022-11-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
